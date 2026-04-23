@@ -547,8 +547,11 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .product-item-img {
   width: 100%;
   aspect-ratio: 3/2;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: var(--bg-surface);
+  padding: var(--space-6);
+  box-sizing: border-box;
 }
 .product-item-body { padding: var(--space-6); }
 .product-item-head {
