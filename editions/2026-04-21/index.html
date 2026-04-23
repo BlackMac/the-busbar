@@ -37,7 +37,7 @@
         <time datetime="2026-04-21">Week of 2026-04-21</time> &middot; Edition #1
     </div>
     <h1 class="edition-title">The Busbar</h1>
-    <p class="edition-subtitle">Victron releases Venus OS 3.50 with a critical fix for MultiPlus-II units dropping AC output under float — affects roughly 12,000 units built between November 2025 and February 2026.</p>
+    <p class="edition-subtitle">Victron introduces a modular Microgrid architecture requiring no central controller; SuperPack NG and Lynx Smart BMS NG both receive firmware updates; EVE MB31 314Ah cells dip below $85 at US retail.</p>
 </div>
 
 <main id="main-content" class="site-main">
@@ -51,8 +51,8 @@
             <li>
                 <span class="toc-num" aria-hidden="true">→</span>
                 <a href="#lead">
-                    <span class="toc-tag">Firmware · Lead</span>
-                    <span class="toc-title">Victron Venus OS 3.50 fixes MultiPlus-II AC dropout under float — 12,000 units affected</span>
+                    <span class="toc-tag">Inverter · Lead</span>
+                    <span class="toc-title">Victron Microgrid: independent power banks share load without a central controller</span>
                 </a>
             </li>
             
@@ -61,32 +61,40 @@
             <li>
                 <span class="toc-num" aria-hidden="true">1.</span>
                 <a href="#news-1">
-                    <span class="toc-tag">Battery</span>
-                    <span class="toc-title">CATL unveils Yitianyihu: 314Ah LFP cells officially enter mass production</span>
+                    <span class="toc-tag">Firmware</span>
+                    <span class="toc-title">Lynx Smart BMS NG firmware v1.17 corrects DVCC charge instability</span>
                 </a>
             </li>
             
             <li>
                 <span class="toc-num" aria-hidden="true">2.</span>
                 <a href="#news-2">
-                    <span class="toc-tag">Charging</span>
-                    <span class="toc-title">Redarc launches BCDC2450: 50A DC-DC with 60V wide-input, first in Australian lineup</span>
+                    <span class="toc-tag">Battery</span>
+                    <span class="toc-title">SuperPack NG firmware v1.05 enables continuous 2C discharge and widens temperature range</span>
                 </a>
             </li>
             
             <li>
                 <span class="toc-num" aria-hidden="true">3.</span>
                 <a href="#news-3">
-                    <span class="toc-tag">Industry</span>
-                    <span class="toc-title">Renogy acquires Tigo Energy&#39;s mobile division; targets integrated MPPT+monitoring market</span>
+                    <span class="toc-tag">Firmware</span>
+                    <span class="toc-title">Venus OS v3.72 patches ESS safeguard, Pylontech updater, and Node-RED paths</span>
                 </a>
             </li>
             
             <li>
                 <span class="toc-num" aria-hidden="true">4.</span>
                 <a href="#news-4">
-                    <span class="toc-tag">Marine</span>
-                    <span class="toc-title">ABYC publishes E-13:2026 — LFP-specific requirements now mandatory for new marine installs</span>
+                    <span class="toc-tag">Industry</span>
+                    <span class="toc-title">Victron 2026 pipeline: 48V 20kVA MultiPlus, split-phase inverter, TR Smart 48/12 60A DC-DC</span>
+                </a>
+            </li>
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">5.</span>
+                <a href="#news-5">
+                    <span class="toc-tag">Battery</span>
+                    <span class="toc-title">EVE MB31 314Ah cells below $85 at US retail; DIYSolarForum weighing raw-cell economics</span>
                 </a>
             </li>
             
@@ -97,7 +105,7 @@
                 <li class="toc-special">
                     <a href="#background">
                         <span class="toc-tag">The Background</span>
-                        <span class="toc-title">Why the 314Ah cell is likely to repeat what the 280Ah did to the 200Ah market</span>
+                        <span class="toc-title">The 314Ah crossover: what the raw-cell economics actually look like in 2026</span>
                     </a>
                 </li>
                 
@@ -125,25 +133,23 @@
     
     
     <article class="article article--lead" id="lead" aria-labelledby="lead-h">
-        <p class="article-tag">Firmware &middot; The Lead</p>
-        <h2 id="lead-h">Victron Venus OS 3.50 fixes MultiPlus-II AC dropout under float — 12,000 units affected</h2>
-        <p class="article-tl-dr">Venus OS 3.50 addresses a confirmed shutdown bug in MultiPlus-II 48/3000–48/5000 units (firmware HQ2518–HQ2611) where the inverter drops AC output after entering float — no warning, no alarm. If you have a MultiPlus-II 48V unit manufactured between November 2025 and February 2026, update now.</p>
-        <div class="article-body"><p>Victron released Venus OS 3.50 on April 18. The changelog lists twelve items, but only one demands immediate attention: a fix for MultiPlus-II 48V units silently dropping AC output after transitioning to float. The bug manifests with no alarm, no visible fault code in VRM. The inverter simply stops outputting AC. Shore power or a generator can mask the problem indefinitely — until you're off-grid and your fridge stops.</p>
-<p>The affected firmware range is HQ2518 through HQ2611, corresponding to MultiPlus-II 48/3000, 48/5000, and 48/8000 units produced between roughly late November 2025 and mid-February 2026. Victron has not issued a formal recall; the fix is delivered via firmware update. Units outside this serial range are unaffected, according to the changelog.</p>
-<p>The update path: Venus OS 3.50 is available via VRM remote firmware update, or directly from the Victron Professional portal for manual installation via USB. The update also pushes new MultiPlus-II firmware (v560) automatically to affected units when Venus OS 3.50 is installed — you do not need to flash the MultiPlus-II separately.</p>
-<p>What else is in 3.50: improved ESS scheduling accuracy (±2 minutes vs ±8 minutes previously), a fix for DVCC shared current sensing drift after extended lithium charging sessions, and updated support for the new Victron SmartShunt 2000A. The SmartShunt support is of note for large LFP bank builders — the 2000A model arrives with Bluetooth calibration instead of requiring a CCGX/Cerbo for initial setup.</p>
-<p>Forum reports on DIYSolarForum confirm the dropout symptom going back to early March. Several users traced it to float transitions, which is consistent with the fix description. Victron's response time — six to eight weeks from first reports to a shipping fix — is faster than average for the industry but still left a window for builds going off-grid without noticing the issue.</p>
+        <p class="article-tag">Inverter &middot; The Lead</p>
+        <h2 id="lead-h">Victron Microgrid: independent power banks share load without a central controller</h2>
+        <p class="article-tl-dr">Victron&#39;s new Microgrid solution lets separate, standalone inverter/charger installations synchronise on a shared AC bus using frequency droop — no communication cabling between units, no central controller, scalable to 400kW with existing MultiPlus and Quattro hardware.</p>
+        <div class="article-body"><p>On 13 April Victron Energy published details of its new Microgrid solution — a way to build large off-grid power systems by connecting independent inverter/charger groups in parallel without adding a central controller or running data cables between them.</p>
+<p>The architecture divides a system into "Power Banks." Each Power Bank is a complete, standalone Victron installation: its own MultiPlus, MultiPlus-II, Quattro, or Quattro-II inverter/chargers, its own battery bank, its own GX monitoring device. Multiple Power Banks then connect to a common AC bus. Load sharing is handled by frequency droop: as total system load increases, bus frequency drops slightly, and each Power Bank independently increases its output in response. No Power Bank needs to know what the others are doing — there is no inter-unit data link.</p>
+<p>Scaling works by adding another Power Bank. Victron quotes a maximum system capacity of 400kW. Because each Power Bank is fully independent, taking one offline for service or fault recovery does not interrupt the remaining units; they continue supplying the AC bus.</p>
+<p>The capability is delivered via dedicated VE.Bus firmware versions S97 and S98, available for the existing MultiPlus, MultiPlus-II, Quattro, and Quattro-II range. No new hardware is required. Victron identifies target applications as generator rental fleets, construction sites, events, and remote communities or industrial facilities where traditional high-voltage grid infrastructure is not practical.</p>
+<p>The frequency-droop approach differs from Victron's existing VE.Bus parallel and three-phase system architecture, which requires communication cabling and a designated master unit. Victron has published an HTML5 and PDF technical manual; deployment is intended to go through a trained Victron distributor.</p>
 </div>
         
         <div class="sources">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://github.com/victronenergy/venus/blob/master/Changelog" rel="noopener noreferrer external" target="_blank">Victron Energy — Venus OS 3.50 Changelog</a></li>
+                <li><a href="https://www.victronenergy.com/blog/2026/04/13/introducing-victron-microgrid/" rel="noopener noreferrer external" target="_blank">Victron Energy Blog — Introducing Victron Microgrid</a></li>
                 
-                <li><a href="https://professional.victronenergy.com/" rel="noopener noreferrer external" target="_blank">Victron Professional Portal</a></li>
-                
-                <li><a href="https://diysolarforum.com/threads/multiplus-ii-48v-dropping-ac-output-float.12345/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — MultiPlus-II dropout thread</a></li>
+                <li><a href="https://professional.victronenergy.com/news/detail/352/" rel="noopener noreferrer external" target="_blank">Victron Professional — Microgrid product announcement</a></li>
                 
             </ul>
         </div>
@@ -154,21 +160,20 @@
     
     
     <article class="article" id="news-1" aria-labelledby="news-1-h">
-        <p class="article-tag">Battery</p>
-        <h2 id="news-1-h">CATL unveils Yitianyihu: 314Ah LFP cells officially enter mass production</h2>
-        <p class="article-tl-dr">CATL confirmed this week that its 314Ah prismatic LFP cell — widely anticipated as the successor to the 280Ah cell that dominated the DIY market since 2021 — is now in full mass production. Pricing is not yet public.</p>
-        <div class="article-body"><p>After months of samples and forum speculation, CATL announced that the 314Ah LFP prismatic cell (internal designation Yitianyihu) entered mass production in Q1 2026. The cell measures 173×71.7×207.2mm and is rated at 3.2V nominal, 314Ah capacity, with a cycle life of 4,000 cycles to 80% capacity at 0.5C. It is designed for both stationary and mobile applications.</p>
-<p>The DIY relevance: at 314Ah per cell, a 4S 12V bank delivers 314Ah; a 16S 48V bank delivers 314Ah at 48V (roughly 15kWh). Compared to a 280Ah 16S bank (13.4kWh), that is a 12% capacity increase in the same footprint — or the same capacity in a smaller footprint if you reduce cell count. Cell pricing has not been officially announced; Chinese Alibaba listings show €85–€110 per cell shipped to Europe, unverified.</p>
-<p>The 280Ah cell will continue in production. CATL has not announced an end-of-life date. Several European DIY resellers contacted by forum users on DIYSolarForum confirmed they expect 314Ah cells in stock by Q3 2026.</p>
+        <p class="article-tag">Firmware</p>
+        <h2 id="news-1-h">Lynx Smart BMS NG firmware v1.17 corrects DVCC charge instability</h2>
+        <p class="article-tl-dr">Released 14 April, the update stabilises charging under DVCC control, preventing unnecessary charger shutdowns while keeping cell voltages within safe limits. A regression removes per-module serial numbers from cell diagnostics.</p>
+        <div class="article-body"><p>Victron released firmware v1.17 for the Lynx Smart BMS NG on 14 April. The primary change addresses DVCC (Distributed Voltage and Current Control) behaviour: the previous firmware could cause charge current to oscillate and chargers to switch off unnecessarily while the BMS was actively limiting charge voltage. v1.17 stabilises this without relaxing the safe voltage ceiling.</p>
+<p>A regression has been noted by users: v1.17 removes the per-battery-module serial number from the highest/lowest cell voltage and temperature display, showing "0" instead of the unit identifier. This affects installations with multiple Lynx battery modules where the serial number was used to locate a problem cell. Victron is aware; no fix timeline has been given.</p>
 </div>
         
         <div class="sources">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://www.catl.com/news/957.html" rel="noopener noreferrer external" target="_blank">CATL — Yitianyihu product announcement (Chinese)</a></li>
+                <li><a href="https://community.victronenergy.com/t/lynx-smart-bms-ng-firmware-v1-17/56510" rel="noopener noreferrer external" target="_blank">Victron Community — Lynx Smart BMS NG firmware v1.17</a></li>
                 
-                <li><a href="https://diysolarforum.com/threads/catl-314ah-cells-mass-production.11111/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — 314Ah cell thread</a></li>
+                <li><a href="https://professional.victronenergy.com/news/" rel="noopener noreferrer external" target="_blank">Victron Professional News</a></li>
                 
             </ul>
         </div>
@@ -176,19 +181,22 @@
     </article>
     
     <article class="article" id="news-2" aria-labelledby="news-2-h">
-        <p class="article-tag">Charging</p>
-        <h2 id="news-2-h">Redarc launches BCDC2450: 50A DC-DC with 60V wide-input, first in Australian lineup</h2>
-        <p class="article-tl-dr">Redarc&#39;s new BCDC2450 expands its DC-DC charger range with a 50A output and a 9–60V input window — wide enough to handle variable alternator voltages from Ford PowerBoost and Ram EcoDiesel trucks without stalling.</p>
-        <div class="article-body"><p>Redarc announced the BCDC2450 on April 17. It delivers 50A to a 12V auxiliary battery from any DC source between 9 and 60V. The wide input range targets the growing number of vehicles with smart alternator systems that vary charging voltage — a known problem for older DC-DC designs that require a stable 13.8V+ to activate.</p>
-<p>Key specs: 50A output, 9–60V input, 12V or 24V auxiliary output (model-dependent), Anderson SB connector standard, IP67 rated, 170×110×55mm. No Bluetooth — Redarc positions this as an installation-grade unit, not a feature-forward consumer product. MSRP: AUD $649 / approx. USD $420. Available from Redarc dealers and ARB stores in Australia; US availability through Redarc North America partners.</p>
-<p>The 60V input ceiling is the notable addition. Ford's PowerBoost mild hybrid and Ram's EcoDiesel eTorque system both generate voltage spikes above the 40–45V ceiling of most DC-DC chargers on the market. Redarc does not explicitly claim compatibility with these vehicles — check installation guides before purchasing.</p>
+        <p class="article-tag">Battery</p>
+        <h2 id="news-2-h">SuperPack NG firmware v1.05 enables continuous 2C discharge and widens temperature range</h2>
+        <p class="article-tl-dr">Released 7 April, the update unlocks full 2C continuous discharge on the SuperPack NG range and extends both charge and discharge operating temperature limits. Self-heating remains active down to -30°C.</p>
+        <div class="article-body"><p>Victron released firmware v1.05 for the Lithium SuperPack NG on 7 April. The primary change expands continuous discharge to 2C — a 100Ah SuperPack NG can now supply 200A continuously within safe temperature and voltage limits, up from the previous 1C rating. Victron also extended the permitted charge and discharge temperature ranges; specific degree values were not published in the release notes.</p>
+<p>The SuperPack NG is a sealed, self-contained LiFePO4 pack with an integrated BMS, built-in self-heating that enables charging down to -30°C, and an on/off switch for storage. Current shipping variants are 12.8V/100Ah, 12.8V/200Ah, and 25.6V/100Ah. The 25.6V/200Ah and 51.2V/100Ah are listed on the product page as available variants; availability by region will vary. The 2C rating makes the pack substantially more usable for engine-start backup or high-current inverter loads without paralleling units.</p>
 </div>
         
         <div class="sources">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://www.redarc.com.au/bcdc2450" rel="noopener noreferrer external" target="_blank">Redarc — BCDC2450 product page</a></li>
+                <li><a href="https://professional.victronenergy.com/news/" rel="noopener noreferrer external" target="_blank">Victron Professional News — SuperPack NG firmware v1.05</a></li>
+                
+                <li><a href="https://www.victronenergy.com/batteries/lithium-superpack-ng" rel="noopener noreferrer external" target="_blank">Victron Energy — Lithium SuperPack NG product page</a></li>
+                
+                <li><a href="https://www.boatingnz.co.nz/2026/04/victrons-lithium-superpack-ng-the-super-easy-upgrade-for-lead-acid-batteries/" rel="noopener noreferrer external" target="_blank">Boating New Zealand — Victron Lithium SuperPack NG</a></li>
                 
             </ul>
         </div>
@@ -196,21 +204,19 @@
     </article>
     
     <article class="article" id="news-3" aria-labelledby="news-3-h">
-        <p class="article-tag">Industry</p>
-        <h2 id="news-3-h">Renogy acquires Tigo Energy&#39;s mobile division; targets integrated MPPT+monitoring market</h2>
-        <p class="article-tl-dr">Renogy announced the acquisition of Tigo Energy&#39;s mobile and off-grid product division on April 19. No financial terms disclosed. The move gives Renogy access to Tigo&#39;s optimizer technology for mobile solar strings.</p>
-        <div class="article-body"><p>Renogy announced on April 19 that it has acquired the mobile and off-grid division of Tigo Energy, a US manufacturer known for solar optimizers and module-level power electronics. Financial terms were not disclosed. Tigo's residential grid-tied business is unaffected and remains independent.</p>
-<p>What Renogy gains: Tigo's TS4 series of per-panel optimizers, which enable monitoring and optimization of individual solar panels in a string — a feature currently absent from Renogy's MPPT lineup. For van and boat builders running multiple panels with partial shading, per-panel optimization can recover 10–25% of otherwise lost capacity. Whether Renogy integrates this into its existing MPPT product line or sells it as a standalone add-on is not yet clear.</p>
-<p>This is Renogy's second acquisition in 18 months, after purchasing the battery management system startup Daly Electronics' IP portfolio in November 2024. The pattern suggests a strategy of building a vertically integrated DC power product stack rather than continuing as a reseller of commodity components.</p>
+        <p class="article-tag">Firmware</p>
+        <h2 id="news-3-h">Venus OS v3.72 patches ESS safeguard, Pylontech updater, and Node-RED paths</h2>
+        <p class="article-tl-dr">Released 30 March, v3.72 corrects an ESS issue that caused unnecessary battery discharge across multiple phases, restores Pylontech detection on CAN, and fixes missing Node-RED Custom Control paths. v3.80 beta testing is paused pending stability on the v3.7x branch.</p>
+        <div class="article-body"><p>Venus OS v3.72, released 30 March, addresses several issues introduced by v3.70. The most operationally significant fix is an ESS safeguard correction: v3.71 and earlier could apply an overly restrictive AC power setpoint that caused batteries to discharge across multiple phases when they should not have. v3.72 corrects this.</p>
+<p>Additional fixes: Pylontech battery detection failures on earlier CAN networks (causing units to disappear from VRM) are resolved; minimum/maximum cell voltages now display correctly in millivolts after regression in v3.71; Node-RED Custom Control node paths are restored; a memory leak and VRM logger crash at startup are patched. Screen blanking on non-Victron HDMI displays is disabled to prevent frozen readouts on third-party screens.</p>
+<p>Victron notes that v3.72 temporarily pauses the v3.80 beta programme while the v3.7x branch is stabilised. v3.72 is available via the GX device update menu or VRM remote update.</p>
 </div>
         
         <div class="sources">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://www.renogy.com/blog/renogy-acquires-tigo-energy-mobile-division/" rel="noopener noreferrer external" target="_blank">Renogy — Press release (April 19, 2026)</a></li>
-                
-                <li><a href="https://www.pv-tech.org/renogy-acquires-tigo-energy-mobile-division/" rel="noopener noreferrer external" target="_blank">PV Tech — Renogy moves into optimizer market</a></li>
+                <li><a href="https://community.victronenergy.com/t/venus-os-v3-72-released-officially/55217" rel="noopener noreferrer external" target="_blank">Victron Community — Venus OS v3.72 released officially</a></li>
                 
             </ul>
         </div>
@@ -218,23 +224,39 @@
     </article>
     
     <article class="article" id="news-4" aria-labelledby="news-4-h">
-        <p class="article-tag">Marine</p>
-        <h2 id="news-4-h">ABYC publishes E-13:2026 — LFP-specific requirements now mandatory for new marine installs</h2>
-        <p class="article-tl-dr">ABYC&#39;s revised E-13 standard, effective April 1, 2026, requires lithium battery installations in recreational marine vessels to include battery-integrated or external thermal runaway detection and a defined ventilation pathway. Grandfathering provisions apply to existing installs.</p>
-        <div class="article-body"><p>ABYC E-13:2026 (Electric Propulsion Systems) took effect April 1 and introduces LFP-specific requirements for new installations. The two key additions: (1) thermal runaway detection must be integrated or external and must trigger an audible alarm and automatic disconnect; (2) the installation area must provide a defined ventilation pathway to outside air, with a minimum free area specified in the standard based on battery capacity.</p>
-<p>Grandfathering: existing installations completed before April 1, 2026 are not required to retrofit. Installations completed after that date must comply. This affects DIY installers who self-certify, professional yards, and manufacturers of boats with LFP as standard equipment. The standard is not legally mandated by the USCG for recreational vessels, but it is the de facto compliance baseline for US marine surveyors and insurance underwriters.</p>
-<p>The ventilation requirement is the most practically complex. For many retrofits, routing a ventilation path to outside air requires structural work. Marine How To published a detailed walkthrough of compliant ventilation approaches on April 20 — link below.</p>
+        <p class="article-tag">Industry</p>
+        <h2 id="news-4-h">Victron 2026 pipeline: 48V 20kVA MultiPlus, split-phase inverter, TR Smart 48/12 60A DC-DC</h2>
+        <p class="article-tl-dr">Victron&#39;s confirmed 2026 product additions include its largest-ever single inverter/charger, a new non-isolated 48V-to-12V DC-DC charger, and a standalone 120/240V split-phase unit currently in development.</p>
+        <div class="article-body"><p>Trek Systems, a US Victron integrator, has compiled Victron's confirmed and announced 2026 product additions. The headline unit is the MultiPlus 48V 20000VA — Victron's largest single inverter/charger — expected in mid-2026 for 120V North American markets; the 230V version is already available. A standalone 120/240V split-phase inverter/charger delivering true split phase from a single unit (rather than requiring two stacked MultiPlus units) is also confirmed as in development, with no ship date announced.</p>
+<p>The TR Smart 48/12 60A — a non-isolated DC-DC step-down charger — addresses a gap in the current lineup. At 60A output (720W), it is intended for 48V primary systems with meaningful 12V loads such as lighting, pumps, and USB distribution; the current non-isolated Orion TR Smart tops out at 30A (360W). An Orion XS 12/12 70A is also listed for mid-to-late 2026. New Blue Smart IP43 chargers supporting 36V and 48V battery banks were expected in Q1 2026. No pricing has been announced for any of these products.</p>
 </div>
         
         <div class="sources">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://abycinc.org/page/standards" rel="noopener noreferrer external" target="_blank">ABYC — E-13:2026 (member access required)</a></li>
+                <li><a href="https://trek.systems/victron-energy-updates-in-2026-new-products-victron-all-in-one-digital-switching-and-microgrids/" rel="noopener noreferrer external" target="_blank">Trek Systems — Victron Energy Updates in 2026</a></li>
                 
-                <li><a href="https://marinehowto.com/abyc-e-13-2026-lfp-ventilation/" rel="noopener noreferrer external" target="_blank">Marine How To — ABYC E-13:2026 ventilation compliance guide</a></li>
+            </ul>
+        </div>
+        
+    </article>
+    
+    <article class="article" id="news-5" aria-labelledby="news-5-h">
+        <p class="article-tag">Battery</p>
+        <h2 id="news-5-h">EVE MB31 314Ah cells below $85 at US retail; DIYSolarForum weighing raw-cell economics</h2>
+        <p class="article-tl-dr">Four-pack pricing for Grade A EVE MB31 cells now works out to $83–$85 per cell at US retailers, narrowing the cost gap versus pre-assembled 48V packs and driving active forum discussion about when raw-cell builds make financial sense.</p>
+        <div class="article-body"><p>EVE MB31 Grade A LiFePO4 prismatic cells (314Ah, 3.2V) are currently listed at US retailers for approximately $83–$85 per cell when purchased in four-packs — 18650batterystore.com shows a four-pack at $333 (promotional) versus a $445 regular price. Individual cell pricing is higher at most outlets.</p>
+<p>A DIYSolarForum thread, "Is it time to start building batteries from raw cells?", has attracted substantial discussion in recent weeks. Participants are weighing the narrowed gap between raw-cell build cost and pre-assembled pack pricing. At $83–$85 per cell, a 16-cell 48V 314Ah bank (approximately 16kWh usable) has a cell cost of $1,330–$1,360 before BMS, busbars, enclosure, and labour; pre-assembled packs of similar capacity from brands such as WattCycle are advertised in the $1,500–$2,000 range. Forum claims about specific pricing are not independently verified by The Busbar.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
                 
-                <li><a href="https://panbo.com/abyc-e-13-2026-lfp-marine-installs/" rel="noopener noreferrer external" target="_blank">Panbo — ABYC E-13 revised: what changes for LFP installs</a></li>
+                <li><a href="https://www.18650batterystore.com/products/eve-mb31-grade-a-cells-3-2v-lifepo4-314ah-battery" rel="noopener noreferrer external" target="_blank">18650 Battery Store — EVE MB31 314Ah 4-pack</a></li>
+                
+                <li><a href="https://diysolarforum.com/threads/is-it-time-to-start-building-batteries-from-raw-cells.123052/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — Is it time to start building batteries from raw cells?</a></li>
                 
             </ul>
         </div>
@@ -245,24 +267,29 @@
     
     
     <section class="section-break" id="background" aria-labelledby="background-h">
-        <p class="background-type">The Background &middot; Trend Piece</p>
-        <h2 class="section-heading" id="background-h">Why the 314Ah cell is likely to repeat what the 280Ah did to the 200Ah market</h2>
-        <div class="background-body"><p>In 2021, the 280Ah LFP prismatic cell became the default building block for DIY battery banks. Before it, the dominant format was the 200Ah cell. The 280Ah cell did not win on price per kilowatt-hour — early pricing was similar. It won because it delivered more capacity in the same physical footprint, which meant simpler bus bar runs, fewer parallel cell groups, and lower assembly complexity. The 200Ah cell did not disappear overnight, but within 18 months it became the minority choice.</p>
-<p>The 314Ah cell is entering the market under similar conditions. The same 173mm-wide prismatic form factor, the same cell count per bank, 12% more capacity per cell. A 16S 48V bank built with 314Ah cells delivers roughly 15kWh; the equivalent 280Ah bank delivers 13.4kWh. The difference is meaningful in a van or on a boat: it is the difference between running air conditioning for two hours or three, or between three days and four without solar input.</p>
-<h3>Where the 280Ah cell stays relevant</h3>
-<p>Existing builds will not be replaced. The 280Ah cell will remain widely available — CATL has not announced end-of-life, and EVE and REPT still have 280Ah production capacity. For anyone pricing a battery bank today, the key question is whether the 314Ah cell is available from a reseller with proper certification (UN38.3, IEC 62619) at a price competitive with 280Ah cells. As of this week, verified European pricing is not available. Expect 3–6 months before the 314Ah cell reaches the same price-per-wh floor as the 280Ah cell currently sits at in Europe.</p>
-<h3>What to watch</h3>
-<p>EVE and REPT have not announced 314Ah equivalents. CATL dominates the first-mover position, but both competitors shipped competing products within 12 months of the 280Ah cell's market entry. It is reasonable to expect 310–320Ah cells from EVE and REPT by Q4 2026. At that point, the 280Ah cell faces the same dynamic it imposed on the 200Ah cell five years ago.</p>
-<p>For builders in the planning phase: if your build starts in the next 60 days, 280Ah cells from reputable resellers remain the lower-risk choice — proven supply chain, known quality range, available certifications. If you are planning a build for late 2026 or 2027, the 314Ah cell is worth including in your budget scenarios.</p>
+        <p class="background-type">The Background &middot; Market Analysis</p>
+        <h2 class="section-heading" id="background-h">The 314Ah crossover: what the raw-cell economics actually look like in 2026</h2>
+        <div class="background-body"><p>In early 2024, a Grade A EVE 280Ah prismatic cell cost approximately $85–$100 at US retail, and the conventional wisdom was that builders were paying a premium for the discipline and convenience of a pre-assembled pack. Two years later, EVE and CATL 314Ah cells — a full 12% more capacity per cell — are selling at similar or lower per-cell prices. The question of whether to build from raw cells has a different answer than it did twelve months ago.</p>
+<h3>How prices got here</h3>
+<p>The straightforward explanation is production scale. CATL and EVE both expanded 314Ah prismatic output substantially through 2024–2025, and the cell has become something close to a commodity format in the supply chain. US importers have tightened margins as competition increased. The four-pack retail price at 18650batterystore and comparable outlets now works out to $83–$85 per cell for EVE MB31 Grade A. Comparable CATL-format cells are available from parallel suppliers at similar prices.</p>
+<p>The consequence is that the raw-cell premium — the cost paid for the ability to select your own BMS, choose your own enclosure, and understand every component — has compressed considerably. A 16-cell 48V bank at current pricing runs approximately $1,330–$1,360 in cells alone, before adding a JK or Daly active-balancing BMS ($80–$200 depending on current rating and feature set), busbars, fuses, and an enclosure.</p>
+<h3>The pre-built alternative</h3>
+<p>Pre-assembled 48V 314Ah packs from brands like WattCycle and Redodo are currently advertised in the $1,500–$2,000 range in the US market. The cost gap has narrowed. Forum participants make the point that the pre-built price includes a warranty, factory cell-matching and testing, and fully assembled hardware — and that removing those components from the equation makes the comparison less clean than the cell price alone suggests.</p>
+<p>A recurring friction point on DIYSolarForum is BMS ecosystem compatibility. Pre-assembled budget packs occasionally ship with BMS units that have limited or broken communication with Victron DVCC or the Cerbo GX. A current thread documenting Redodo batteries failing to appear in BAT-BMS and Overkill Solar apps illustrates the category of problem: a pack that works as a dumb battery but does not integrate cleanly into a managed system. Raw-cell builders choosing a JK BMS or similar with known Victron compatibility avoid this failure mode — but they are also taking on the responsibility of configuration.</p>
+<h3>What the forum is not resolving</h3>
+<p>The active DIYSolarForum thread does not reach a single conclusion, which is appropriate: the right answer depends on builder experience, available time, local cell import availability, BMS ecosystem in use, and whether a person is doing a first build or a third. The forum discussion is most useful as a live record of what builders are actually finding as they work through the arithmetic in April 2026, not as a prescription.</p>
+<p>What the thread does establish is that the economic case for pre-built packs as the obviously cheaper option has weakened. For builders already comfortable with LiFePO4 cell handling, capacity testing at delivery, and BMS configuration, the raw-cell route is now genuinely cost-competitive — which was not clearly the case in 2023. Whether that cost difference justifies the additional complexity is a question each builder has to answer for their own situation.</p>
 </div>
         
         <div class="sources" style="margin-top: 2rem;">
             <div class="sources-label">Sources</div>
             <ul>
                 
-                <li><a href="https://www.catl.com/news/957.html" rel="noopener noreferrer external" target="_blank">CATL — Yitianyihu announcement</a></li>
+                <li><a href="https://www.18650batterystore.com/products/eve-mb31-grade-a-cells-3-2v-lifepo4-314ah-battery" rel="noopener noreferrer external" target="_blank">18650 Battery Store — EVE MB31 314Ah pricing</a></li>
                 
-                <li><a href="https://diysolarforum.com/threads/catl-314ah-cells-mass-production.11111/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — 314Ah pricing discussion</a></li>
+                <li><a href="https://diysolarforum.com/threads/is-it-time-to-start-building-batteries-from-raw-cells.123052/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — Is it time to start building batteries from raw cells?</a></li>
+                
+                <li><a href="https://diysolarforum.com/threads/redodo-battery-not-found-in-bat-bms-or-overkill-solar-apps.124079/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — Redodo battery not found in BAT-BMS or Overkill Solar apps</a></li>
                 
             </ul>
         </div>
@@ -275,20 +302,20 @@
     <section class="section-break" id="community-pulse" aria-labelledby="community-pulse-h">
         <h2 class="section-heading" id="community-pulse-h">Community Pulse</h2>
         <p class="section-subheading">What the forums are talking about this week</p>
-        <div class="community-body"><p>The dominant topic on DIYSolarForum this week is the Venus OS 3.50 float dropout bug. Several users discovered the issue the hard way — waking up to dead batteries after a multiday cloudy spell. The consensus is that the bug is real and the update fixes it. One thread ran to 180 posts in 72 hours, which is unusual for a firmware topic.</p>
-<p>On Reddit r/diysolar, the 314Ah cell announcement generated the most upvotes of any post this month. The comment section mixes genuine excitement with appropriate skepticism about pricing and availability outside China. A recurring point: waiting for EVE and REPT to respond before committing.</p>
-<p>r/vandwellers had a notable thread on the Redarc BCDC2450 and wide-input DC-DC chargers generally. Several Ford Maverick Hybrid and Rivian owners confirmed that older DC-DC chargers fail to activate at all with their vehicles' smart alternator systems. The 60V input ceiling on the new Redarc is drawing interest.</p>
+        <div class="community-body"><p>A thread in r/diysolar this week is looking for Android beta testers for <strong>WireSizer Pro</strong>, described by the developer as a wire-sizing app with a DC-system focus. The original WireSizer has been a long-standing reference for voltage-drop calculations in the community; the Pro variant appears to be a more feature-complete rebuild. The developer is specifically requesting Android feedback before wider release.</p>
+<p>On r/vandwellers, a thread titled "It's nearly official, I can run AC 24/7 offgrid" documents a van build sustaining 24/7 air conditioning from solar and battery. The replies lean practical — SOC management strategies, inverter sizing notes, battery thermal considerations — rather than sceptical, suggesting the bar for what constitutes a genuinely functional off-grid AC setup has moved within the community.</p>
+<p>On DIYSolarForum, an active thread asks whether EVE's own datasheet — specifying a 3.65V per-cell upper charge voltage (58.4V for a 16S pack) — should be followed, or whether the community convention of charging to 3.45–3.50V is the safer choice for long-term cycle life. The debate resurfaces regularly; the thread is a useful snapshot of where community consensus sits in early 2026.</p>
 </div>
         
         <div class="community-threads">
             <div class="community-threads-label">Threads</div>
             <ul>
                 
-                <li><a href="https://diysolarforum.com/threads/venus-os-350-float-dropout.12399/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — Venus OS 3.50 float dropout bug megathread</a></li>
+                <li><a href="https://www.reddit.com/r/diySolar/comments/1srx5sk/hi_im_looking_for_android_beta_testers_for_my_new/" rel="noopener noreferrer external" target="_blank">r/diysolar — WireSizer Pro Android beta testers wanted</a></li>
                 
-                <li><a href="https://www.reddit.com/r/diysolar/comments/xyz123/" rel="noopener noreferrer external" target="_blank">Reddit r/diysolar — CATL 314Ah in mass production</a></li>
+                <li><a href="https://www.reddit.com/r/vandwellers/comments/1ss2sdo/its_nearly_official_i_can_run_ac_247_offgrid/" rel="noopener noreferrer external" target="_blank">r/vandwellers — It&#39;s nearly official, I can run AC 24/7 offgrid</a></li>
                 
-                <li><a href="https://www.reddit.com/r/vandwellers/comments/abc456/" rel="noopener noreferrer external" target="_blank">Reddit r/vandwellers — DC-DC chargers and smart alternators</a></li>
+                <li><a href="https://diysolarforum.com/threads/eve-314ah-cells-charge-to-3-65-per-cell-58-4-for-16s-thats-what-their-tech-sheet-states.123473/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — EVE 314Ah cells: charge to 3.65V per cell?</a></li>
                 
             </ul>
         </div>
@@ -306,52 +333,54 @@
             <div class="product-item">
                 <div class="product-item-head">
                     <div class="product-item-name">
-                        <a href="https://www.victronenergy.com/battery-monitors/smart-battery-shunt" rel="noopener noreferrer external" target="_blank">Victron SmartShunt 2000A</a>
+                        <a href="https://www.victronenergy.com/batteries/lithium-superpack-ng" rel="noopener noreferrer external" target="_blank">Lithium SuperPack NG 12.8V 100Ah</a>
                         <span style="font-weight: 400; color: var(--text-muted);"> &mdash; Victron Energy</span>
-                    </div>
-                    <span class="product-item-tag">Monitoring</span>
-                </div>
-                <p class="product-item-desc">Battery monitor for large LFP banks up to 2000A continuous, Bluetooth setup without requiring a GX device.</p>
-                <div class="product-item-meta">
-                    <span>$189 / €175</span>
-                    <span>Available now via Victron dealers</span>
-                </div>
-                
-                <div class="product-item-editorial">Bluetooth calibration is the meaningful addition over the previous 2000A model — no Cerbo needed for initial setup.</div>
-                
-            </div>
-            
-            <div class="product-item">
-                <div class="product-item-head">
-                    <div class="product-item-name">
-                        <a href="https://sokbattery.com/products/48v-206ah-lfp-heated" rel="noopener noreferrer external" target="_blank">SOK 206Ah 48V LiFePO4 with heater</a>
-                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; SOK Battery</span>
                     </div>
                     <span class="product-item-tag">Battery</span>
                 </div>
-                <p class="product-item-desc">Drop-in 48V LFP pack with integrated 100W self-heating pad, rated to -40°C activation.</p>
+                <p class="product-item-desc">Sealed LiFePO4 drop-in with integrated BMS, automatic self-heating to -30°C, on/off switch for storage, and 2C continuous discharge (enabled via firmware v1.05).</p>
                 <div class="product-item-meta">
-                    <span>$1,499</span>
-                    <span>Ships from US warehouse, 3–5 business days</span>
+                    <span>Not published</span>
+                    <span>12.8V 100Ah/200Ah and 25.6V 100Ah shipping; 25.6V 200Ah and 51.2V 100Ah listed as available variants — regional availability varies</span>
                 </div>
                 
-                <div class="product-item-editorial">First SOK 48V pack with integrated heater. Cold-climate builds finally have a reasonably priced option at this voltage.</div>
+                <div class="product-item-editorial">The firmware-enabled 2C rating is the meaningful change this week — it makes the pack useful for high-current loads without paralleling units.</div>
                 
             </div>
             
             <div class="product-item">
                 <div class="product-item-head">
                     <div class="product-item-name">
-                        <a href="https://www.epever.com/product/tracer-bn-series/" rel="noopener noreferrer external" target="_blank">Epever Tracer BN 40A MPPT</a>
-                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; Epever</span>
+                        <a href="https://signaturesolar.com/eg4-chargeverter-gc-48v-100a-battery-charger-5120w-output/" rel="noopener noreferrer external" target="_blank">Chargeverter GC</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; EG4 Electronics</span>
                     </div>
-                    <span class="product-item-tag">Solar</span>
+                    <span class="product-item-tag">Charging</span>
                 </div>
-                <p class="product-item-desc">40A MPPT controller with 150V PV input, Bluetooth monitoring via Epever app, compatible with Lithium, AGM, and Gel.</p>
+                <p class="product-item-desc">48V 100A AC-to-DC battery charger, 5120W output at 240VAC, accepts 90–264VAC input, includes dry-contact AGS output and built-in breaker.</p>
                 <div class="product-item-meta">
-                    <span>$89</span>
-                    <span>Available via Amazon US and Epever direct</span>
+                    <span>$549.99</span>
+                    <span>Available now via Signature Solar and third-party retailers</span>
                 </div>
+                
+                <div class="product-item-editorial">Frequently cited on DIYSolarForum for generator-to-48V-battery charging; the GC variant adds the built-in breaker over the earlier model.</div>
+                
+            </div>
+            
+            <div class="product-item">
+                <div class="product-item-head">
+                    <div class="product-item-name">
+                        <a href="https://trek.systems/victron-energy-updates-in-2026-new-products-victron-all-in-one-digital-switching-and-microgrids/" rel="noopener noreferrer external" target="_blank">TR Smart 48/12 60A (non-isolated)</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; Victron Energy</span>
+                    </div>
+                    <span class="product-item-tag">Charging</span>
+                </div>
+                <p class="product-item-desc">Non-isolated DC-DC step-down charger for powering 12V loads from a 48V primary system; 60A output (720W).</p>
+                <div class="product-item-meta">
+                    <span>Not announced</span>
+                    <span>Announced for 2026; no confirmed ship date</span>
+                </div>
+                
+                <div class="product-item-editorial">Addresses a real gap: the current non-isolated Orion TR Smart tops out at 30A (360W), making 48V systems with substantial 12V loads awkward without multiple units.</div>
                 
             </div>
             
