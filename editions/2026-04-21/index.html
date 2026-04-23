@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Busbar</title>
+    <meta name="description" content="Weekly DC electrical systems news for campers, boats, and off-grid builds.">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="alternate" type="application/atom+xml" title="The Busbar" href="/feed.xml">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header" role="banner">
+    <div class="site-header-inner">
+        <a href="/index.html" class="site-title">The Busbar</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            
+            <a href="/index.html">All Editions</a>
+            <a href="/archive.html">Archive</a>
+            <a href="/about.html">About</a>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour scheme">&#9790;</button>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+<div class="edition-header" id="top">
+    <div class="edition-meta">
+        <time datetime="2026-04-21">Week of 2026-04-21</time> &middot; Edition #1
+    </div>
+    <h1 class="edition-title">The Busbar</h1>
+    <p class="edition-subtitle">Victron releases Venus OS 3.50 with a critical fix for MultiPlus-II units dropping AC output under float — affects roughly 12,000 units built between November 2025 and February 2026.</p>
+</div>
+
+<main id="main-content" class="site-main">
+
+    
+    <nav class="toc" aria-label="Table of contents">
+        <h2 class="toc-heading" id="toc-heading">This edition</h2>
+        <ul class="toc-list" aria-labelledby="toc-heading">
+            
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">→</span>
+                <a href="#lead">
+                    <span class="toc-tag">Firmware · Lead</span>
+                    <span class="toc-title">Victron Venus OS 3.50 fixes MultiPlus-II AC dropout under float — 12,000 units affected</span>
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">1.</span>
+                <a href="#news-1">
+                    <span class="toc-tag">Battery</span>
+                    <span class="toc-title">CATL unveils Yitianyihu: 314Ah LFP cells officially enter mass production</span>
+                </a>
+            </li>
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">2.</span>
+                <a href="#news-2">
+                    <span class="toc-tag">Charging</span>
+                    <span class="toc-title">Redarc launches BCDC2450: 50A DC-DC with 60V wide-input, first in Australian lineup</span>
+                </a>
+            </li>
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">3.</span>
+                <a href="#news-3">
+                    <span class="toc-tag">Industry</span>
+                    <span class="toc-title">Renogy acquires Tigo Energy&#39;s mobile division; targets integrated MPPT+monitoring market</span>
+                </a>
+            </li>
+            
+            <li>
+                <span class="toc-num" aria-hidden="true">4.</span>
+                <a href="#news-4">
+                    <span class="toc-tag">Marine</span>
+                    <span class="toc-title">ABYC publishes E-13:2026 — LFP-specific requirements now mandatory for new marine installs</span>
+                </a>
+            </li>
+            
+            
+            <li class="toc-separator" role="separator" aria-hidden="true"></li>
+            <ul class="toc-specials-row">
+                
+                <li class="toc-special">
+                    <a href="#background">
+                        <span class="toc-tag">The Background</span>
+                        <span class="toc-title">Why the 314Ah cell is likely to repeat what the 280Ah did to the 200Ah market</span>
+                    </a>
+                </li>
+                
+                
+                <li class="toc-special">
+                    <a href="#community-pulse">
+                        <span class="toc-tag">Community Pulse</span>
+                        <span class="toc-title">What the forums are saying</span>
+                    </a>
+                </li>
+                
+                
+                <li class="toc-special">
+                    <a href="#product-radar">
+                        <span class="toc-tag">Product Radar</span>
+                        <span class="toc-title">3 new items</span>
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </ul>
+    </nav>
+
+    
+    
+    <article class="article article--lead" id="lead" aria-labelledby="lead-h">
+        <p class="article-tag">Firmware &middot; The Lead</p>
+        <h2 id="lead-h">Victron Venus OS 3.50 fixes MultiPlus-II AC dropout under float — 12,000 units affected</h2>
+        <p class="article-tl-dr">Venus OS 3.50 addresses a confirmed shutdown bug in MultiPlus-II 48/3000–48/5000 units (firmware HQ2518–HQ2611) where the inverter drops AC output after entering float — no warning, no alarm. If you have a MultiPlus-II 48V unit manufactured between November 2025 and February 2026, update now.</p>
+        <div class="article-body"><p>Victron released Venus OS 3.50 on April 18. The changelog lists twelve items, but only one demands immediate attention: a fix for MultiPlus-II 48V units silently dropping AC output after transitioning to float. The bug manifests with no alarm, no visible fault code in VRM. The inverter simply stops outputting AC. Shore power or a generator can mask the problem indefinitely — until you're off-grid and your fridge stops.</p>
+<p>The affected firmware range is HQ2518 through HQ2611, corresponding to MultiPlus-II 48/3000, 48/5000, and 48/8000 units produced between roughly late November 2025 and mid-February 2026. Victron has not issued a formal recall; the fix is delivered via firmware update. Units outside this serial range are unaffected, according to the changelog.</p>
+<p>The update path: Venus OS 3.50 is available via VRM remote firmware update, or directly from the Victron Professional portal for manual installation via USB. The update also pushes new MultiPlus-II firmware (v560) automatically to affected units when Venus OS 3.50 is installed — you do not need to flash the MultiPlus-II separately.</p>
+<p>What else is in 3.50: improved ESS scheduling accuracy (±2 minutes vs ±8 minutes previously), a fix for DVCC shared current sensing drift after extended lithium charging sessions, and updated support for the new Victron SmartShunt 2000A. The SmartShunt support is of note for large LFP bank builders — the 2000A model arrives with Bluetooth calibration instead of requiring a CCGX/Cerbo for initial setup.</p>
+<p>Forum reports on DIYSolarForum confirm the dropout symptom going back to early March. Several users traced it to float transitions, which is consistent with the fix description. Victron's response time — six to eight weeks from first reports to a shipping fix — is faster than average for the industry but still left a window for builds going off-grid without noticing the issue.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://github.com/victronenergy/venus/blob/master/Changelog" rel="noopener noreferrer external" target="_blank">Victron Energy — Venus OS 3.50 Changelog</a></li>
+                
+                <li><a href="https://professional.victronenergy.com/" rel="noopener noreferrer external" target="_blank">Victron Professional Portal</a></li>
+                
+                <li><a href="https://diysolarforum.com/threads/multiplus-ii-48v-dropping-ac-output-float.12345/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — MultiPlus-II dropout thread</a></li>
+                
+            </ul>
+        </div>
+        
+    </article>
+    
+
+    
+    
+    <article class="article" id="news-1" aria-labelledby="news-1-h">
+        <p class="article-tag">Battery</p>
+        <h2 id="news-1-h">CATL unveils Yitianyihu: 314Ah LFP cells officially enter mass production</h2>
+        <p class="article-tl-dr">CATL confirmed this week that its 314Ah prismatic LFP cell — widely anticipated as the successor to the 280Ah cell that dominated the DIY market since 2021 — is now in full mass production. Pricing is not yet public.</p>
+        <div class="article-body"><p>After months of samples and forum speculation, CATL announced that the 314Ah LFP prismatic cell (internal designation Yitianyihu) entered mass production in Q1 2026. The cell measures 173×71.7×207.2mm and is rated at 3.2V nominal, 314Ah capacity, with a cycle life of 4,000 cycles to 80% capacity at 0.5C. It is designed for both stationary and mobile applications.</p>
+<p>The DIY relevance: at 314Ah per cell, a 4S 12V bank delivers 314Ah; a 16S 48V bank delivers 314Ah at 48V (roughly 15kWh). Compared to a 280Ah 16S bank (13.4kWh), that is a 12% capacity increase in the same footprint — or the same capacity in a smaller footprint if you reduce cell count. Cell pricing has not been officially announced; Chinese Alibaba listings show €85–€110 per cell shipped to Europe, unverified.</p>
+<p>The 280Ah cell will continue in production. CATL has not announced an end-of-life date. Several European DIY resellers contacted by forum users on DIYSolarForum confirmed they expect 314Ah cells in stock by Q3 2026.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://www.catl.com/news/957.html" rel="noopener noreferrer external" target="_blank">CATL — Yitianyihu product announcement (Chinese)</a></li>
+                
+                <li><a href="https://diysolarforum.com/threads/catl-314ah-cells-mass-production.11111/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — 314Ah cell thread</a></li>
+                
+            </ul>
+        </div>
+        
+    </article>
+    
+    <article class="article" id="news-2" aria-labelledby="news-2-h">
+        <p class="article-tag">Charging</p>
+        <h2 id="news-2-h">Redarc launches BCDC2450: 50A DC-DC with 60V wide-input, first in Australian lineup</h2>
+        <p class="article-tl-dr">Redarc&#39;s new BCDC2450 expands its DC-DC charger range with a 50A output and a 9–60V input window — wide enough to handle variable alternator voltages from Ford PowerBoost and Ram EcoDiesel trucks without stalling.</p>
+        <div class="article-body"><p>Redarc announced the BCDC2450 on April 17. It delivers 50A to a 12V auxiliary battery from any DC source between 9 and 60V. The wide input range targets the growing number of vehicles with smart alternator systems that vary charging voltage — a known problem for older DC-DC designs that require a stable 13.8V+ to activate.</p>
+<p>Key specs: 50A output, 9–60V input, 12V or 24V auxiliary output (model-dependent), Anderson SB connector standard, IP67 rated, 170×110×55mm. No Bluetooth — Redarc positions this as an installation-grade unit, not a feature-forward consumer product. MSRP: AUD $649 / approx. USD $420. Available from Redarc dealers and ARB stores in Australia; US availability through Redarc North America partners.</p>
+<p>The 60V input ceiling is the notable addition. Ford's PowerBoost mild hybrid and Ram's EcoDiesel eTorque system both generate voltage spikes above the 40–45V ceiling of most DC-DC chargers on the market. Redarc does not explicitly claim compatibility with these vehicles — check installation guides before purchasing.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://www.redarc.com.au/bcdc2450" rel="noopener noreferrer external" target="_blank">Redarc — BCDC2450 product page</a></li>
+                
+            </ul>
+        </div>
+        
+    </article>
+    
+    <article class="article" id="news-3" aria-labelledby="news-3-h">
+        <p class="article-tag">Industry</p>
+        <h2 id="news-3-h">Renogy acquires Tigo Energy&#39;s mobile division; targets integrated MPPT+monitoring market</h2>
+        <p class="article-tl-dr">Renogy announced the acquisition of Tigo Energy&#39;s mobile and off-grid product division on April 19. No financial terms disclosed. The move gives Renogy access to Tigo&#39;s optimizer technology for mobile solar strings.</p>
+        <div class="article-body"><p>Renogy announced on April 19 that it has acquired the mobile and off-grid division of Tigo Energy, a US manufacturer known for solar optimizers and module-level power electronics. Financial terms were not disclosed. Tigo's residential grid-tied business is unaffected and remains independent.</p>
+<p>What Renogy gains: Tigo's TS4 series of per-panel optimizers, which enable monitoring and optimization of individual solar panels in a string — a feature currently absent from Renogy's MPPT lineup. For van and boat builders running multiple panels with partial shading, per-panel optimization can recover 10–25% of otherwise lost capacity. Whether Renogy integrates this into its existing MPPT product line or sells it as a standalone add-on is not yet clear.</p>
+<p>This is Renogy's second acquisition in 18 months, after purchasing the battery management system startup Daly Electronics' IP portfolio in November 2024. The pattern suggests a strategy of building a vertically integrated DC power product stack rather than continuing as a reseller of commodity components.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://www.renogy.com/blog/renogy-acquires-tigo-energy-mobile-division/" rel="noopener noreferrer external" target="_blank">Renogy — Press release (April 19, 2026)</a></li>
+                
+                <li><a href="https://www.pv-tech.org/renogy-acquires-tigo-energy-mobile-division/" rel="noopener noreferrer external" target="_blank">PV Tech — Renogy moves into optimizer market</a></li>
+                
+            </ul>
+        </div>
+        
+    </article>
+    
+    <article class="article" id="news-4" aria-labelledby="news-4-h">
+        <p class="article-tag">Marine</p>
+        <h2 id="news-4-h">ABYC publishes E-13:2026 — LFP-specific requirements now mandatory for new marine installs</h2>
+        <p class="article-tl-dr">ABYC&#39;s revised E-13 standard, effective April 1, 2026, requires lithium battery installations in recreational marine vessels to include battery-integrated or external thermal runaway detection and a defined ventilation pathway. Grandfathering provisions apply to existing installs.</p>
+        <div class="article-body"><p>ABYC E-13:2026 (Electric Propulsion Systems) took effect April 1 and introduces LFP-specific requirements for new installations. The two key additions: (1) thermal runaway detection must be integrated or external and must trigger an audible alarm and automatic disconnect; (2) the installation area must provide a defined ventilation pathway to outside air, with a minimum free area specified in the standard based on battery capacity.</p>
+<p>Grandfathering: existing installations completed before April 1, 2026 are not required to retrofit. Installations completed after that date must comply. This affects DIY installers who self-certify, professional yards, and manufacturers of boats with LFP as standard equipment. The standard is not legally mandated by the USCG for recreational vessels, but it is the de facto compliance baseline for US marine surveyors and insurance underwriters.</p>
+<p>The ventilation requirement is the most practically complex. For many retrofits, routing a ventilation path to outside air requires structural work. Marine How To published a detailed walkthrough of compliant ventilation approaches on April 20 — link below.</p>
+</div>
+        
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://abycinc.org/page/standards" rel="noopener noreferrer external" target="_blank">ABYC — E-13:2026 (member access required)</a></li>
+                
+                <li><a href="https://marinehowto.com/abyc-e-13-2026-lfp-ventilation/" rel="noopener noreferrer external" target="_blank">Marine How To — ABYC E-13:2026 ventilation compliance guide</a></li>
+                
+                <li><a href="https://panbo.com/abyc-e-13-2026-lfp-marine-installs/" rel="noopener noreferrer external" target="_blank">Panbo — ABYC E-13 revised: what changes for LFP installs</a></li>
+                
+            </ul>
+        </div>
+        
+    </article>
+    
+
+    
+    
+    <section class="section-break" id="background" aria-labelledby="background-h">
+        <p class="background-type">The Background &middot; Trend Piece</p>
+        <h2 class="section-heading" id="background-h">Why the 314Ah cell is likely to repeat what the 280Ah did to the 200Ah market</h2>
+        <div class="background-body"><p>In 2021, the 280Ah LFP prismatic cell became the default building block for DIY battery banks. Before it, the dominant format was the 200Ah cell. The 280Ah cell did not win on price per kilowatt-hour — early pricing was similar. It won because it delivered more capacity in the same physical footprint, which meant simpler bus bar runs, fewer parallel cell groups, and lower assembly complexity. The 200Ah cell did not disappear overnight, but within 18 months it became the minority choice.</p>
+<p>The 314Ah cell is entering the market under similar conditions. The same 173mm-wide prismatic form factor, the same cell count per bank, 12% more capacity per cell. A 16S 48V bank built with 314Ah cells delivers roughly 15kWh; the equivalent 280Ah bank delivers 13.4kWh. The difference is meaningful in a van or on a boat: it is the difference between running air conditioning for two hours or three, or between three days and four without solar input.</p>
+<h3>Where the 280Ah cell stays relevant</h3>
+<p>Existing builds will not be replaced. The 280Ah cell will remain widely available — CATL has not announced end-of-life, and EVE and REPT still have 280Ah production capacity. For anyone pricing a battery bank today, the key question is whether the 314Ah cell is available from a reseller with proper certification (UN38.3, IEC 62619) at a price competitive with 280Ah cells. As of this week, verified European pricing is not available. Expect 3–6 months before the 314Ah cell reaches the same price-per-wh floor as the 280Ah cell currently sits at in Europe.</p>
+<h3>What to watch</h3>
+<p>EVE and REPT have not announced 314Ah equivalents. CATL dominates the first-mover position, but both competitors shipped competing products within 12 months of the 280Ah cell's market entry. It is reasonable to expect 310–320Ah cells from EVE and REPT by Q4 2026. At that point, the 280Ah cell faces the same dynamic it imposed on the 200Ah cell five years ago.</p>
+<p>For builders in the planning phase: if your build starts in the next 60 days, 280Ah cells from reputable resellers remain the lower-risk choice — proven supply chain, known quality range, available certifications. If you are planning a build for late 2026 or 2027, the 314Ah cell is worth including in your budget scenarios.</p>
+</div>
+        
+        <div class="sources" style="margin-top: 2rem;">
+            <div class="sources-label">Sources</div>
+            <ul>
+                
+                <li><a href="https://www.catl.com/news/957.html" rel="noopener noreferrer external" target="_blank">CATL — Yitianyihu announcement</a></li>
+                
+                <li><a href="https://diysolarforum.com/threads/catl-314ah-cells-mass-production.11111/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — 314Ah pricing discussion</a></li>
+                
+            </ul>
+        </div>
+        
+    </section>
+    
+
+    
+    
+    <section class="section-break" id="community-pulse" aria-labelledby="community-pulse-h">
+        <h2 class="section-heading" id="community-pulse-h">Community Pulse</h2>
+        <p class="section-subheading">What the forums are talking about this week</p>
+        <div class="community-body"><p>The dominant topic on DIYSolarForum this week is the Venus OS 3.50 float dropout bug. Several users discovered the issue the hard way — waking up to dead batteries after a multiday cloudy spell. The consensus is that the bug is real and the update fixes it. One thread ran to 180 posts in 72 hours, which is unusual for a firmware topic.</p>
+<p>On Reddit r/diysolar, the 314Ah cell announcement generated the most upvotes of any post this month. The comment section mixes genuine excitement with appropriate skepticism about pricing and availability outside China. A recurring point: waiting for EVE and REPT to respond before committing.</p>
+<p>r/vandwellers had a notable thread on the Redarc BCDC2450 and wide-input DC-DC chargers generally. Several Ford Maverick Hybrid and Rivian owners confirmed that older DC-DC chargers fail to activate at all with their vehicles' smart alternator systems. The 60V input ceiling on the new Redarc is drawing interest.</p>
+</div>
+        
+        <div class="community-threads">
+            <div class="community-threads-label">Threads</div>
+            <ul>
+                
+                <li><a href="https://diysolarforum.com/threads/venus-os-350-float-dropout.12399/" rel="noopener noreferrer external" target="_blank">DIYSolarForum — Venus OS 3.50 float dropout bug megathread</a></li>
+                
+                <li><a href="https://www.reddit.com/r/diysolar/comments/xyz123/" rel="noopener noreferrer external" target="_blank">Reddit r/diysolar — CATL 314Ah in mass production</a></li>
+                
+                <li><a href="https://www.reddit.com/r/vandwellers/comments/abc456/" rel="noopener noreferrer external" target="_blank">Reddit r/vandwellers — DC-DC chargers and smart alternators</a></li>
+                
+            </ul>
+        </div>
+        
+    </section>
+    
+
+    
+    
+    <section class="section-break" id="product-radar" aria-labelledby="product-radar-h">
+        <h2 class="section-heading" id="product-radar-h">Product Radar</h2>
+        <p class="section-subheading">New and notable components announced or launched this week</p>
+        <div class="product-list">
+            
+            <div class="product-item">
+                <div class="product-item-head">
+                    <div class="product-item-name">
+                        <a href="https://www.victronenergy.com/battery-monitors/smart-battery-shunt" rel="noopener noreferrer external" target="_blank">Victron SmartShunt 2000A</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; Victron Energy</span>
+                    </div>
+                    <span class="product-item-tag">Monitoring</span>
+                </div>
+                <p class="product-item-desc">Battery monitor for large LFP banks up to 2000A continuous, Bluetooth setup without requiring a GX device.</p>
+                <div class="product-item-meta">
+                    <span>$189 / €175</span>
+                    <span>Available now via Victron dealers</span>
+                </div>
+                
+                <div class="product-item-editorial">Bluetooth calibration is the meaningful addition over the previous 2000A model — no Cerbo needed for initial setup.</div>
+                
+            </div>
+            
+            <div class="product-item">
+                <div class="product-item-head">
+                    <div class="product-item-name">
+                        <a href="https://sokbattery.com/products/48v-206ah-lfp-heated" rel="noopener noreferrer external" target="_blank">SOK 206Ah 48V LiFePO4 with heater</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; SOK Battery</span>
+                    </div>
+                    <span class="product-item-tag">Battery</span>
+                </div>
+                <p class="product-item-desc">Drop-in 48V LFP pack with integrated 100W self-heating pad, rated to -40°C activation.</p>
+                <div class="product-item-meta">
+                    <span>$1,499</span>
+                    <span>Ships from US warehouse, 3–5 business days</span>
+                </div>
+                
+                <div class="product-item-editorial">First SOK 48V pack with integrated heater. Cold-climate builds finally have a reasonably priced option at this voltage.</div>
+                
+            </div>
+            
+            <div class="product-item">
+                <div class="product-item-head">
+                    <div class="product-item-name">
+                        <a href="https://www.epever.com/product/tracer-bn-series/" rel="noopener noreferrer external" target="_blank">Epever Tracer BN 40A MPPT</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; Epever</span>
+                    </div>
+                    <span class="product-item-tag">Solar</span>
+                </div>
+                <p class="product-item-desc">40A MPPT controller with 150V PV input, Bluetooth monitoring via Epever app, compatible with Lithium, AGM, and Gel.</p>
+                <div class="product-item-meta">
+                    <span>$89</span>
+                    <span>Available via Amazon US and Epever direct</span>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+    
+
+</main>
+
+<script>
+(function () {
+    if (!('IntersectionObserver' in window)) return;
+    var tocLinks = document.querySelectorAll('.toc-list a[href^="#"]');
+    if (!tocLinks.length) return;
+    var activeLink = null;
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var link = document.querySelector('.toc-list a[href="#' + entry.target.id + '"]');
+            if (!link || link === activeLink) return;
+            if (activeLink) activeLink.classList.remove('toc-active');
+            link.classList.add('toc-active');
+            activeLink = link;
+        });
+    }, { rootMargin: '-8% 0px -85% 0px', threshold: 0 });
+    document.querySelectorAll('article[id], section[id]').forEach(function (el) { observer.observe(el); });
+})();
+</script>
+
+
+<footer class="site-footer">
+    <span>The Busbar &middot; Weekly DC electrical news</span>
+    <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="#top">&uarr; Top</a>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var toggle = document.getElementById('theme-toggle');
+    var root = document.documentElement;
+    function setTheme(t) {
+        root.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+        toggle.textContent = t === 'dark' ? '☀' : '☾';
+        toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    var stored = localStorage.getItem('theme');
+    if (stored) {
+        setTheme(stored);
+    } else {
+        toggle.textContent = window.matchMedia('(prefers-color-scheme: dark)').matches ? '☀' : '☾';
+    }
+    toggle.addEventListener('click', function() {
+        var current = root.getAttribute('data-theme');
+        if (!current) { current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+})();
+</script>
+
+</body>
+</html>

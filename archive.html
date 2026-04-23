@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Busbar</title>
+    <meta name="description" content="Weekly DC electrical systems news for campers, boats, and off-grid builds.">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="alternate" type="application/atom+xml" title="The Busbar" href="/feed.xml">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header" role="banner">
+    <div class="site-header-inner">
+        <a href="/index.html" class="site-title">The Busbar</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            
+            <a href="/index.html">All Editions</a>
+            <a href="/archive.html">Archive</a>
+            <a href="/about.html">About</a>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour scheme">&#9790;</button>
+        </nav>
+    </div>
+</header>
+
+
+<div class="page-header" id="top">
+    <h1>Archive</h1>
+    <p class="page-subtitle">All editions of The Busbar.</p>
+    <div class="page-meta">1 edition</div>
+</div>
+
+<main id="main-content" class="site-main">
+
+    
+    
+    <div class="edition-card">
+        <div class="edition-card-head">
+            <span class="edition-card-date">Week of 2026-04-21 &middot; #1</span>
+            <a href="/editions/2026-04-21/" class="edition-card-link">Read &rarr;</a>
+        </div>
+        
+        <div class="edition-card-lead"><a href="/editions/2026-04-21/#lead">Victron Venus OS 3.50 fixes MultiPlus-II AC dropout under float — 12,000 units affected</a></div>
+        <div class="edition-card-deck">Venus OS 3.50 addresses a confirmed shutdown bug in MultiPlus-II 48/3000–48/5000 units (firmware HQ2518–HQ2611) where the inverter drops AC output after entering float — no warning, no alarm. If you have a MultiPlus-II 48V unit manufactured between November 2025 and February 2026, update now.</div>
+        
+    </div>
+    
+
+</main>
+
+
+<footer class="site-footer">
+    <span>The Busbar &middot; Weekly DC electrical news</span>
+    <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="#top">&uarr; Top</a>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var toggle = document.getElementById('theme-toggle');
+    var root = document.documentElement;
+    function setTheme(t) {
+        root.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+        toggle.textContent = t === 'dark' ? '☀' : '☾';
+        toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    var stored = localStorage.getItem('theme');
+    if (stored) {
+        setTheme(stored);
+    } else {
+        toggle.textContent = window.matchMedia('(prefers-color-scheme: dark)').matches ? '☀' : '☾';
+    }
+    toggle.addEventListener('click', function() {
+        var current = root.getAttribute('data-theme');
+        if (!current) { current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+})();
+</script>
+
+</body>
+</html>
