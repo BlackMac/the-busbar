@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+permalink: archive.html
+---
+
+<div class="page-header" id="top">
+    <h1>Archive</h1>
+    <p class="page-subtitle">All editions of The Busbar.</p>
+    <div class="page-meta">{{ collections.editions | length }} edition{% if collections.editions | length != 1 %}s{% endif %}</div>
+</div>
+
+<main id="main-content" class="site-main">
+
+    {% for ed in collections.editions %}
+    {% set dateLabel = ed.date | englishDate %}
+    <div class="edition-card">
+        <div class="edition-card-head">
+            <span class="edition-card-date">{{ ed.data.week_of }} &middot; #{{ ed.data.edition }}</span>
+            <a href="{{ ed.url }}" class="edition-card-link">Read &rarr;</a>
+        </div>
+        {% if ed.data.lead %}
+        <div class="edition-card-lead"><a href="{{ ed.url }}#lead">{{ ed.data.lead.headline }}</a></div>
+        <div class="edition-card-deck">{{ ed.data.lead.tl_dr }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+</main>

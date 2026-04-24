@@ -1,0 +1,267 @@
+{
+  "tier_a": [
+    {
+      "name": "Victron Professional News",
+      "url": "https://professional.victronenergy.com/news/",
+      "type": "web",
+      "category": "manufacturer",
+      "note": "PRIMARY Victron source. Lists all firmware releases, product launches with exact dates. Fetch directly every run — more reliable than the blog RSS for technical news."
+    },
+    {
+      "name": "Victron Energy Blog",
+      "url": "https://www.victronenergy.com/blog/feed/",
+      "type": "rss",
+      "category": "manufacturer",
+      "note": "Case studies, feature announcements, in-depth product posts. Supplement to Victron Professional."
+    },
+    {
+      "name": "Victron Cerbo / Venus OS GitHub",
+      "url": "https://github.com/victronenergy/venus/blob/master/Changelog",
+      "type": "web",
+      "category": "firmware",
+      "note": "Venus OS firmware changelog — use as secondary confirmation after Victron Professional. Hits 429 frequently; use WebFetch manually if needed."
+    },
+    {
+      "name": "DIY Solar Forum — Latest Posts",
+      "url": "https://diysolarforum.com/whats-new/posts/?skip=1",
+      "type": "web",
+      "category": "community",
+      "note": "Actual recent threads. NOTE: direct fetch returns 403; use WebSearch with site:diysolarforum.com for specific topics instead. The /forums/ URL only returns category pages (useless)."
+    },
+    {
+      "name": "Panbo - The Marine Electronics Hub",
+      "url": "https://panbo.com/feed/",
+      "type": "rss",
+      "category": "publication",
+      "note": "High-quality marine electronics coverage; includes DC systems, monitoring, NMEA"
+    },
+    {
+      "name": "FarOutRide",
+      "url": "https://faroutride.com/feed/",
+      "type": "rss",
+      "category": "publication",
+      "note": "Van build electrical guides; usually thorough and product-specific"
+    },
+    {
+      "name": "Reddit r/vandwellers",
+      "url": "https://www.reddit.com/r/vandwellers/.rss",
+      "type": "rss",
+      "category": "community"
+    },
+    {
+      "name": "Reddit r/solar",
+      "url": "https://www.reddit.com/r/solar/.rss",
+      "type": "rss",
+      "category": "community"
+    },
+    {
+      "name": "Reddit r/diysolar",
+      "url": "https://www.reddit.com/r/diysolar/.rss",
+      "type": "rss",
+      "category": "community"
+    },
+    {
+      "name": "Reddit r/liveaboard",
+      "url": "https://www.reddit.com/r/liveaboard/.rss",
+      "type": "rss",
+      "category": "community"
+    }
+  ],
+  "tier_b": [
+    {
+      "name": "Redarc Electronics News",
+      "url": "https://www.redarcelectronics.com/au/discover/news/",
+      "type": "web",
+      "category": "manufacturer",
+      "note": "Australian DC-DC and battery charging specialist. NOTE: feed returns all-time articles, not date-filtered — check publication dates manually."
+    },
+    {
+      "name": "Practical Boat Owner",
+      "url": "https://www.pbo.co.uk/feed",
+      "type": "rss",
+      "category": "trade_press"
+    },
+    {
+      "name": "Yachting Monthly",
+      "url": "https://www.yachtingmonthly.com/feed",
+      "type": "rss",
+      "category": "trade_press"
+    },
+    {
+      "name": "IBI News (International Boat Industry)",
+      "url": "https://www.ibi.net/feed",
+      "type": "rss",
+      "category": "trade_press",
+      "note": "Feed URL 404 as of April 2026 — check manually if needed"
+    },
+    {
+      "name": "Attainable Adventure Cruising",
+      "url": "https://www.morganscloud.com/feed/",
+      "type": "rss",
+      "category": "publication",
+      "note": "Offshore sailing; good on electrical safety, standards, DC architecture"
+    },
+    {
+      "name": "Marine How To",
+      "url": "https://marinehowto.com/feed/",
+      "type": "rss",
+      "category": "publication",
+      "note": "ABYC-focused marine electrical how-to content"
+    },
+    {
+      "name": "CruisersForum - Electrical / Electronics",
+      "url": "https://www.cruisersforum.com/forums/f43/",
+      "type": "web",
+      "category": "community",
+      "note": "Liveaboard sailing community; scan for recurring issues and product threads"
+    },
+    {
+      "name": "YBW Forum - Electrical",
+      "url": "https://forums.ybw.com/forumdisplay.php?60-Electrical-Systems",
+      "type": "web",
+      "category": "community"
+    },
+    {
+      "name": "Hull Truth - Fishing Electrical",
+      "url": "https://www.thehulltruth.com/boating-forum/electrical-electronics/",
+      "type": "web",
+      "category": "community",
+      "note": "Returns 403 as of April 2026"
+    },
+    {
+      "name": "Caravan Industry News",
+      "url": "https://caravanindustrynews.com.au/feed/",
+      "type": "rss",
+      "category": "trade_press"
+    },
+    {
+      "name": "Renogy Blog",
+      "url": "https://www.renogy.com/blog/feed/",
+      "type": "rss",
+      "category": "manufacturer",
+      "note": "BROKEN as of April 2026 — feed returns 404. Check manually if needed."
+    },
+    {
+      "name": "Epoch Batteries News",
+      "url": "https://www.epochbatteries.com/blogs/news.atom",
+      "type": "rss",
+      "category": "manufacturer",
+      "note": "BROKEN as of April 2026 — feed returns 404. Check epochbatteries.com manually."
+    },
+    {
+      "name": "EcoFlow Newsroom",
+      "url": "https://www.ecoflow.com/us/blogs/news.atom",
+      "type": "rss",
+      "category": "manufacturer",
+      "note": "BROKEN as of April 2026 — feed returns 404. Only for major technical/recall news."
+    }
+  ],
+  "tier_c": [
+    {
+      "name": "ABYC Standards",
+      "url": "https://abycinc.org/news/",
+      "type": "web",
+      "category": "standards",
+      "note": "Scan when a standard revision is rumored or expected"
+    },
+    {
+      "name": "CPSC Recalls",
+      "url": "https://www.cpsc.gov/Recalls/",
+      "type": "web",
+      "category": "recall",
+      "note": "Filter for marine / camping / RV electrical products. For DC systems, check: battery chargers, inverters, LiFePO4 packs, shore power equipment."
+    },
+    {
+      "name": "RAPEX / ICSMS",
+      "url": "https://ec.europa.eu/safety-gate-alerts/screen/webReport",
+      "type": "web",
+      "category": "recall",
+      "note": "EU product safety alerts; filter for electrical energy storage"
+    },
+    {
+      "name": "NHTSA Recalls",
+      "url": "https://www.nhtsa.gov/recalls",
+      "type": "web",
+      "category": "recall",
+      "note": "US vehicle recalls; scan for 12V/48V RV/truck electrical"
+    },
+    {
+      "name": "EU Battery Regulation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1542",
+      "type": "web",
+      "category": "standards",
+      "note": "Scan for implementing regulations and delegated acts"
+    },
+    {
+      "name": "SolarQuotes Blog",
+      "url": "https://www.solarquotes.com.au/blog/feed/",
+      "type": "rss",
+      "category": "publication",
+      "note": "Australia-focused; useful for LFP pricing data and market moves"
+    },
+    {
+      "name": "Gnarly Trades (YouTube)",
+      "url": "https://www.youtube.com/@GnarlyTrades",
+      "type": "web",
+      "category": "youtube",
+      "note": "Marine electrical specialist; teardowns and ABYC content"
+    },
+    {
+      "name": "Will Prowse (YouTube)",
+      "url": "https://www.youtube.com/@WillProwse",
+      "type": "web",
+      "category": "youtube",
+      "note": "DIY LFP battery builds, off-grid solar; large audience, reliable testing"
+    },
+    {
+      "name": "Andy Kirby / Off-Grid Garage (YouTube)",
+      "url": "https://www.youtube.com/@OffGridGarage",
+      "type": "web",
+      "category": "youtube",
+      "note": "Detailed BMS and LFP cell analysis"
+    },
+    {
+      "name": "Battleborn Batteries Blog",
+      "url": "https://battlebornbatteries.com/blog/feed/",
+      "type": "rss",
+      "category": "manufacturer"
+    }
+  ],
+  "event_driven": [
+    {
+      "name": "METSTRADE",
+      "url": "https://www.metstrade.com/news",
+      "type": "web",
+      "category": "trade_show",
+      "note": "Amsterdam; marine equipment trade show; November"
+    },
+    {
+      "name": "boot Düsseldorf",
+      "url": "https://www.boot.de/en/press/news.html",
+      "type": "web",
+      "category": "trade_show",
+      "note": "Düsseldorf; largest European boat show; January"
+    },
+    {
+      "name": "Miami International Boat Show",
+      "url": "https://www.miamiboatshow.com/en/news.html",
+      "type": "web",
+      "category": "trade_show",
+      "note": "February"
+    },
+    {
+      "name": "Overland Expo",
+      "url": "https://www.overlandexpo.com/blog/",
+      "type": "web",
+      "category": "trade_show",
+      "note": "Multiple US events; May (West), June (Mountain), October (East). Blog feed URL 404 as of April 2026 — check web directly."
+    },
+    {
+      "name": "Caravan Salon Düsseldorf",
+      "url": "https://www.caravan-salon.de/en/press/news.html",
+      "type": "web",
+      "category": "trade_show",
+      "note": "August; largest European RV/caravan show"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle or title or "The Busbar" }}</title>
+    <meta name="description" content="{{ pageDescription or 'Weekly DC electrical systems news for campers, boats, and off-grid builds.' }}">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="alternate" type="application/atom+xml" title="The Busbar" href="/feed.xml">
+    <script defer src="https://umami.yuzu.chat/script.js" data-website-id="0d4386f7-46cd-468a-b1e5-1c00da4d0460"></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header" role="banner">
+    <div class="site-header-inner">
+        <a href="/index.html" class="site-title">The Busbar</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            {% if customNav %}
+            {{ customNav | safe }}
+            {% else %}
+            <a href="/index.html">All Editions</a>
+            <a href="/archive.html">Archive</a>
+            <a href="/about.html">About</a>
+            {% endif %}
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour scheme">&#9790;</button>
+        </nav>
+    </div>
+</header>
+
+{{ content | safe }}
+
+<footer class="site-footer">
+    <span>The Busbar &middot; Weekly DC electrical news</span>
+    <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="https://voltplan.app/impressum" rel="noopener noreferrer" target="_blank">Legal Notice</a>
+        <a href="https://voltplan.app/datenschutz" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+        <a href="#top">&uarr; Top</a>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var toggle = document.getElementById('theme-toggle');
+    var root = document.documentElement;
+    function setTheme(t) {
+        root.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+        toggle.textContent = t === 'dark' ? '☀' : '☾';
+        toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    var stored = localStorage.getItem('theme');
+    if (stored) {
+        setTheme(stored);
+    } else {
+        toggle.textContent = window.matchMedia('(prefers-color-scheme: dark)').matches ? '☀' : '☾';
+    }
+    toggle.addEventListener('click', function() {
+        var current = root.getAttribute('data-theme');
+        if (!current) { current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+})();
+</script>
+
+</body>
+</html>

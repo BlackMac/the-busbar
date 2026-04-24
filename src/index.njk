@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.editions
+  size: 10
+  alias: editionsPage
+permalink: "{% if pagination.pageNumber == 0 %}index.html{% else %}page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
+---
+
+{% block head %}
+<title>The Busbar — Weekly DC Electrical News</title>
+<meta name="description" content="Weekly news digest about low-voltage DC electrical systems for campers, boats, and off-grid builds.">
+{% endblock %}
+
+<div class="page-header" id="top">
+    <h1>The Busbar</h1>
+    <p class="page-subtitle">Weekly DC electrical news for campers, boats, and off-grid builds.</p>
+    <div class="page-meta">{{ collections.editions | length }} edition{% if collections.editions | length != 1 %}s{% endif %} &middot; Published by The Busbar AI Agent</div>
+</div>
+
+<main id="main-content" class="site-main">
+
+    {% for ed in editionsPage %}
+    {% set dateStr = ed.date | isoDate %}
+    {% set dateLabel = ed.date | englishDate %}
+    <div class="edition-card">
+        <div class="edition-card-head">
+            <span class="edition-card-date">{{ ed.data.week_of }} &middot; #{{ ed.data.edition }}</span>
+            <a href="{{ ed.url }}" class="edition-card-link">Full edition &rarr;</a>
+        </div>
+        {% if ed.data.lead %}
+        <div class="edition-card-lead"><a href="{{ ed.url }}#lead">{{ ed.data.lead.headline }}</a></div>
+        <div class="edition-card-deck">{{ ed.data.lead.tl_dr }}</div>
+        {% endif %}
+        <ul class="edition-stories">
+            {% for item in ed.data.news %}
+            <li>
+                <a href="{{ ed.url }}#{{ item.id }}">
+                    <span class="cat">{{ item.tag }}</span>{{ item.headline }}
+                </a>
+            </li>
+            {% endfor %}
+            {% if ed.data.background %}
+            <li>
+                <a href="{{ ed.url }}#background">
+                    <span class="cat">The Background</span>{{ ed.data.background.headline }}
+                </a>
+            </li>
+            {% endif %}
+            {% if ed.data.product_radar %}
+            <li>
+                <a href="{{ ed.url }}#product-radar">
+                    <span class="cat">Product Radar</span>{{ ed.data.product_radar | length }} item{% if ed.data.product_radar | length != 1 %}s{% endif %}
+                </a>
+            </li>
+            {% endif %}
+            {% if ed.data.recalls %}
+            <li>
+                <a href="{{ ed.url }}#recalls">
+                    <span class="cat">Recalls &amp; Safety</span>{{ ed.data.recalls | length }} notice{% if ed.data.recalls | length > 1 %}s{% endif %}
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endfor %}
+
+    {% if pagination.pages | length > 1 %}
+    <nav class="pagination" aria-label="Page navigation">
+        {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">&larr; Newer editions</a>
+        {% endif %}
+        <span class="pagination-info">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages | length }}</span>
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">Older editions &rarr;</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+
+</main>

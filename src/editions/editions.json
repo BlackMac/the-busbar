@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/edition.njk",
+  "permalink": "/editions/{{ date | isoDate }}/index.html"
+}

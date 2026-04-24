@@ -1,0 +1,300 @@
+---
+layout: layouts/base.njk
+---
+{% set dateStr = date | isoDate %}
+{% set dateLabel = date | englishDate %}
+{% set pageTitle %}{{ week_of }} — The Busbar #{{ edition }}{% endset %}
+{% set pageDescription %}{{ lead.tl_dr if lead }}{% endset %}
+
+<div class="edition-header" id="top">
+    <div class="edition-meta">
+        <time datetime="{{ dateStr }}">{{ week_of }}</time> &middot; Edition #{{ edition }}
+    </div>
+    <h1 class="edition-title">The Busbar</h1>
+    <p class="edition-subtitle">{{ week_summary }}</p>
+</div>
+
+<main id="main-content" class="site-main">
+
+    {# ── Table of Contents ── #}
+    <nav class="toc" aria-label="Table of contents">
+        <h2 class="toc-heading" id="toc-heading">This edition</h2>
+        <ul class="toc-list" aria-labelledby="toc-heading">
+            {# Lead #}
+            {% if lead %}
+            <li>
+                <span class="toc-num" aria-hidden="true">→</span>
+                <a href="#lead">
+                    <span class="toc-tag">{{ lead.tag }} · Lead</span>
+                    <span class="toc-title">{{ lead.headline }}</span>
+                </a>
+            </li>
+            {% endif %}
+            {# News items #}
+            {% for item in news %}
+            <li>
+                <span class="toc-num" aria-hidden="true">{{ loop.index }}.</span>
+                <a href="#{{ item.id }}">
+                    <span class="toc-tag">{{ item.tag }}</span>
+                    <span class="toc-title">{{ item.headline }}</span>
+                </a>
+            </li>
+            {% endfor %}
+            {# Special sections #}
+            <li class="toc-separator" role="separator" aria-hidden="true"></li>
+            <ul class="toc-specials-row">
+                {% if background %}
+                <li class="toc-special">
+                    <a href="#background">
+                        <span class="toc-tag">The Background</span>
+                        <span class="toc-title">{{ background.headline }}</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% if community_pulse %}
+                <li class="toc-special">
+                    <a href="#community-pulse">
+                        <span class="toc-tag">Community Pulse</span>
+                        <span class="toc-title">What the forums are saying</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% if youtube %}
+                <li class="toc-special">
+                    <a href="#on-the-bench">
+                        <span class="toc-tag">On the Bench</span>
+                        <span class="toc-title">{{ youtube | length }} video{% if youtube | length > 1 %}s{% endif %}</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% if product_radar %}
+                <li class="toc-special">
+                    <a href="#product-radar">
+                        <span class="toc-tag">Product Radar</span>
+                        <span class="toc-title">{{ product_radar | length }} new items</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% if recalls %}
+                <li class="toc-special">
+                    <a href="#recalls">
+                        <span class="toc-tag">Recalls &amp; Safety</span>
+                        <span class="toc-title">{{ recalls | length }} notice{% if recalls | length > 1 %}s{% endif %}</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </ul>
+    </nav>
+
+    {# ── The Lead ── #}
+    {% if lead %}
+    {% set leadAmazonUrl = (lead.amazon_product_id | amazonGoId(dateStr)) or (lead.amazon_query | amazonGo(dateStr)) %}
+    <article class="article article--lead" id="lead" aria-labelledby="lead-h">
+        <p class="article-tag">{{ lead.tag }} &middot; The Lead</p>
+        <h2 id="lead-h">{{ lead.headline }}</h2>
+        <p class="article-tl-dr">{{ lead.tl_dr }}</p>
+        <div class="article-body">{{ lead.body | safe }}</div>
+        {% if leadAmazonUrl %}
+        <p class="amazon-cta">
+            <a href="{{ leadAmazonUrl }}" rel="sponsored noopener noreferrer external" target="_blank">Find on Amazon &rarr;</a>
+        </p>
+        {% endif %}
+        {% if lead.sources %}
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                {% for src in lead.sources %}
+                <li><a href="{{ src.url }}" rel="noopener noreferrer external" target="_blank">{{ src.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </article>
+    {% endif %}
+
+    {# ── News Items ── #}
+    {% for item in news %}
+    {% set amazonUrl = (item.amazon_product_id | amazonGoId(dateStr)) or (item.amazon_query | amazonGo(dateStr)) %}
+    <article class="article" id="{{ item.id }}" aria-labelledby="{{ item.id }}-h">
+        <p class="article-tag">{{ item.tag }}</p>
+        <h2 id="{{ item.id }}-h">{{ item.headline }}</h2>
+        <p class="article-tl-dr">{{ item.tl_dr }}</p>
+        <div class="article-body">{{ item.body | safe }}</div>
+        {% if amazonUrl %}
+        <p class="amazon-cta">
+            <a href="{{ amazonUrl }}" rel="sponsored noopener noreferrer external" target="_blank">Find on Amazon &rarr;</a>
+        </p>
+        {% endif %}
+        {% if item.sources %}
+        <div class="sources">
+            <div class="sources-label">Sources</div>
+            <ul>
+                {% for src in item.sources %}
+                <li><a href="{{ src.url }}" rel="noopener noreferrer external" target="_blank">{{ src.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+
+    {# ── The Background ── #}
+    {% if background %}
+    <section class="section-break" id="background" aria-labelledby="background-h">
+        <p class="background-type">The Background &middot; {{ background.type | replace("_", " ") | title }}</p>
+        <h2 class="section-heading" id="background-h">{{ background.headline }}</h2>
+        <div class="background-body">{{ background.body | safe }}</div>
+        {% if background.sources %}
+        <div class="sources" style="margin-top: 2rem;">
+            <div class="sources-label">Sources</div>
+            <ul>
+                {% for src in background.sources %}
+                <li><a href="{{ src.url }}" rel="noopener noreferrer external" target="_blank">{{ src.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </section>
+    {% endif %}
+
+    {# ── Community Pulse ── #}
+    {% if community_pulse %}
+    <section class="section-break" id="community-pulse" aria-labelledby="community-pulse-h">
+        <h2 class="section-heading" id="community-pulse-h">Community Pulse</h2>
+        <p class="section-subheading">What the forums are talking about this week</p>
+        <div class="community-body">{{ community_pulse.body | safe }}</div>
+        {% if community_pulse.threads %}
+        <div class="community-threads">
+            <div class="community-threads-label">Threads</div>
+            <ul>
+                {% for thread in community_pulse.threads %}
+                <li><a href="{{ thread.url }}" rel="noopener noreferrer external" target="_blank">{{ thread.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </section>
+    {% endif %}
+
+    {# ── On the Bench (YouTube) ── #}
+    {% if youtube %}
+    <section class="section-break" id="on-the-bench" aria-labelledby="on-the-bench-h">
+        <h2 class="section-heading" id="on-the-bench-h">On the Bench</h2>
+        <p class="section-subheading">YouTube picks: builds, teardowns, firmware walkthroughs, and reviews</p>
+        <div class="yt-grid">
+            {% for vid in youtube %}
+            {% if vid.featured %}
+            <div class="yt-card yt-card--featured yt-card--full">
+                <a href="https://www.youtube.com/watch?v={{ vid.id }}" rel="noopener noreferrer external" target="_blank">
+                    <img src="/assets/images/thumbs/{{ vid.id }}.jpg" alt="{{ vid.title }}" loading="lazy">
+                </a>
+                <div class="yt-card-body">
+                    <div class="yt-card-label">&#9889; Must Watch</div>
+                    <div class="yt-card-title"><a href="https://www.youtube.com/watch?v={{ vid.id }}" rel="noopener noreferrer external" target="_blank">{{ vid.title }}</a></div>
+                    <div class="yt-card-channel">{{ vid.channel }}{% if vid.published %} &middot; {{ vid.published }}{% endif %}</div>
+                    <div class="yt-card-desc">{{ vid.description }}</div>
+                </div>
+            </div>
+            {% else %}
+            <div class="yt-card">
+                <a href="https://www.youtube.com/watch?v={{ vid.id }}" rel="noopener noreferrer external" target="_blank">
+                    <img src="/assets/images/thumbs/{{ vid.id }}.jpg" alt="{{ vid.title }}" loading="lazy">
+                </a>
+                <div class="yt-card-body">
+                    <div class="yt-card-label">{{ vid.label or "Video" }}</div>
+                    <div class="yt-card-title"><a href="https://www.youtube.com/watch?v={{ vid.id }}" rel="noopener noreferrer external" target="_blank">{{ vid.title }}</a></div>
+                    <div class="yt-card-channel">{{ vid.channel }}{% if vid.published %} &middot; {{ vid.published }}{% endif %}</div>
+                    <div class="yt-card-desc">{{ vid.description }}</div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {# ── Product Radar ── #}
+    {% if product_radar %}
+    <section class="section-break" id="product-radar" aria-labelledby="product-radar-h">
+        <h2 class="section-heading" id="product-radar-h">Product Radar</h2>
+        <p class="section-subheading">New and notable components announced or launched this week</p>
+        <div class="product-list">
+            {% for product in product_radar %}
+            {% set productAmazonUrl = (product.amazon_product_id | amazonGoId(dateStr)) or (product.amazon_query | amazonGo(dateStr)) %}
+            <div class="product-item{% if product.image %} product-item--has-image{% endif %}">
+                {% if product.image %}
+                <img class="product-item-img" src="/assets/images/products/{{ product.image }}" alt="{{ product.image_alt or product.name }}" loading="lazy">
+                <div class="product-item-body">
+                {% endif %}
+                <div class="product-item-head">
+                    <div class="product-item-name">
+                        <a href="{{ product.url }}" rel="noopener noreferrer external" target="_blank">{{ product.name }}</a>
+                        <span style="font-weight: 400; color: var(--text-muted);"> &mdash; {{ product.manufacturer }}</span>
+                    </div>
+                    <span class="product-item-tag">{{ product.tag }}</span>
+                </div>
+                <p class="product-item-desc">{{ product.description }}</p>
+                <div class="product-item-meta">
+                    {% if product.price %}<span>{{ product.price }}</span>{% endif %}
+                    {% if product.availability %}<span>{{ product.availability }}</span>{% endif %}
+                    {% if productAmazonUrl %}<a class="product-item-amazon" href="{{ productAmazonUrl }}" rel="sponsored noopener noreferrer external" target="_blank">Find on Amazon &rarr;</a>{% endif %}
+                </div>
+                {% if product.editorial %}
+                <div class="product-item-editorial">{{ product.editorial }}</div>
+                {% endif %}
+                {% if product.image %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {# ── Recalls & Safety ── #}
+    {% if recalls %}
+    <section class="section-break" id="recalls" aria-labelledby="recalls-h">
+        <h2 class="section-heading" id="recalls-h">Recalls &amp; Safety</h2>
+        <p class="section-subheading">Official notices, firmware safety fixes, and reported failures</p>
+        {% for recall in recalls %}
+        <div class="recall-item">
+            <p class="recall-tag">{{ recall.tag }}</p>
+            <h3 class="recall-headline">{{ recall.headline }}</h3>
+            <div class="recall-body">{{ recall.body | safe }}</div>
+            {% if recall.source_url %}
+            <div class="recall-source">
+                <a href="{{ recall.source_url }}" rel="noopener noreferrer external" target="_blank">{{ recall.source_label or recall.source_url }}</a>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    <aside class="affiliate-disclosure" role="note" aria-label="Affiliate disclosure">
+        <p><strong>As an Amazon Associate, The Busbar earns from qualifying purchases.</strong></p>
+        <p>Some links in this edition lead to Amazon via our affiliate partner voltplan.app. If you buy through one of these links, we may receive a small commission at no extra cost to you. We never let this influence what we cover or how we cover it — products are selected on editorial merit, and our assessments remain independent.</p>
+    </aside>
+
+</main>
+
+<script>
+(function () {
+    if (!('IntersectionObserver' in window)) return;
+    var tocLinks = document.querySelectorAll('.toc-list a[href^="#"]');
+    if (!tocLinks.length) return;
+    var activeLink = null;
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var link = document.querySelector('.toc-list a[href="#' + entry.target.id + '"]');
+            if (!link || link === activeLink) return;
+            if (activeLink) activeLink.classList.remove('toc-active');
+            link.classList.add('toc-active');
+            activeLink = link;
+        });
+    }, { rootMargin: '-8% 0px -85% 0px', threshold: 0 });
+    document.querySelectorAll('article[id], section[id]').forEach(function (el) { observer.observe(el); });
+})();
+</script>

@@ -1,0 +1,13 @@
+{
+  "name": "the-busbar",
+  "version": "1.0.0",
+  "description": "The Busbar — Weekly DC electrical systems news digest",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.3"
+  }
+}
