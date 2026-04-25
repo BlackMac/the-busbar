@@ -33,15 +33,51 @@ _site/                        # Eleventy build output (gitignored in source repo
 - URL: `https://busbar.voltplan.app/` (custom domain via `CNAME` in repo root, passthrough-copied by Eleventy)
 - Local preview: `npm run dev` serves on `http://localhost:8080`.
 
-Typical weekly workflow:
+## How editions get produced
+
+Editions are generated **on this Linux server** (the same host where this CLAUDE.md is being read), driven by a system cron job — *not* by GitHub Actions, *not* by Anthropic's remote-routine system.
+
+```
+Sun 00:40 (Europe/Berlin)
+  └─ /etc/crontab → create-edition.sh
+       └─ runs in /DATA/AppData/big-bear-code-server/projects/The_Busbar
+       └─ pipes .claude/commands/new-edition.md into `claude -p`
+       └─ Claude (non-interactive) runs the full new-edition pipeline:
+            • busbar_agent.py → /tmp/busbar-raw.json
+            • WebSearch / WebFetch supplement
+            • Duplicate-check vs editions/published-topics.md (six sections)
+            • Fact-check vs primary sources
+            • Write src/editions/<Mon>.md + editions/run-logs/<Mon>.md
+            • Append to editions/published-topics.md
+            • Local `npm run build` as pre-flight
+            • git add + commit + push origin main
+       └─ Push triggers .github/workflows/deploy.yml on GitHub
+            └─ Actions runs `npm run build` again, deploys to Pages (~1–2 min)
+```
+
+Two distinct steps, both required:
+1. **Local production** (cron + claude) — researches, writes, commits, pushes
+2. **Remote deploy** (GitHub Actions) — builds and publishes
+
+Crontab entry:
+```
+40 0 * * 0 /DATA/AppData/big-bear-code-server/projects/The_Busbar/create-edition.sh >> /tmp/busbar-edition.log 2>&1
+```
+
+Run log on disk: `/tmp/busbar-edition.log`.
+
+## Manual edition workflow
+
+If you produce an edition by hand (not via the cron):
 
 ```bash
-# after writing src/editions/YYYY-MM-DD.md and editions/run-logs/YYYY-MM-DD.md:
-npm run build                     # optional — verify locally
+# write src/editions/YYYY-MM-DD.md + editions/run-logs/YYYY-MM-DD.md by hand,
+# then update editions/published-topics.md, then:
+npm run build                     # verify locally — abort on failure
 git add src/editions editions/run-logs editions/published-topics.md
 git commit -m "Edition: week of YYYY-MM-DD"
 git push origin main
-# Actions runs build + deploy automatically (~1–2 min).
+# Actions builds + deploys automatically (~1–2 min).
 ```
 
 ## Agent brief

@@ -1,19 +1,22 @@
 #!/usr/bin/env bash
-# Weekly The Busbar edition via Claude Code (non-interactive)
-# Runs on Saturdays at 23:00 — edition date is the upcoming Monday.
+# Weekly The Busbar edition via local Claude Code (non-interactive)
+# Runs via system cron every Sunday at 00:40 server local time (Europe/Berlin).
+# Edition date = the upcoming Monday.
 #
 # Crontab entry:
-#   0 23 * * 6 /DATA/AppData/big-bear-code-server/projects/dc-news-agent/create-edition.sh >> /tmp/busbar-edition.log 2>&1
+#   40 0 * * 0 /DATA/AppData/big-bear-code-server/projects/The_Busbar/create-edition.sh >> /tmp/busbar-edition.log 2>&1
 
 set -euo pipefail
 
-cd /DATA/AppData/big-bear-code-server/projects/dc-news-agent
+PROJECT=/DATA/AppData/big-bear-code-server/projects/The_Busbar
+cd "$PROJECT"
 
-# Edition date = the upcoming Monday (Saturday + 2 days).
-# "next monday" from Saturday gives Mon +2; cron only fires on Saturday so this is always correct.
+# Edition date = the upcoming Monday.
+# `date -d "next monday"` returns the next Monday relative to today —
+# correct on both Saturday (+2) and Sunday (+1).
 EDITION_DATE=$(date -d "next monday" +%Y-%m-%d)
 
-# Skip if this edition already exists
+# Skip if this edition already exists (manual run, retry, etc.)
 if [ -f "src/editions/${EDITION_DATE}.md" ]; then
     echo "[$(date)] Edition ${EDITION_DATE} already exists, skipping."
     exit 0

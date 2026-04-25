@@ -39,7 +39,15 @@ Today's date: run `date +%Y-%m-%d` to confirm.
    - `ABYC ISO marine electrical [year]` → standards updates
    - If it's a trade show week: `[show name] [year] product announcements DC solar`
 
-6. **Duplicate check** — compare every potential story against `editions/published-topics.md`. Skip exact repeats; new developments on previous stories are fine (link back to the prior edition).
+6. **Duplicate check** — compare *every section* of the planned edition against `editions/published-topics.md`. Six tracked dimensions:
+   - Stories (news + Lead) — same firmware version, same product launch, same recall, same forum-driven story should not be re-covered
+   - Product Radar — same manufacturer + product name should not appear twice (newer revision is fine, but say so)
+   - Recalls — same recall ID should not be repeated unless materially expanded
+   - Background deep-dives — don't repeat the same angle on the same topic within ~6 months
+   - Community Pulse — same forum thread / Reddit post URL should not appear twice
+   - On the Bench — each YouTube `VIDEO_ID` appears at most once across all editions
+
+   Skip exact repeats; new developments on previous stories are fine (link back to the prior edition).
 
 7. **Fact-check** — verify all factual claims (specs, prices, recall numbers) against at least one primary source (manufacturer page, official recall notice, standards body). Never fabricate. If you can only find a forum report, label it as such in the text.
 
@@ -80,18 +88,22 @@ Today's date: run `date +%Y-%m-%d` to confirm.
     - Sections skipped and why
     - REVIEW FLAGS — anything that needs human review before publication
 
-11. **Build and deploy**:
+11. **Build (verify locally)**:
     ```bash
+    npm ci
     npm run build
-    cd /tmp/the-busbar && git pull origin main
-    rsync -av /DATA/AppData/big-bear-code-server/projects/dc-news-agent/_site/ /tmp/the-busbar/
-    cd /tmp/the-busbar
-    git add .
+    ```
+    If the build fails for any reason (YAML syntax, template error, missing image, etc.), STOP. Don't push. Fix the issue or document it in `editions/run-logs/YYYY-MM-DD-FAILED.md` and exit cleanly. Better to skip the week than ship broken content.
+
+12. **Update tracking** — append entries to *every relevant section* of `editions/published-topics.md` — Stories, Product Radar, Recalls, Background, Community Pulse, On the Bench. The file is the single source of truth for dedup; if it's incomplete, future editions repeat themes.
+
+13. **Commit and push to main**:
+    ```bash
+    git add -A
     git commit -m "Edition: week of YYYY-MM-DD"
     git push origin main
     ```
-
-12. **Update tracking** — add published stories to `editions/published-topics.md`.
+    GitHub Actions builds and deploys to https://busbar.voltplan.app/ in 1–2 minutes via `.github/workflows/deploy.yml`. No manual rsync, no /tmp/the-busbar, no separate deploy repo — pushing to `main` IS the deploy.
 
 ## Hard constraints
 
