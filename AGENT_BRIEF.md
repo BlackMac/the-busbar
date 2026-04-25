@@ -37,30 +37,45 @@ Writing level: technical but readable. Assume the reader is smarter than you, bu
 ## 3. Scope
 
 ### In scope
+
+**Hardware & systems:**
 - Batteries (LiFePO4, lead-acid, other chemistries) for mobile/marine/off-grid use
 - Inverters, inverter/chargers
 - Solar panels, MPPT/PWM charge controllers
 - DC-DC chargers, alternator charging, shore power
-- BMS (battery management systems)
+- BMS (battery management systems) — including indie/DIY/open-source BMS projects
 - Monitoring equipment (shunts, GX devices, apps, displays)
 - 12V/24V/48V system architecture
 - Wiring, fusing, busbars, distribution
 - DC-powered appliances where the interesting story is the DC side (compressor fridges, diesel heaters, DC aircon, induction cooktops running off LFP)
+
+**Standards, recalls, regulation:**
 - Standards: ABYC, ISO, IEC, NFPA 1194, EU RCD, Battery Regulation, UL
 - Product recalls affecting any of the above
+- Anything political or geopolitical that directly affects the DC market (tariffs on LFP cells, export restrictions on BMS chips, EU regulation timelines, etc.)
+
+**Industry:**
 - Company news: acquisitions, insolvencies, new market entries, pricing shifts
 - Manufacturer firmware/software updates that affect real users
 - Boat shows, RV shows, industry trade fairs (METSTRADE, boot Düsseldorf, Caravan Salon, Miami Boat Show, Overland Expo, etc.)
+- Indie/boutique manufacturers shipping new products — small batches, custom BMS shops, DIY-cell resellers, community-driven hardware
+
+**Community + makers — also in scope, not just news:**
+- **Notable indie builds**: when a van/boat/overland builder publishes a build (YouTube series, blog write-up, forum thread) where the *electrical system* is genuinely interesting — innovative architecture, an unusual problem solved well, an instructive teardown, a clever wire run. The story is the build, not the lifestyle.
+- **Open-source projects**: BMS firmware (e.g. SimpleBMS, ESP32-BMS), monitoring software (Home Assistant integrations for DC systems, Node-RED flows), inverter firmware projects (OpenInverter), community-built chargers — when a v1.0 ships, when a major release lands, when a fork picks up momentum.
+- **Community engineering wins**: a forum thread or maker who solves a hard real-world problem (BMS communication mismatch, alternator regulation hack, novel cell balancing approach) that others can apply to their own builds.
+- **Educational milestones**: a deep, technically rigorous video or write-up that becomes a reference for the DC community (e.g. an authoritative Will Prowse comparison, an Off-Grid Garage capacity test, a Mortons on the Move deep-dive on a marine system).
+
+For all four of the above: the test is *technical signal*, not popularity. We cover an indie van builder with 8k subscribers if the electrical work is exceptional; we skip a 500k-sub channel doing routine product placement.
 
 ### Out of scope
-- Van life travel content
-- Lifestyle / Instagram content
+- Van/boat life *travel* content (route reviews, daily-life vlogs, destination posts) — but the *build/electrical work* of the same creators is in scope, see above
+- Lifestyle / Instagram content not tied to a build or technical artifact
 - 230V or 120V home wiring as a primary topic
 - Vehicle mechanics unrelated to the electrical system
-- Stationary residential solar (unless a product crosses over)
+- Stationary residential solar (unless a product crosses over to mobile/off-grid)
 - Sailing/cruising advice that isn't electrical
 - RV park/campground reviews
-- Anything political or geopolitical unless it directly affects the DC market (tariffs on LFP cells, export restrictions on BMS chips, etc.)
 
 ### Gray zones — use judgment
 - **Portable power stations (EcoFlow Delta, Bluetti, Jackery etc.):** include when the news is technical (new chemistry, new architecture, recall) or market-shaping (major pricing move). Skip for ordinary product launches.
@@ -77,6 +92,32 @@ Source tiers:
 - **Tier B** — scan weekly, medium signal
 - **Tier C** — scan opportunistically
 - **Event-driven** — scan around specific trade shows
+
+### Brand watchlist (actively search beyond the RSS pool)
+
+Victron has the most aggressive news pipeline of any DC manufacturer — RSS-driven discovery alone produces a Victron-skewed edition. To counter that, every run must **actively WebSearch** for news from this rotating list, even when the RSS feed pool is quiet:
+
+**Established non-Victron majors:**
+- Battle Born Batteries · EcoFlow · Bluetti · Anker SOLIX · Goal Zero · Jackery · Lion Energy
+- Mastervolt · Sterling Power · REDARC · Schneider Conext · OutBack Power · MidNite Solar
+- Pylontech · BYD · CATL · EVE · Renogy · Battle Born · Lion Energy
+- Morningstar · Genasun · EPEVER (MPPT/charge controllers)
+
+**Indie / boutique / DIY-scene firms — actively seek these out:**
+- SOK Battery · Epoch Batteries · Big Battery · LiTime · Redodo · Power Queen · Ampere Time (consumer LiFePO4)
+- 18650 Battery Store · Battery Hookup · AltE Store (DIY cell + parts)
+- Pocomtech · Andy's Workshop · custom-BMS makers (small-batch makers)
+- OpenInverter · SimpleBMS · ESP32-BMS community projects (open-source)
+- Off-Grid Garage Australia (Andy) · Trek Systems · Mortons on the Move · HoboTech (independent reviewers/educators)
+
+A "cool indie firm" weekly story (a small maker shipping a clever product, a community-built BMS reaching v1.0, a niche reseller hitting a milestone) is **higher editorial value** than a routine Victron firmware patch — even when the firmware patch is technically newsworthy. Lean toward the indie story when both options exist.
+
+### Diversity rule (hard cap)
+
+In any single edition:
+- **No single manufacturer may exceed 40% of stories or 40% of Product Radar items.** Victron is included in this cap — no exceptions.
+- If a slow week leaves you only Victron stories, ship a **shorter** edition (3 news items instead of 6) rather than padding with stale or low-value Victron content.
+- Each edition's run log must include a **Brand distribution** section listing every brand that appeared, with counts. If the cap is exceeded, this is a REVIEW FLAG.
 
 ## 5. Weekly edition structure
 

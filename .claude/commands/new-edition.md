@@ -35,9 +35,16 @@ Today's date: run `date +%Y-%m-%d` to confirm.
    - `Victron [product name] firmware v[version]` → find community discussion and detail
    - `LiFePO4 battery recall CPSC [year]` → US safety recalls
    - `site:diysolarforum.com [topic]` → actual forum threads (BMS issues, cell pricing, build discussions)
-   - `[manufacturer] new product [year]` → EG4, SOK, Epoch, Battleborn, Renogy, REDARC
    - `ABYC ISO marine electrical [year]` → standards updates
    - If it's a trade show week: `[show name] [year] product announcements DC solar`
+
+   **Mandatory non-Victron sweep** (do not skip — Victron's RSS pipeline is so prolific that without this step the edition skews 70%+ Victron):
+   - `Battle Born Batteries news [month year]`, `EcoFlow announcement [month year]`, `Bluetti news [month year]`, `Mastervolt news [month year]`, `Sterling Power news [month year]`, `REDARC product launch [year]`
+   - `SOK Battery news`, `Epoch Batteries product`, `Big Battery LiFePO4`, `LiTime new product`, `Redodo announcement` — indie LiFePO4 makers move fast and rarely hit RSS feeds
+   - `18650 Battery Store new`, `Battery Hookup deal` — DIY-cell scene
+   - `Off-Grid Garage Australia new video`, `Mortons on the Move new`, `Trek Systems new` — independent reviewers (often surface news before mainstream)
+   - `OpenInverter project update`, `ESP32 BMS open source` — open-source DC scene
+   See AGENT_BRIEF.md §4 "Brand watchlist" for the full rotating list. Run at least 6–8 of these searches per edition.
 
 6. **Duplicate check** — compare *every section* of the planned edition against `editions/published-topics.md`. Six tracked dimensions:
    - Stories (news + Lead) — same firmware version, same product launch, same recall, same forum-driven story should not be re-covered
@@ -86,7 +93,9 @@ Today's date: run `date +%Y-%m-%d` to confirm.
     - Items considered but rejected (with reason)
     - Items included (lead, news 1–N, background, community pulse, product radar, recalls)
     - Sections skipped and why
-    - REVIEW FLAGS — anything that needs human review before publication
+    - **Brand distribution** — count every brand/maker/project that appears across Lead + News + Product Radar (e.g. `Victron: 3, EcoFlow: 1, Battle Born: 1, EG4: 1, SOK: 1, OpenInverter: 1`). Per AGENT_BRIEF.md §4 the diversity rule caps any single manufacturer at 40% of stories *and* 40% of Product Radar items. If exceeded, list as REVIEW FLAG. If the only news of the week is genuinely Victron-only, ship a shorter edition rather than violate the cap.
+    - **Indie/build coverage** — note whether this edition includes at least one indie firm, open-source project, community-engineering win, or notable build. Two consecutive editions without any indie coverage = REVIEW FLAG.
+    - REVIEW FLAGS — anything that needs human review before publication, including any brand-cap or indie-coverage breaches
 
 11. **Build (verify locally)**:
     ```bash
