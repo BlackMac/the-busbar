@@ -185,7 +185,13 @@ Exactly one tag per news item, news piece, and product radar item:
 2. **Supplement with WebSearch**: search for DC electrical news from the past 7–10 days
    - Always check `professional.victronenergy.com/news/` directly — best source for Victron firmware
    - Key searches: `Victron firmware [month year]`, `LiFePO4 battery recall CPSC`, `site:diysolarforum.com [topic]`
-3. **Duplicate check**: compare against `editions/published-topics.md`
+3. **Duplicate check**: compare *every section* of the planned edition against `editions/published-topics.md`. Six tracked dimensions:
+   - Stories (news items + Lead) — same firmware version, same product launch, same recall, same forum-driven story should not be re-covered
+   - Product Radar — same manufacturer + product name should not appear twice (newer revision is fine, but say so)
+   - Recalls — same recall ID should not be repeated unless materially expanded
+   - Background deep-dives — don't repeat the same angle on the same topic within ~6 months
+   - Community Pulse — same forum thread / Reddit post URL should not appear twice
+   - On the Bench — each YouTube `VIDEO_ID` appears at most once across all editions
 4. **Fact-check**: verify specs/prices against primary sources. Never fabricate.
 5. **Download images** for any YouTube videos or product images included:
    ```bash
@@ -196,7 +202,7 @@ Exactly one tag per news item, news piece, and product radar item:
 6. **Write edition file**: `src/editions/YYYY-MM-DD.md` — use this CLAUDE.md schema above
 7. **Write run log**: `editions/run-logs/YYYY-MM-DD.md` (see Run Log section below)
 8. **Build and deploy** (see Publishing above)
-9. **Update tracking**: add published stories/products to `editions/published-topics.md`
+9. **Update tracking**: append entries to *every relevant section* of `editions/published-topics.md` — Stories, Product Radar, Recalls, Background, Community Pulse, On the Bench. One bullet per item. The file is the single source of truth for dedup; if it's incomplete, future editions repeat themes.
 
 ## Run log format
 

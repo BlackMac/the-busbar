@@ -1,6 +1,8 @@
 # The Busbar — Published Topics Tracking
 
-Used for duplicate detection. Add each published story, product, and recall after every edition.
+Used for duplicate detection. **Every section of every edition gets recorded here**, so future editions can avoid repeating themes, products, recalls, deep-dives, forum threads, or videos.
+
+Before writing a new edition, the agent reads this file end-to-end and skips any topic already covered. After writing, the agent appends new entries into the matching section.
 
 ## Stories Published
 
@@ -11,7 +13,6 @@ Used for duplicate detection. Add each published story, product, and recall afte
 - 2026-04-21 | Firmware | Venus OS v3.72 — ESS safeguard, Pylontech CAN detection, Node-RED fixes (released 2026-03-30)
 - 2026-04-21 | Industry | Victron 2026 product pipeline: MultiPlus 48V 20kVA, split-phase inverter, TR Smart 48/12 60A, Orion XS 12/12 70A
 - 2026-04-21 | Battery | EVE MB31 314Ah cells at ~$83–$85/cell (4-pack retail); DIYSolarForum raw-cell economics discussion
-- 2026-04-21 | Battery | Background: 314Ah cell pricing crossover vs. pre-assembled packs; BMS compatibility issues with Redodo/Victron DVCC
 
 ## Product Radar — Already Featured
 
@@ -23,3 +24,24 @@ Used for duplicate detection. Add each published story, product, and recall afte
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
+
+## Background Deep-Dives — Already Done
+
+<!-- Don't repeat the same angle on the same topic within ~6 months. Variation on the same subject is fine if the angle is genuinely different. -->
+<!-- Format: - YYYY-MM-DD | Type | One-line summary of the angle/thesis -->
+- 2026-04-21 | market_analysis | The 314Ah cell crossover: raw-cell economics vs pre-built packs in 2026, plus BMS compatibility friction (Redodo/Victron DVCC)
+
+## Community Pulse — Threads & Discussions Already Featured
+
+<!-- Same forum thread/Reddit post should not appear twice. New replies in the same thread are not a reason to re-feature. -->
+<!-- Format: - YYYY-MM-DD | Forum | Thread title / topic — short note -->
+- 2026-04-21 | r/diysolar | WireSizer Pro Android beta testers wanted
+- 2026-04-21 | r/vandwellers | It's nearly official, I can run AC 24/7 offgrid
+- 2026-04-21 | DIYSolarForum | EVE 314Ah cells: charge to 3.65V per cell? (tech sheet discussion)
+
+## On the Bench — YouTube Videos Already Featured
+
+<!-- Each VIDEO_ID appears at most once. New videos from the same channel are fine. -->
+<!-- Format: - YYYY-MM-DD | VIDEO_ID | Channel — Title -->
+- 2026-04-21 | GNKAUiY6izc | Trek Systems — Victron Energy Updates in 2026: New Products, All-In-One, Microgrid
+- 2026-04-21 | HarRKsrqOss | DIY Solar Power with Will Prowse — 2026 Will Prowse Approved Solar Products: Which Ones Survived?!
