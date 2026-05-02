@@ -19,6 +19,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-04-27 | Battery | Bluetti FridgePower Kickstarter launch (16 Apr) — 2,016Wh LiFePO4, 1,800W, 75mm slim, 10ms switchover, $759 backer
 - 2026-04-27 | Firmware | JK Inverter-BMS V19.31B special firmware — Off-Grid Garage caution about parallel-BMS feature and RS485 inverter compatibility
 - 2026-04-27 | Safety | Casely Power Pods recall reannounced (CPSC, 16 Apr) — 429,000 units, 1 fatality, model E33A 5,000 mAh MagSafe (lithium-ion power banks, not LFP)
+- 2026-05-04 | Battery | Panbo / Ben Stein lithium-cycle test part 2 (28 Apr) — WattCycle 100Ah Mini past 1,100 cycles, projected 3,000–4,000 cycles vs 5,000-cycle marketing claim; Blue Heron 100Ah Extreme at 500 cycles with capacity-bump anomaly; 93.7% round-trip efficiency; vs Duracell flooded "16x cost per kWh"
+- 2026-05-04 | Battery | Dragonfly Energy first Japanese patent allowance (23 Apr) — "Powderized Solid-State Electrolyte and Electroactive Materials"; foundation of dry-electrode all-solid-state cell roadmap; no near-term Battle Born product implication
+- 2026-05-04 | Industry | OffGrid Benchmark public launch (late April) — independent review platform by Jordan Stambaugh (WA); 92 products at launch across 6 categories; no manufacturer payments; programmatic comparison engine
+- 2026-05-04 | Marine | Victron M/V Cowboy case study (24 Apr) — 74-foot motor vessel rebuild; 2 of 4 Quattros not connected; double AC bonding; hand-loose DC terminations found via thermal imaging; rebuild used Ekrano GX + ARCO Zeus + GX Tank 140 modules
+- 2026-05-04 | Industry | Trek Systems Victron 2-day hands-on training Denver (announced ~30 Apr) — 28–29 May; 16 RVTI Level-3 credit hours; 20-attendee cap
 
 ## Product Radar — Already Featured
 
@@ -29,6 +34,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-04-27 | Epoch Batteries | 12V 460Ah V2-T Elite Series (Group 8D, IP67, integrated 400A Class T fuse, ABYC/NMEA/NMMA, $2,199)
 - 2026-04-27 | Bluetti | FridgePower (Kickstarter, 2,016Wh LiFePO4, 1,800W, $759 backer / $1,299 retail)
 - 2026-04-27 | Bluetti | EnergyPro 13K (EP13K hybrid inverter + AT1 panel + EnergyPack 500 modular battery, from $7,919)
+- 2026-05-04 | WattCycle | 12V 100Ah Mini Bluetooth LiFePO4 (Group 22NF, 1,280Wh, 100A BMS, IP65, no heater/CAN, $199 Amazon) — Lead test reference
+- 2026-05-04 | Blue Heron | 100Ah 12.8V Group 27 LiFePO4 EXTREME Series (heater, Bluetooth, Victron-comm, NMEA 2000, 500A 3-sec pulse, UL 1973, $789) — Lead test reference
+- 2026-05-04 | ARCO Marine | Zeus High-Energy Alternator Regulator (Bluetooth + CAN-bus + NMEA 2000, 12–48V, dual shunt input, ~$1,099 US) — featured in News 3 Cowboy case study
 
 ## Recalls — Already Covered
 
@@ -52,6 +60,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-04-27 | Airstream Forums | Battle Born 12V 100Ah Battery Failures: Field Reports, Testing, and Alternatives
 - 2026-04-27 | iRV2 | Battleborn Battery Safety Issue
 - 2026-04-27 | DIYSolarForum | BMS in LG Chem ESS modules (9 April thread)
+- 2026-05-04 | r/diySolar | 12v LiFepO4 server rack batteries other than EG4 LL? (30 April) — unverified OP claim that EG4 has emailed customers about discontinuation; treated in edition as forum signal only
+- 2026-05-04 | r/diySolar | AC Frequency Stability in Off Grid Systems (2 May) — 49–51 Hz drift question, hybrid-inverter AC-input frequency tolerance discussion
+- 2026-05-04 | r/diySolar | Bluecarbon system connectivity (30 April) — concrete comms-quirk reports for the Chinese all-in-one inverter
 
 ## On the Bench — YouTube Videos Already Featured
 
