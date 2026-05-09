@@ -24,6 +24,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-04 | Industry | OffGrid Benchmark public launch (late April) — independent review platform by Jordan Stambaugh (WA); 92 products at launch across 6 categories; no manufacturer payments; programmatic comparison engine
 - 2026-05-04 | Marine | Victron M/V Cowboy case study (24 Apr) — 74-foot motor vessel rebuild; 2 of 4 Quattros not connected; double AC bonding; hand-loose DC terminations found via thermal imaging; rebuild used Ekrano GX + ARCO Zeus + GX Tank 140 modules
 - 2026-05-04 | Industry | Trek Systems Victron 2-day hands-on training Denver (announced ~30 Apr) — 28–29 May; 16 RVTI Level-3 credit hours; 20-attendee cap
+- 2026-05-11 | Inverter | REDARC RS3 inverter family (1200/2000/3000W) US launch + REDWorks Power Panels (Scout 25, QuickFit 100A) + REDVision Essentials Display debut at Overland Expo West (15–17 May, Flagstaff AZ); RS3 3000W $1,319 SKU R-12-3000RS3-NA; built-in ATS, RV-C, WAGO connectors, 26% smaller / 28% lighter, full output to 104°F
+- 2026-05-11 | Marine | r/liveaboard "Two years without gas on a ketch" (4 May) — gimbaled stainless enclosure with combination oven + induction hob + microwave; 800W solar (with shading penalty); Scandinavia-to-Mediterranean cruise; OP did not publish battery capacity
+- 2026-05-11 | Battery | Anker Solix XE launch (30 Apr) — 7kWh usable on 314Ah cells, 5kW bidirectional inverter, up to 10kW solar input, 100% DoD, 10,000-cycle claim, scales to 126kWh / 15kW AC, 10ms UPS switchover, "Anka" AI assistant; AU retail Aug 2026 pending CEC; residential whole-home focus
+- 2026-05-11 | Industry | Victron + Pytes + ENERP Warsaw passenger elevator (8 May) — 4.72kWp acoustic-PV hybrid panels into railway viaduct noise barrier, MultiPlus-II 48/5000 + SmartSolar MPPT RS 450V + 15kWh Pytes battery + Lynx Distributor + Cerbo GX with VRM; ~4MWh/yr; powers passenger elevator with grid-outage continuity
+- 2026-05-11 | Solar | FarOutRide Van Roof Layout Planner free in-browser tool launch (5 May) — sketch van roof, place accessories (vents, antennas, racks, AC), auto-fill remaining area with solar panels for sizing/layout; no signup
 
 ## Product Radar — Already Featured
 
@@ -37,6 +42,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-04 | WattCycle | 12V 100Ah Mini Bluetooth LiFePO4 (Group 22NF, 1,280Wh, 100A BMS, IP65, no heater/CAN, $199 Amazon) — Lead test reference
 - 2026-05-04 | Blue Heron | 100Ah 12.8V Group 27 LiFePO4 EXTREME Series (heater, Bluetooth, Victron-comm, NMEA 2000, 500A 3-sec pulse, UL 1973, $789) — Lead test reference
 - 2026-05-04 | ARCO Marine | Zeus High-Energy Alternator Regulator (Bluetooth + CAN-bus + NMEA 2000, 12–48V, dual shunt input, ~$1,099 US) — featured in News 3 Cowboy case study
+- 2026-05-11 | REDARC | RS3 Pure Sine Wave Inverter — 12V 3000W (SKU R-12-3000RS3-NA, 120VAC ±3%, built-in ATS, WAGO connectors, RV-C, 408×290×102mm, 6.5kg, -4°F to 140°F, 2-yr warranty, $1,319) — Lead launch flagship; 1200W and 2000W variants debut at Overland Expo West but US pricing not yet disclosed
+- 2026-05-11 | Anker | Solix XE — 7kWh / 5kW bidirectional / 10K-cycle / 314Ah cells / scales to 126kWh / 15kW AC / 10ms UPS / Anka AI assistant; residential whole-home focus, AU retail Aug 2026, US/EU pricing not announced
+- 2026-05-11 | Daniel Szlaski (independent) | Glance: Solis Solar Monitor — iOS/iPadOS/macOS unofficial third-party SolisCloud companion with Home Screen and Lock Screen widgets; talks to SolisCloud directly, no third-party server, on-device credentials; free with one-time IAP for live auto-refresh
 
 ## Recalls — Already Covered
 
@@ -63,6 +71,10 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-04 | r/diySolar | 12v LiFepO4 server rack batteries other than EG4 LL? (30 April) — unverified OP claim that EG4 has emailed customers about discontinuation; treated in edition as forum signal only
 - 2026-05-04 | r/diySolar | AC Frequency Stability in Off Grid Systems (2 May) — 49–51 Hz drift question, hybrid-inverter AC-input frequency tolerance discussion
 - 2026-05-04 | r/diySolar | Bluecarbon system connectivity (30 April) — concrete comms-quirk reports for the Chinese all-in-one inverter
+- 2026-05-11 | r/liveaboard | Two years without gas on a ketch (4 May) — featured as News 1; community engineering build with gimbaled induction + combo oven on 800W solar
+- 2026-05-11 | r/liveaboard | Helping a friend plan a simple 12V electrical system for a small boat (7 May) — featured in Community Pulse; basic-build conversation, Class T fusing, smart shunt vs voltage SOC, single-bank vs split, dock-side AC
+- 2026-05-11 | r/diysolar | Configuring Epever Devices via USB-to-RS485 Cable (9 May) — featured in Community Pulse; SolarAssistant and direct Modbus paths off the manufacturer Windows toolchain
+- 2026-05-11 | r/vandwellers | How I charge my batteries at a Level 2 EV charging station — Method 2: 240V AC to 12V/24V DC converter (6 May) — featured in Community Pulse; opportunistic EV-infrastructure charging via 240VAC step-down
 
 ## On the Bench — YouTube Videos Already Featured
 
