@@ -29,6 +29,12 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-11 | Battery | Anker Solix XE launch (30 Apr) — 7kWh usable on 314Ah cells, 5kW bidirectional inverter, up to 10kW solar input, 100% DoD, 10,000-cycle claim, scales to 126kWh / 15kW AC, 10ms UPS switchover, "Anka" AI assistant; AU retail Aug 2026 pending CEC; residential whole-home focus
 - 2026-05-11 | Industry | Victron + Pytes + ENERP Warsaw passenger elevator (8 May) — 4.72kWp acoustic-PV hybrid panels into railway viaduct noise barrier, MultiPlus-II 48/5000 + SmartSolar MPPT RS 450V + 15kWh Pytes battery + Lynx Distributor + Cerbo GX with VRM; ~4MWh/yr; powers passenger elevator with grid-outage continuity
 - 2026-05-11 | Solar | FarOutRide Van Roof Layout Planner free in-browser tool launch (5 May) — sketch van roof, place accessories (vents, antennas, racks, AC), auto-fill remaining area with solar panels for sizing/layout; no signup
+- 2026-05-18 | Solar | Maryland HB 1532 (Utility RELIEF Act) signed by Gov. Wes Moore (12 May) — plug-in solar effective 1 October 2026; 1,200W per utility meter; 391W UL-exempt; UL-listed required above; utility notification + optional auto-locking AC disconnect switch at customer cost; fifth US state to legalise (Utah, Maine, Virginia, Colorado the others)
+- 2026-05-18 | Charging | Mastervolt IP67 Mac Plus 48V DC-DC family (7–8 May) — four variants (48/12-50A, 12/48-15A, 48/24-30A, 24/48-15A); reinforced aluminium + touch-safe cover for unenclosed marine installs; retains bi-directional architecture, 3-step+ charging, lead-acid through LiFePO4, MasterBus/CZone/NMEA 2000; parallel to >100A
+- 2026-05-18 | Monitoring | Victron SolarSense 750 wireless PV monitor (13 May) — irradiance + panel temperature + estimated PV power; BLE; IP65; self-powered via integrated PV cell + 40 mAh / 3.6V internal battery; surfaces in VictronConnect/VRM/Node-RED; SLS300175100; $102 US (Nomadic Supply)
+- 2026-05-18 | Solar | Bluetti Balco series Paris launch (12 May) — Balco 260 (15kWh stack via 5 expansions, 4 MPPTs, 2,400W PV), Balco 500 (70–470V HV MPPT, 4,300W PV, 11kW 3-unit parallel), Balco Transfer Hub (retrofit 800W grid-feed-in for existing portable power stations); AI-EMS; BLUETTI Space Wi-Fi linking up to 6 units; EU emphasis; pricing not disclosed
+- 2026-05-18 | Battery | Anker Solix Solarbank 4 E5000 Pro Berlin launch (12 May) — 5kWh on 314Ah LFP cells; 5kW PV across 4 MPPTs; 2.5kW household + 800W Schuko grid feed-in + 2.5kW off-grid port with 10ms UPS; IP66, -20°C to +55°C; 10K-cycle / 15-yr; modular to 30kWh; €1,999 RRP (€1,499 promo); 12 June 2026 official launch; distinct from prior Solix XE
+- 2026-05-18 | Industry | Dragonfly Energy Q1 2026 results (14 May) — net sales $9.7M (above guidance); 17.6% gross margin; $5.8M OEM + $3.7M D2C; March RV retail -20% YoY; $3M+ Stevens Transport order (~500 trucks, first of 2,500-truck transition); Q2 guidance $13.2M (+36% QoQ); $9M annualised adj EBITDA cost-savings; also Battle Born e-commerce relaunch (13 May) + $527K Nevada Tech Hub funding for cylindrical-cell prototyping (14 May)
 
 ## Product Radar — Already Featured
 
@@ -45,6 +51,10 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-11 | REDARC | RS3 Pure Sine Wave Inverter — 12V 3000W (SKU R-12-3000RS3-NA, 120VAC ±3%, built-in ATS, WAGO connectors, RV-C, 408×290×102mm, 6.5kg, -4°F to 140°F, 2-yr warranty, $1,319) — Lead launch flagship; 1200W and 2000W variants debut at Overland Expo West but US pricing not yet disclosed
 - 2026-05-11 | Anker | Solix XE — 7kWh / 5kW bidirectional / 10K-cycle / 314Ah cells / scales to 126kWh / 15kW AC / 10ms UPS / Anka AI assistant; residential whole-home focus, AU retail Aug 2026, US/EU pricing not announced
 - 2026-05-11 | Daniel Szlaski (independent) | Glance: Solis Solar Monitor — iOS/iPadOS/macOS unofficial third-party SolisCloud companion with Home Screen and Lock Screen widgets; talks to SolisCloud directly, no third-party server, on-device credentials; free with one-time IAP for live auto-refresh
+- 2026-05-18 | Victron Energy | SolarSense 750 Wireless PV Monitor (SLS300175100, $102 US) — self-powered BLE sensor for irradiance, panel temp, estimated PV power; IP65; integrated PV cell + 40 mAh / 3.6V internal battery; surfaces in VictronConnect/VRM/Node-RED; one-year warranty
+- 2026-05-18 | Mastervolt | Mac Plus 12/48-15 IP67 family (also 48/12-50A, 48/24-30A, 24/48-15A variants) — bi-directional DC-DC chargers with reinforced aluminium housing and touch-safe connector cover for unenclosed marine installs; 3-step+ charging; lead-acid through LiFePO4; MasterBus/CZone/NMEA 2000; parallel to >100A; pricing not disclosed at announcement
+- 2026-05-18 | Bluetti | Balco 260 / Balco 500 / Balco Transfer Hub — Paris-launch balcony-solar ecosystem; Balco 260 supports 15kWh via 5 expansions, 4 MPPTs, 2,400W PV, 96.11% efficiency, 4.5W standby; Balco 500 70–470V HV MPPT, 4,300W PV, 11kW in 3-unit parallel; Transfer Hub retrofit accessory for 800W grid feed-in from existing Bluetti portable power stations; pricing not disclosed
+- 2026-05-18 | Anker | Solix Solarbank 4 E5000 Pro (€1,999 RRP) — 5kWh modular on 314Ah LFP cells, 5kW PV across 4 MPPTs, 2.5kW household + 800W Schuko grid feed-in + 2.5kW off-grid with 10ms UPS, IP66, -20°C to +55°C, 10K-cycle/15-yr, modular to 30kWh; expansion battery €1,049 (from €1,399); German launch 12 June 2026
 
 ## Recalls — Already Covered
 
@@ -57,6 +67,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 <!-- Format: - YYYY-MM-DD | Type | One-line summary of the angle/thesis -->
 - 2026-04-21 | market_analysis | The 314Ah cell crossover: raw-cell economics vs pre-built packs in 2026, plus BMS compatibility friction (Redodo/Victron DVCC)
 - 2026-04-27 | market_analysis | China's PV/battery export VAT rebate elimination (1 April 2026) — module pricing impact 10–14%, battery pricing impact lagging into late Q3/Q4 2026 and Q1 2027
+- 2026-05-18 | market_analysis | US plug-in solar inflection: connecting Maryland HB 1532 (5th state to legalise) with Bluetti Balco Paris launch and Anker Solarbank 4 E5000 Pro Berlin launch the same week; 391W UL-exempt threshold maps to existing EU low-end product cluster, 1,200W cap circuit-aware (15A/120V leaves 600W headroom), Colorado at 1,920W, no UL 9540-listed 1,200W kit on US shelves at production time, locking-disconnect option is the implementation question utilities will decide before 1 October
 
 ## Community Pulse — Threads & Discussions Already Featured
 
@@ -75,6 +86,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-11 | r/liveaboard | Helping a friend plan a simple 12V electrical system for a small boat (7 May) — featured in Community Pulse; basic-build conversation, Class T fusing, smart shunt vs voltage SOC, single-bank vs split, dock-side AC
 - 2026-05-11 | r/diysolar | Configuring Epever Devices via USB-to-RS485 Cable (9 May) — featured in Community Pulse; SolarAssistant and direct Modbus paths off the manufacturer Windows toolchain
 - 2026-05-11 | r/vandwellers | How I charge my batteries at a Level 2 EV charging station — Method 2: 240V AC to 12V/24V DC converter (6 May) — featured in Community Pulse; opportunistic EV-infrastructure charging via 240VAC step-down
+- 2026-05-18 | r/diysolar | Setting up Balcony Solar plug-in with Battery Back-up (14 May) — featured in Community Pulse; SoCal user designing 4×400W in-series plug-in-plus-battery system within days of Maryland HB 1532 signing
+- 2026-05-18 | r/diysolar | Pylontech Force-L1 + Growatt SPF 6000 ES Plus — CAN (L52) connects but reads SOC as 1% (14 May) — featured in Community Pulse; 3× SPF 6000 ES Plus parallel with 2 Pylontech Force-L1 stacks; Main CPU 100.06 / Slave CPU 101.05; LCD handshake works but SOC clamps at 1% vs real ~40%; classic BMS-CAN profile mismatch template
+- 2026-05-18 | r/diysolar | Network guy trying to build a solar-powered surveillance trailer (15 May) — featured in Community Pulse; 2×450W solar + Starlink + cameras + networking 24/7 off-grid; autonomy-budget sanity check thread, Starlink idle draw / winter solar derating / unattended-trailer manual-tilt feasibility discussion
 
 ## On the Bench — YouTube Videos Already Featured
 
