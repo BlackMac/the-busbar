@@ -40,6 +40,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-25 | Charging | Victron Smart IP43 Charger 36V/15A + 48V/13A added (18 May) — completes 12/24/36/48V mains-charger lineup; 120–240V dual input, 6-stage adaptive, programmable LiFePO4 curve, Bluetooth/VictronConnect, VE.Smart Networking, VE.Direct, IP43; pricing not published
 - 2026-05-25 | Industry | Tigo ships first US-made TS4-A-O optimizers to EG4 (19 May) — 650W optimizer (modules to 725W DC, 12–80V MPP) + CCA loggers + TAP units; assembled at SVI Vancouver WA; bundled with US-made EG4 inverters; domestic-content/tariff angle
 - 2026-05-25 | Battery | Pylontech 601Ah LFP cell at CIBF 2026 (opened 13 May) — 426Wh/L, 96.5% efficiency, >12,000-cycle claim; shown with PyOcean-M9-8000 liquid-cooled container; utility/C&I scope, framed as large-format roadmap marker; also BloombergNEF Tier 1 Q2 2026 (7 May)
+- 2026-06-01 | Battery | Marine How To / Rod Collins (MaineSail) 17-year-old DIY GBS LiFePO4 house bank (article 24 May) — cells date-stamped May 2009, in service since early 2010, ~2,500 cycles at ~80% DoD by 2023, reports ~100% of rated capacity on calibrated discharge test; single documented bank used as LFP calendar-life data point (Lead)
+- 2026-06-01 | Solar | Victron "Irrigating Two-Million Acres" Nullarbor sheep-station off-grid pumping case study (29 May) — homestead 45kVA three-phase Quattro + 96kWh Pylontech + 44.28kW Trina on SmartSolar MPPT RS; three remote bore sites each 24kVA (3×8kVA Quattro) + 42kWh Pylontech + 29kW solar + Cerbo GX + backup gen; VRM remote pump/tank control + auto-genset on SOC across ~1,400km pipeline / 200+ troughs / 118 paddocks
+- 2026-06-01 | Battery | Power Queen 24V 125Ah self-heating LiFePO4 trolling-motor battery launch (13 May) — 3,200Wh, IP67, dual-mode self-heating (auto-on-charge + app preheat), Bluetooth SoC/health/runtime, sized 70–100lb thrust, ~18h at ~7A; PR omitted continuous/BMS current, cycle life, weight, warranty, price; covered as launch note not buying guide
 
 ## Product Radar — Already Featured
 
@@ -78,6 +81,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-04-27 | market_analysis | China's PV/battery export VAT rebate elimination (1 April 2026) — module pricing impact 10–14%, battery pricing impact lagging into late Q3/Q4 2026 and Q1 2027
 - 2026-05-18 | market_analysis | US plug-in solar inflection: connecting Maryland HB 1532 (5th state to legalise) with Bluetti Balco Paris launch and Anker Solarbank 4 E5000 Pro Berlin launch the same week; 391W UL-exempt threshold maps to existing EU low-end product cluster, 1,200W cap circuit-aware (15A/120V leaves 600W headroom), Colorado at 1,920W, no UL 9540-listed 1,200W kit on US shelves at production time, locking-disconnect option is the implementation question utilities will decide before 1 October
 - 2026-05-25 | trend_piece | What a "runtime" certification actually measures: TÜV SÜD A+ Runtime on the Anker S2000 grades delivered energy vs nameplate Wh; inverter conversion loss + idle draw eat the gap; OptiSave sub-6W idle as the answer; EcoFlow RIVER 2 TÜV Rheinland (2022) precedent; value as cross-brand yardstick unproven until grading scale published + 2nd vendor submits — treat as credible single-vendor claim, not yet a benchmark
+- 2026-06-01 | trend_piece | Calendar vs cycle aging in LFP: using Marine How To's 17-year GBS bank to separate the two aging clocks; calendar aging driven by average SoC + temperature, dominates a house bank's real lifespan since it spends more time resting than cycling; ties to Panbo cycle-test gap (5,000-cycle claims → ~3,000–4,000 measured); practical levers (moderate resting SoC, no float, keep cool, conservative voltages) cost nothing
 
 ## Community Pulse — Threads & Discussions Already Featured
 
@@ -102,6 +106,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-05-25 | r/diysolar | Recommended Plug and Play Solar that complies with Colorado's recently passed law? (23 May) — featured in Community Pulse; Colorado resident asking which products meet the 1,920W cap/cert requirements; follow-on to the plug-in-solar-law-ahead-of-product-catalogue point from #5 Background
 - 2026-05-25 | r/vandwellers | 12v vs 24v (22 May) — featured in Community Pulse; perennial system-architecture trade-off (12V simplicity/appliance compatibility vs 24V/48V for high continuous loads + wire-gauge cost)
 - 2026-05-25 | r/diysolar | Charge Controller for DC system (21 May) — featured in Community Pulse; MPPT selection for a DC-only/no-inverter setup, sizing controller to array + bank
+- 2026-06-01 | r/diysolar | Anyone have the EU firmware for Deye SUN-5K-SG03LP1-EU? Flashed wrong version, MPPT now dead (25 May) — featured in Community Pulse; cautionary tale on flashing non-matching regional/model inverter firmware; bricked MPPT input; "newer version ≠ correct build"
+- 2026-06-01 | r/diysolar | I built my own off-grid solar monitor because juggling three vendor apps drove me mad (27 May) — featured in Community Pulse; maker project unifying inverter/BMS/shunt data into one dashboard, seeking pre-launch feedback
+- 2026-06-01 | r/diysolar | Jackery power stations lose pass through charging feature when connected in parallel (28 May) — featured in Community Pulse; forum-reported behaviour quirk (verify against own units), parallel pass-through limitation
 
 ## On the Bench — YouTube Videos Already Featured
 
