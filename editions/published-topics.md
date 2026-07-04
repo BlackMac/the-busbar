@@ -57,6 +57,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-29 | Inverter | Victron Multi HS19 Solar 15k officially shipping (23 June) — 15kW three-phase inverter/charger + 4×8kW independent MPPTs; 650–1000V HV solar input; 19" rack, 26.5kg, 98% efficiency; parallel operation pending firmware; pricing not disclosed; first shown Intersolar 2023
 - 2026-06-29 | Battery | Redodo 12V 120Ah Group 24 Bluetooth LiFePO4 launch (18 June) — 1,536Wh, 23.8 lbs, Bluetooth SoC/health/OTA, $329.99 pre-order; BMS amperage and cycle count not stated in launch materials
 - 2026-06-29 | Industry | Archived Battle Born BB1275 datasheet surfaces showing 50A max charge current (vs current 37.5A); Dragonfly's lawsuit claims Prowse tested at 49A "outside spec" — archived spec potentially contradicts this; no court ruling; case ongoing
+- 2026-07-06 | Monitoring | Victron Nucleo GX announced 3 July — quad-core GX device, Ekrano-GX speed at $266 MSRP (~$225 street); 25 devices via VE.Direct/USB + VE.Can, Ethernet/WiFi/Bluetooth/microSD, 8–70V DC input; no VE.Bus/tank/temp inputs/HDMI — explicitly not for marine per Victron/Panbo; Cerbo MK3 (3x current Cerbo MK2 speed) teased for later 2026; follows Intersolar Europe teaser from 2026-06-22 (Lead + Product Radar)
+- 2026-07-06 | Safety | Marine How To "Calculating LiFePo4 Short Circuit Current" (3 July) — BMS rating ≠ fuse rating; SCC set by internal resistance/voltage; 100Ah/1.56mΩ cell ≈ 8,533A fault current, 314Ah 4S bank ≈ 19,500A; why ABYC requires 20,000A AIC fuses above 200Ah; recommends IR meter (Fnirsi HRM-10, ~$80) over datasheet trust
+- 2026-07-06 | Battery | Marine How To "LiFePo4 vs. AGM Charge Efficiency" (25 June) — LFP ~1C charge rate at ~99% efficiency vs AGM ~0.2C at ~85%; healthy lead-acid runs 70–90%, worsens with sulfation; LFP has no sulfation mechanism, prefers mid-range resting SoC
+- 2026-07-06 | Monitoring | Woterfitz (German electric-boat builder, Bernd Rudolf) custom charter-boat monitoring dashboard on Victron Cerbo GX — solved "infinite time-to-go" when 2.4kW solar > 1.5kW ePropulsion motor draw; NGINX/PHP + MQTT dashboard, custom ePropulsion RS485→VE DBus decoder, low-SoC load shedding at 30%; 24kWh bank, 102km/2.5 days on 40% SoC (Sept test); indie/community-engineering coverage
+- 2026-07-06 | Industry | Bluetti launches in New Zealand (1 July) — local warehousing/support; leads with existing Elite 300/200 V2/100 V2 power stations repositioned for freedom camping, sailing, island travel; no new hardware
 
 ## Product Radar — Already Featured
 
@@ -91,11 +96,15 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-29 | ARCO Marine | Zeus Omega Alternator Control System — CM ($599) + ADM ($585); $889 complete single-alternator system; IP68 ADM, IP20 CM; 12/24/36/48V; AZ CAN bus; Hall Effect sensor; NMEA 2000/RV-C/DVCC/CZone/WiFi (Lead + Product Radar)
 - 2026-06-29 | Redodo | 12V 120Ah Group 24 Bluetooth LiFePO4 — 1,536Wh, 23.8 lbs, $329.99 pre-order, Bluetooth SoC/OTA; BMS amp rating and cycle count not disclosed at launch (News 3 + Product Radar)
 - 2026-06-29 | Victron Energy | Multi HS19 Solar 15k — 15kW three-phase + 4×8kW MPPTs, 650–1000V HV, 19" rack, 26.5kg, 98% efficiency; shipping June 2026; pricing TBD; parallel pending firmware (News 2 + Product Radar — previously listed as "slated summer 2026")
+- 2026-07-06 | Victron Energy | Nucleo GX — quad-core GX device, $266 MSRP/~$225 street, 25 devices VE.Direct/USB + VE.Can; no VE.Bus/tank/temp/HDMI; explicitly not for marine; ships ~mid-August (Lead + Product Radar)
+- 2026-07-06 | Bluetti | Elite 300 — 3,014Wh/2,400W (4,800W surge) portable power station, "smallest 3kWh" claim, 10ms UPS; existing product (Feb 2026 launch elsewhere), featured for New Zealand market entry, NZ pricing not disclosed (News 4 + Product Radar)
+- 2026-07-06 | WattCycle | 16kWh 48V 314Ah Wall-Mount LiFePO4 — BYD cells, 300A BMS, 8-channel 3A active balancing, UL 1973, $2,299.99; CEC listing (CA incentive eligibility) pending as of publication, not yet confirmed final (Product Radar)
 
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
 - 2026-04-27 | Casely | Power Pods 5,000 mAh MagSafe (model E33A) — CPSC reannounced 16 April after fatality
+- 2026-07-06 | Alliance RV | NHTSA #26V380 — undersized inverter DC ground cable, 1,354 units across Midwest Automotive Design luxury van lineup (2020–2026 model years), thermal/fire risk; notification letters mailed 6 July; dealer inspection/replacement free
 
 ## Background Deep-Dives — Already Done
 
@@ -141,6 +150,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-22 | r/vandwellers | Zero Breeze customer service warning (18 June) — featured in Community Pulse; owner complaints about support on the battery-powered DC air conditioner; signal of niche 12V/24V cooling gear shipping ahead of support scaling
 - 2026-06-29 | r/vandwellers | A power station with two 48v expansion batteries (27 June) — expandable power station vs custom LFP bank; branded expansion-pack lock-in, per-kWh pricing vs open cells; firmware-capped capacity warning
 - 2026-06-29 | r/vandwellers | Vitrifrigo VT96FR vs VT56FR vs Isotherm Cruise CR 195? (25 June) — DC compressor-fridge selection; VT96FR vs VT56FR volume comparison; CR 195 build quality noted; compressor brand, ambient-temperature ceiling, 12/24V flexibility as decision axes
+- 2026-07-06 | r/vandwellers | 100° day. 28 hours a/c on solar and battery (4 July) — featured in Community Pulse; 12,000 BTU 120V AC in a Ford Transit, desert-Southwest sun, 80°F thermostat vs 96–100°F ambient; 84% capacity / 114Ah discharged after first 12 hours with normal daily loads layered on; only partial (12hr) result available, framed as a partial data point
+- 2026-07-06 | DIYSolarForum | Charge to 100%? BMS Engineer Explains — featured in Community Pulse; BMS Full-Charge-Voltage/Current threshold settings; most BMSes systematically undercount discharge/overcount charge, causing optimistic SOC drift without periodic true-100% recalibration
 
 ## On the Bench — YouTube Videos Already Featured
 
