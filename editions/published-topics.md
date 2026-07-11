@@ -62,6 +62,10 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-06 | Battery | Marine How To "LiFePo4 vs. AGM Charge Efficiency" (25 June) — LFP ~1C charge rate at ~99% efficiency vs AGM ~0.2C at ~85%; healthy lead-acid runs 70–90%, worsens with sulfation; LFP has no sulfation mechanism, prefers mid-range resting SoC
 - 2026-07-06 | Monitoring | Woterfitz (German electric-boat builder, Bernd Rudolf) custom charter-boat monitoring dashboard on Victron Cerbo GX — solved "infinite time-to-go" when 2.4kW solar > 1.5kW ePropulsion motor draw; NGINX/PHP + MQTT dashboard, custom ePropulsion RS485→VE DBus decoder, low-SoC load shedding at 30%; 24kWh bank, 102km/2.5 days on 40% SoC (Sept test); indie/community-engineering coverage
 - 2026-07-06 | Industry | Bluetti launches in New Zealand (1 July) — local warehousing/support; leads with existing Elite 300/200 V2/100 V2 power stations repositioned for freedom camping, sailing, island travel; no new hardware
+- 2026-07-13 | Firmware | SolarAssistant ships official Home Assistant integration v0.2.0 (2 July) plus 2026-07-02 Beta firmware adding REST/WebSocket/Cloud APIs, CLI tool, notification automations, expanded Growatt/SRNE/Sumry/Luxpower/Voltronic/Solis/GoodWe support — reduces DIY reverse-engineering/MQTT-scraping workarounds for budget hybrid inverter monitoring (Lead)
+- 2026-07-13 | Monitoring | Victron GlobalLink 530 announced (7 July) — 4G LTE Cat 1 cellular remote-monitoring gateway, 5-year prepaid SIM, joins GlobalLink 520; NOT certified for US cellular networks, Victron recommends 520 for US installs
+- 2026-07-13 | Marine | LiTime Argoseeker electric outboard series announced (10 July), launching mid-August — A1 24V/700W ~60lb thrust, A2 48V/2000W ~120lb thrust, integrated LiFePO4 battery, clamp-on no-drill install; LiTime's first move beyond batteries into propulsion hardware; pre-launch, specs unverified
+- 2026-07-13 | Battery | Jackery Explorer 100 Plus launch, Australia (6 July) — 99Wh/965g mini LiFePO4 power station, AU$179, flight/train-travel positioning
 
 ## Product Radar — Already Featured
 
@@ -99,12 +103,17 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-06 | Victron Energy | Nucleo GX — quad-core GX device, $266 MSRP/~$225 street, 25 devices VE.Direct/USB + VE.Can; no VE.Bus/tank/temp/HDMI; explicitly not for marine; ships ~mid-August (Lead + Product Radar)
 - 2026-07-06 | Bluetti | Elite 300 — 3,014Wh/2,400W (4,800W surge) portable power station, "smallest 3kWh" claim, 10ms UPS; existing product (Feb 2026 launch elsewhere), featured for New Zealand market entry, NZ pricing not disclosed (News 4 + Product Radar)
 - 2026-07-06 | WattCycle | 16kWh 48V 314Ah Wall-Mount LiFePO4 — BYD cells, 300A BMS, 8-channel 3A active balancing, UL 1973, $2,299.99; CEC listing (CA incentive eligibility) pending as of publication, not yet confirmed final (Product Radar)
+- 2026-07-13 | Victron Energy | GlobalLink 530 — 4G LTE Cat 1 cellular remote-monitoring gateway, 5-year prepaid SIM, no monthly fees; US price not disclosed (not certified for US networks); GlobalLink 520 street price ~$217-255 (News + Product Radar)
+- 2026-07-13 | LiTime | Argoseeker A1/A2 electric outboard motors — 24V/700W and 48V/2000W clamp-on units with integrated LiFePO4 battery; launching mid-August 2026; pricing not disclosed; pre-launch specs unverified (News + Product Radar)
+- 2026-07-13 | Jackery | Explorer 100 Plus — 99Wh/965g LiFePO4 mini power station, 128W max output, AU$179; Australia-only launch, no confirmed US/EU availability (News + Product Radar)
 
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
 - 2026-04-27 | Casely | Power Pods 5,000 mAh MagSafe (model E33A) — CPSC reannounced 16 April after fatality
 - 2026-07-06 | Alliance RV | NHTSA #26V380 — undersized inverter DC ground cable, 1,354 units across Midwest Automotive Design luxury van lineup (2020–2026 model years), thermal/fire risk; notification letters mailed 6 July; dealer inspection/replacement free
+- 2026-07-13 | Forest River | NHTSA #26V398 — mislabeled 110V circuits on AC distribution panel, 1,824 units (2025-2026 NOBO/Ibex, 2025-2027 RPOD travel trailers), electrical shock risk; notification letters expected 1 August; dealer label replacement free
+- 2026-07-13 | Tiffin Motorhomes | NHTSA #26V412 — MaxxAir N-Series Maxxfan rooftop vent fan PCB may overheat, 425 units (2026-2027 Zephyr/Wayfarer/Phaeton/Allegro Bus and others), fire risk; notification letters expected 28 August; dealer PCB replacement free
 
 ## Background Deep-Dives — Already Done
 
@@ -152,6 +161,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-29 | r/vandwellers | Vitrifrigo VT96FR vs VT56FR vs Isotherm Cruise CR 195? (25 June) — DC compressor-fridge selection; VT96FR vs VT56FR volume comparison; CR 195 build quality noted; compressor brand, ambient-temperature ceiling, 12/24V flexibility as decision axes
 - 2026-07-06 | r/vandwellers | 100° day. 28 hours a/c on solar and battery (4 July) — featured in Community Pulse; 12,000 BTU 120V AC in a Ford Transit, desert-Southwest sun, 80°F thermostat vs 96–100°F ambient; 84% capacity / 114Ah discharged after first 12 hours with normal daily loads layered on; only partial (12hr) result available, framed as a partial data point
 - 2026-07-06 | DIYSolarForum | Charge to 100%? BMS Engineer Explains — featured in Community Pulse; BMS Full-Charge-Voltage/Current threshold settings; most BMSes systematically undercount discharge/overcount charge, causing optimistic SOC drift without periodic true-100% recalibration
+- 2026-07-13 | DIYSolarForum | Solar Rook (2 July) — featured in Community Pulse; new-retiree first-time-poster ODawg sizing off-grid power for a 12x24 workshop (table saw, miter saw, vacuums, drills, mortiser), weighing Predator generator vs Bluetti power station + solar
+- 2026-07-13 | DIYSolarForum | EG4 12kPV / 18kPV using grid to "fill in" loads rather than battery (poldim, 4 July) — featured in Community Pulse; System Charge SOC Limit capped at 80% caused short heavy loads to pull from grid instead of battery; forum consensus ties to BMS needing periodic true-100% charge to balance cells
 
 ## On the Bench — YouTube Videos Already Featured
 
