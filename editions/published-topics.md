@@ -66,6 +66,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-13 | Monitoring | Victron GlobalLink 530 announced (7 July) — 4G LTE Cat 1 cellular remote-monitoring gateway, 5-year prepaid SIM, joins GlobalLink 520; NOT certified for US cellular networks, Victron recommends 520 for US installs
 - 2026-07-13 | Marine | LiTime Argoseeker electric outboard series announced (10 July), launching mid-August — A1 24V/700W ~60lb thrust, A2 48V/2000W ~120lb thrust, integrated LiFePO4 battery, clamp-on no-drill install; LiTime's first move beyond batteries into propulsion hardware; pre-launch, specs unverified
 - 2026-07-13 | Battery | Jackery Explorer 100 Plus launch, Australia (6 July) — 99Wh/965g mini LiFePO4 power station, AU$179, flight/train-travel positioning
+- 2026-07-20 | Battery | Will Prowse 9-year Battle Born test + teardown (videos 9 + 13 July) — twelve 100Ah units from Dec 2017, single indoor ≤15A system, all measure 26.8–60.2Ah; teardown of two: all 8 cell packs degraded, 73% of cells at 0V in one; terminal melting at 99A on two units; published downloadable data; amid active Dragonfly v. Prowse suit; third Battle Born story after 2026-06-15 Lead and 2026-06-29 datasheet item (Lead)
+- 2026-07-20 | Marine | Digital Yacht veLink shipping + Panbo hands-on (15 July) — $299 BLE-to-NMEA 2000 bridge for up to 8 Victron devices, no GX needed; N2K-powered; PGN limits (no consumed Ah / solar yield); announced Jan 2026, news hook = shipping + Panbo review
+- 2026-07-20 | Inverter | Victron Multi RS 230V (48V 6kVA, no MPPTs, retrofit variant) + Multi RS19 Solar (6kVA + 2×3kWp trackers 65–450V, 19" rack) announced 14 July; pricing undisclosed
+- 2026-07-20 | Safety | Prowse challenges LiTime over UL 1973 claim removed from 320Ah listing after his review (video 6 July) — Wayback Machine evidence, cert database shows LiTime cert for different model; DIYSolarForum thread 126956 corroborates; UL 2054/Intertek point labelled forum analysis
+- 2026-07-20 | Firmware | Venus OS native Shelly integration incomplete (AC-load role only, no PV-inverter role, no Gen 1) — Off-Grid Garage 4-node Node-RED workaround publishes any PM Shelly as PV inverter (video 12 July)
 
 ## Product Radar — Already Featured
 
@@ -106,6 +111,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-13 | Victron Energy | GlobalLink 530 — 4G LTE Cat 1 cellular remote-monitoring gateway, 5-year prepaid SIM, no monthly fees; US price not disclosed (not certified for US networks); GlobalLink 520 street price ~$217-255 (News + Product Radar)
 - 2026-07-13 | LiTime | Argoseeker A1/A2 electric outboard motors — 24V/700W and 48V/2000W clamp-on units with integrated LiFePO4 battery; launching mid-August 2026; pricing not disclosed; pre-launch specs unverified (News + Product Radar)
 - 2026-07-13 | Jackery | Explorer 100 Plus — 99Wh/965g LiFePO4 mini power station, 128W max output, AU$179; Australia-only launch, no confirmed US/EU availability (News + Product Radar)
+- 2026-07-20 | Victron Energy | Multi RS 230V — 48V 6kVA HF inverter/charger without MPPTs, retrofit positioning; announced 14 July, pricing TBD (News + Product Radar)
+- 2026-07-20 | Victron Energy | Multi RS19 Solar — 6kVA + 2×3kWp MPPTs (65–450V), 19" rack, Surlok terminals; announced 14 July, pricing TBD (News + Product Radar)
+- 2026-07-20 | Digital Yacht | veLink — $299 (street ~$285) BLE-to-NMEA 2000 bridge, 8 Victron devices, network-powered; shipping now (News + Product Radar)
+- 2026-07-20 | Gobel Power | Project X LiFePO4 DIY Kit — transparent 51.2V enclosure kit, 300A JK Inverter-BMS + breaker + Class T fuse; $500 (280/314Ah) / $600 (EVE MB56 628Ah), cells not included (Product Radar + On the Bench)
+- 2026-07-20 | Pecron | F5000LFP — 5,120Wh, 3,600W/7,200W 120/240V split-phase, 6,400W PV input, expandable to 35.8kWh, $1,999; "newly relevant" not newly announced (Product Radar)
 
 ## Recalls — Already Covered
 
@@ -114,6 +124,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-06 | Alliance RV | NHTSA #26V380 — undersized inverter DC ground cable, 1,354 units across Midwest Automotive Design luxury van lineup (2020–2026 model years), thermal/fire risk; notification letters mailed 6 July; dealer inspection/replacement free
 - 2026-07-13 | Forest River | NHTSA #26V398 — mislabeled 110V circuits on AC distribution panel, 1,824 units (2025-2026 NOBO/Ibex, 2025-2027 RPOD travel trailers), electrical shock risk; notification letters expected 1 August; dealer label replacement free
 - 2026-07-13 | Tiffin Motorhomes | NHTSA #26V412 — MaxxAir N-Series Maxxfan rooftop vent fan PCB may overheat, 425 units (2026-2027 Zephyr/Wayfarer/Phaeton/Allegro Bus and others), fire risk; notification letters expected 28 August; dealer PCB replacement free
+- 2026-07-20 | Jayco | NHTSA #26V426 + #26V427 — inverter may be installed without grounding connection; 205 2026 Seismic fifth-wheel toy haulers + 182 2026 Heartland Cyclone units; fire/shock risk; dealers install ground wire free; letters mailed 10 July; Jayco recall 9901660
 
 ## Background Deep-Dives — Already Done
 
@@ -126,6 +137,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-15 | trend_piece | Litigate or iterate: independent battery testing under pressure — using Dragonfly v. Prowse (litigate) vs Wattcycle/Marine How To (iterate) to examine the DIY DC world's reliance on independent testers; the affiliate-disclosure tension (testers earning affiliate revenue from products reviewed); Nevada anti-SLAPP and chilling-effect risk; reader takeaways (triangulate across testers, treat fixed hardware as more reassuring than a press release/lawsuit, weigh disclosure as a credibility signal)
 - 2026-06-01 | trend_piece | Calendar vs cycle aging in LFP: using Marine How To's 17-year GBS bank to separate the two aging clocks; calendar aging driven by average SoC + temperature, dominates a house bank's real lifespan since it spends more time resting than cycling; ties to Panbo cycle-test gap (5,000-cycle claims → ~3,000–4,000 measured); practical levers (moderate resting SoC, no float, keep cool, conservative voltages) cost nothing
 - 2026-06-22 | market_analysis | Does bifacial solar actually pay off on a van roof? Bifaciality factor (Renogy 80%) describes cell potential, not yield; real rear-side gain governed by albedo, air gap, rear shading; flush RV-roof mount ≈ 0–3% (feature defeated), tilted/raised ground array over gravel/concrete/sand 5–15%, over snow more; the genuine mobile upgrade in N-Type TOPCon is front-side (efficiency/ft², temp coefficient, slower degradation), not the rear bonus; buy for the cells, earn the bifacial gain with mounting
+- 2026-07-20 | standards_explainer | Why the capacity test is the only test that tells the truth — LFP flat voltage curve masks capacity loss; internal resistance measures conduction path not lithium inventory; dead cells hidden in parallel groups; how to run a proper capacity test (full absorption charge, constant-current discharge to LVC, count Ah); warranty thresholds (70–80% retention) and capacity logs as claim evidence; keyed to Prowse Battle Born dataset (IR near-spec, capacity 27–60%)
 - 2026-06-29 | trend_piece | Smart alternators and the external-regulator market — how smart/ECU-managed alternators forced LiFePO4 builders to external regulators; Zeus Omega as distributed evolution (ADM at alternator vs field-wire run to central controller); DC-DC charger comparison ($889 Zeus vs ~$200 Orion XS for single alternator); distributed-architecture trend in DC systems (VE.Can, multi-MPPT, CANBus BMS)
 
 ## Community Pulse — Threads & Discussions Already Featured
@@ -163,6 +175,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-06 | DIYSolarForum | Charge to 100%? BMS Engineer Explains — featured in Community Pulse; BMS Full-Charge-Voltage/Current threshold settings; most BMSes systematically undercount discharge/overcount charge, causing optimistic SOC drift without periodic true-100% recalibration
 - 2026-07-13 | DIYSolarForum | Solar Rook (2 July) — featured in Community Pulse; new-retiree first-time-poster ODawg sizing off-grid power for a 12x24 workshop (table saw, miter saw, vacuums, drills, mortiser), weighing Predator generator vs Bluetti power station + solar
 - 2026-07-13 | DIYSolarForum | EG4 12kPV / 18kPV using grid to "fill in" loads rather than battery (poldim, 4 July) — featured in Community Pulse; System Charge SOC Limit capped at 80% caused short heavy loads to pull from grid instead of battery; forum consensus ties to BMS needing periodic true-100% charge to balance cells
+- 2026-07-20 | DIYSolarForum | 12X Battleborn Batteries w/ 9 Years of Service (thread 127226) — companion thread to Prowse videos; owners posting own capacity tests (45–78Ah on 100Ah packs); rebalancing doesn't recover capacity
+- 2026-07-20 | r/vandwellers | BougeRV Yuma 200W CIGS Thin-film Solar Panels…all they're cracked up to be? (17 July) — CIGS flexible-panel trade-offs: shade tolerance/curved-roof fit vs efficiency and adhesive-mount longevity
+- 2026-07-20 | r/vandwellers | Brand of Batteries? What has worked good? What hasn't? (18 July) — long-term battery brand anecdata thread
 
 ## On the Bench — YouTube Videos Already Featured
 
@@ -173,3 +188,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-04-27 | BVbCD9NNxj4 | DIY Solar Power with Will Prowse — 12V 460Ah Epoch "V2-T" Marine Rated Battery! Holy Cow..
 - 2026-04-27 | rVXyM-uU_0M | Off-Grid Garage — SOC Accuracy Test Result: New Gobelpower BMS vs JK-BMS vs Victron Smart Shunt
 - 2026-04-27 | uT0mSH3991o | DIY Solar Power with Will Prowse — Battleborn Batteries Responds: Our Batteries Work Great! "Technical Note" Explained
+- 2026-07-20 | 2WPzLgXCogI | Off-Grid Garage — Connecting the Smart Shunt to a 1000A Busbar!
+- 2026-07-20 | NTsE10xyWcw | Off-Grid Garage — Gobel Power Project X: Get your own 35kWh Battery Shelf! But it needs some work...
+- 2026-07-20 | MO6pPlRaLBA | DIY Solar Power with Will Prowse — Caveman Crimping VS Electric Crimper! 300 amp Test Part 5
+(Note: Lead sources 5KCkl01uN5Q + wL1HEVfdNQU and News 9NtHyCpsOT8 / _HkP70xJzSw linked as story sources on 2026-07-20, not featured as On the Bench cards — do not re-feature)
