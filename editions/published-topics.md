@@ -71,6 +71,10 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | Inverter | Victron Multi RS 230V (48V 6kVA, no MPPTs, retrofit variant) + Multi RS19 Solar (6kVA + 2×3kWp trackers 65–450V, 19" rack) announced 14 July; pricing undisclosed
 - 2026-07-20 | Safety | Prowse challenges LiTime over UL 1973 claim removed from 320Ah listing after his review (video 6 July) — Wayback Machine evidence, cert database shows LiTime cert for different model; DIYSolarForum thread 126956 corroborates; UL 2054/Intertek point labelled forum analysis
 - 2026-07-20 | Firmware | Venus OS native Shelly integration incomplete (AC-load role only, no PV-inverter role, no Gen 1) — Off-Grid Garage 4-node Node-RED workaround publishes any PM Shelly as PV inverter (video 12 July)
+- 2026-07-27 | Monitoring | FarOutRide "Real-World Power Data" reference page (20 July) — measured (not estimated) van appliance consumption: fridge 522Wh/day DC (summer), Starlink Mini 486Wh/day DC (45-60W boot/22-35W active/15-17W idle), roof fan 45W/17W/2W by speed, induction cooktop 369Wh/~414Wh battery per meal, oven 127Wh/~142Wh toast, water heater 980Wh/~1,100Wh full heatup + 1,386Wh/~1,552Wh/day maintenance, e-bike charge 650-700Wh; custom Quad-Shunt DC monitor + Zigbee smart plugs (AC, +12% inverter-loss estimate) + Home Assistant Green dashboard; daily totals/solar yield sections marked "coming soon" at publication (Lead)
+- 2026-07-27 | Solar | Hoymiles HiFlow Pro (announced 15 July) — first US microinverter certified to UL 3700 (adopted Dec 2025, first North American plug-in/balcony-solar safety standard); 360W/unit, 4-unit parallel to 1,200W, 99.8%/99.5% MPPT efficiency; ties to 8-state plug-in-solar legalization wave (UT/ME/VA/MD/CO/CT/VT/NH); pricing not disclosed (News + Product Radar)
+- 2026-07-27 | Firmware | VictronConnect v6.40 (21 July) — adds native Bluetooth connectivity for Smart products on Windows (previously cable-only on that platform) + "improved remote console experience" (details not published)
+- 2026-07-27 | Battery | Marine How To "LiFePo4 Balancing vs. Charge Rate" (24 July) — passive balancing activates ~3.40V/cell at 15mV differential, bleeds only 30-100mA vs. full charge current; explains why 0.2C charge recommendation exists (balancing speed, not cell charge-rate limit); charge hard through mid-SoC, slow down near 100%
 
 ## Product Radar — Already Featured
 
@@ -116,6 +120,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | Digital Yacht | veLink — $299 (street ~$285) BLE-to-NMEA 2000 bridge, 8 Victron devices, network-powered; shipping now (News + Product Radar)
 - 2026-07-20 | Gobel Power | Project X LiFePO4 DIY Kit — transparent 51.2V enclosure kit, 300A JK Inverter-BMS + breaker + Class T fuse; $500 (280/314Ah) / $600 (EVE MB56 628Ah), cells not included (Product Radar + On the Bench)
 - 2026-07-20 | Pecron | F5000LFP — 5,120Wh, 3,600W/7,200W 120/240V split-phase, 6,400W PV input, expandable to 35.8kWh, $1,999; "newly relevant" not newly announced (Product Radar)
+- 2026-07-27 | Hoymiles | HiFlow Pro — 360W plug-in microinverter, first US UL 3700-certified unit, 4-unit parallel to 1,200W, 99.8%/99.5% MPPT efficiency, Bluetooth/WiFi setup; pricing not disclosed (News + Product Radar)
 
 ## Recalls — Already Covered
 
@@ -125,6 +130,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-13 | Forest River | NHTSA #26V398 — mislabeled 110V circuits on AC distribution panel, 1,824 units (2025-2026 NOBO/Ibex, 2025-2027 RPOD travel trailers), electrical shock risk; notification letters expected 1 August; dealer label replacement free
 - 2026-07-13 | Tiffin Motorhomes | NHTSA #26V412 — MaxxAir N-Series Maxxfan rooftop vent fan PCB may overheat, 425 units (2026-2027 Zephyr/Wayfarer/Phaeton/Allegro Bus and others), fire risk; notification letters expected 28 August; dealer PCB replacement free
 - 2026-07-20 | Jayco | NHTSA #26V426 + #26V427 — inverter may be installed without grounding connection; 205 2026 Seismic fifth-wheel toy haulers + 182 2026 Heartland Cyclone units; fire/shock risk; dealers install ground wire free; letters mailed 10 July; Jayco recall 9901660
+- 2026-07-27 | Grand Design | NHTSA #26V446 — MaxxAir N-Series Maxxfan rooftop vent fan PCB may fail mid-cycle and overheat, 448 units (2026-2027 Lineage travel trailers), fire risk; same defect as Tiffin #26V412 (2026-07-13); notification letters expected 27 July; dealer PCB replacement free
+- 2026-07-27 | Winnebago | NHTSA #26V450 — same MaxxAir Maxxfan PCB defect as Grand Design/Tiffin, 134 units (2027 Navion/View motorhomes), fire risk; notification letters expected 4 September; dealer PCB replacement free
 
 ## Background Deep-Dives — Already Done
 
@@ -178,6 +185,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | DIYSolarForum | 12X Battleborn Batteries w/ 9 Years of Service (thread 127226) — companion thread to Prowse videos; owners posting own capacity tests (45–78Ah on 100Ah packs); rebalancing doesn't recover capacity
 - 2026-07-20 | r/vandwellers | BougeRV Yuma 200W CIGS Thin-film Solar Panels…all they're cracked up to be? (17 July) — CIGS flexible-panel trade-offs: shade tolerance/curved-roof fit vs efficiency and adhesive-mount longevity
 - 2026-07-20 | r/vandwellers | Brand of Batteries? What has worked good? What hasn't? (18 July) — long-term battery brand anecdata thread
+- 2026-07-27 | r/vandwellers | Well. I think after 7 builds, I did it. I maxed out my roof with 86% roof coverage and 1300 watts of solar. (21 July) — 7th-build indie roof-density solar build
+- 2026-07-27 | r/vandwellers | Solar panel not peak W charge (21 July) — 400W/2x200Ah lithium system, voltage spikes to 20.8V on reconnect then sags to 15V within 10 seconds; troubleshooting thread, unresolved at time of writing
 
 ## On the Bench — YouTube Videos Already Featured
 
