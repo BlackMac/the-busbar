@@ -76,6 +76,12 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-27 | Firmware | VictronConnect v6.40 (21 July) — adds native Bluetooth connectivity for Smart products on Windows (previously cable-only on that platform) + "improved remote console experience" (details not published)
 - 2026-07-27 | Battery | Marine How To "LiFePo4 Balancing vs. Charge Rate" (24 July) — passive balancing activates ~3.40V/cell at 15mV differential, bleeds only 30-100mA vs. full charge current; explains why 0.2C charge recommendation exists (balancing speed, not cell charge-rate limit); charge hard through mid-SoC, slow down near 100%
 
+- 2026-08-10 | Battery | Will Prowse three-way large-format 48V test on new 18kW cycler (video 8 Aug) — EG4 PowerPro vs Ruixu Lithi vs Yixiang, ~300lb each; 3-yr-old EG4 (12MWh cycled) vs Ruixu (barely cycled) differ only 0.6% in capacity after two Las Vegas summers uncharged = empirical support for calendar-over-cycle aging (ties to 2026-06-01 background); 200A continuous test — Yixiang internal fuse at 220°F tripping BMS, bypass fixed it, second fuseless horizontal unit still tripped early (BMS sensitive right at 200A, matched Ruixu at 198A); EG4 best on layout (BMS far from cells + breaker); all rated 140A continuous, all pass there, MOSFETs <40°C, cells never hot in any test (Lead)
+- 2026-08-10 | Industry | Expion360 Q2 2026 (7 Aug) — Forest River adds Georgetown + Dynamax Grand Sport to UL 1973 lithium OEM programs (on top of Dynamax, East to West); net sales $2.0M (-32% YoY, +30% QoQ), gross margin 20.8%→32.4% (low-margin accessory resale discontinued), net loss $1.3M, cash $1.5M at 30 June; 1-for-12 reverse split 21 July, Nasdaq compliance regained 4 Aug; next-gen line still H2 2026, Aug release did not restate Feb per-model capacities
+- 2026-08-10 | Firmware | JK Inverter-BMS V19.34 manual SoC / SoH / cycle-capacity calibration, tested by Off-Grid Garage (video 29 July) — firmware itself released 30 May, settings only exposed via JK BMS Android app v6.0.10, PC software updated 31 July; SoH floor 50%; Andy's finding: "cycle capacity" counts discharged Ah ONLY, charge current never added, so on a 314Ah pack 314Ah reads 1 cycle and 628Ah reads 2 when 628Ah discharged+charged is physically 1 cycle; same on B-series and PB-series, not V19-specific
+- 2026-08-10 | Battery | Gobel Power Thor 5000 unboxing (Off-Grid Garage, 7 Aug) — 5.1kWh/51.2V/100Ah on REPT cells, JK Inverter-BMS JK_PB1A16S10P V19 with 1A active balancing, integrated 100A DC breaker to 250V DC; 135mm deep vs ~180mm for comparable 100Ah rack packs, ~41-44kg one-person carry; designed by Autong (Germany), built by Gobel Power (Shenzhen, est. 2012) — "German designed" framing examined, not repeated unqualified
+- 2026-08-10 | Battery | Paoweric $699 5kWh Amazon server-rack battery tested + torn down by Will Prowse (video 1 Aug) — rated 200A but integrated breaker marked 100A, lasted 54s at 200A; measured 104.8Ah at 100A (mid-pack, better than expected); 13in wide vs 17.5in rack standard; teardown: no BMS inductor (no current throttling), solder blobs on nickel sheet welded to aluminium busbar, six wires on one busbar, temp sensors taped, fibreboard at stack ends only, nothing between cells; Prowse framing = certified/uncertified price gap narrowing (~$150 to a UL 1973 + UL 9540 pack)
+
 ## Product Radar — Already Featured
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Product name -->
@@ -122,6 +128,12 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | Pecron | F5000LFP — 5,120Wh, 3,600W/7,200W 120/240V split-phase, 6,400W PV input, expandable to 35.8kWh, $1,999; "newly relevant" not newly announced (Product Radar)
 - 2026-07-27 | Hoymiles | HiFlow Pro — 360W plug-in microinverter, first US UL 3700-certified unit, 4-unit parallel to 1,200W, 99.8%/99.5% MPPT efficiency, Bluetooth/WiFi setup; pricing not disclosed (News + Product Radar)
 
+- 2026-08-10 | Gobel Power | Thor 5000 — 51.2V 100Ah / 5.1kWh LiFePO4 rack battery, REPT cells, JK Inverter-BMS (1A active balancing), integrated 100A DC breaker; 135×442×450mm, steel case / optional 201 stainless; 6,000 cycles @80% DoD to 80% SoH, 10-yr warranty; $1,382 (currency ambiguous — see run-log flag); China + Germany warehouse stock. NOTE: distinct product from Gobel Power Project X DIY kit (2026-07-20) (News + Product Radar)
+- 2026-08-10 | EG4 | PowerPro WallMount AllWeather 48V 280Ah — 14.3kWh 51.2V outdoor-rated LFP wall battery, 200A BMS + integrated 600A busbar, internal heater, UL 1973 + UL 9540A, 10-yr warranty; $3,150 (Signature Solar retail listing, not manufacturer MSRP) (Lead subject + Product Radar)
+- 2026-08-10 | Paoweric | 5kWh 200A server-rack-style LFP — $699 on Amazon, 13in wide (won't fit 17.5in rack), measured 104.8Ah at 100A, 200A rating sits behind a 100A breaker; listed as price-floor marker, explicitly not a recommendation; no manufacturer product page exists — all specs from Prowse video (News + Product Radar)
+- 2026-08-10 | Expion360 | Next-generation lithium line — Group 27 12.8V 140Ah (from 132Ah, +6%), GC2H 12.8V 180Ah (from 162Ah, +11%), EX1 12.8V 420Ah; VHC internal heating, SmartTalk Bluetooth, CAN bus; H2 2026, no ship date; capacities from 5 Feb 2026 release, timeline reconfirmed 7 Aug (News + Product Radar)
+- 2026-08-10 | Safiery | Solid State Lithium 48V 53.1Ah — 2,712Wh semi-solid LiFePO4 pack for caravan/marine, 1C/2C/3C discharge variants; price not verified (product page did not render pricing); named in Panbo piece as an honest semi-solid case built on LFP not NMC (Product Radar)
+
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
@@ -132,6 +144,10 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | Jayco | NHTSA #26V426 + #26V427 — inverter may be installed without grounding connection; 205 2026 Seismic fifth-wheel toy haulers + 182 2026 Heartland Cyclone units; fire/shock risk; dealers install ground wire free; letters mailed 10 July; Jayco recall 9901660
 - 2026-07-27 | Grand Design | NHTSA #26V446 — MaxxAir N-Series Maxxfan rooftop vent fan PCB may fail mid-cycle and overheat, 448 units (2026-2027 Lineage travel trailers), fire risk; same defect as Tiffin #26V412 (2026-07-13); notification letters expected 27 July; dealer PCB replacement free
 - 2026-07-27 | Winnebago | NHTSA #26V450 — same MaxxAir Maxxfan PCB defect as Grand Design/Tiffin, 134 units (2027 Navion/View motorhomes), fire risk; notification letters expected 4 September; dealer PCB replacement free
+
+- 2026-08-10 | Grand Design | NHTSA #26V492 (Grand Design #910066) — inverter prep circuit conductor with insufficient overcurrent protection, may overheat; 7 units, 2027 Imagine travel trailers; fire risk; dealers replace breaker free; letters expected 17 August; report received 28 July
+- 2026-08-10 | Grand Design | NHTSA #26V490 (Grand Design #910064) — outlet cover improperly secured, screws could contact wiring and arc/short; 2 units, 2026 Imagine travel trailers; fire risk; dealer inspect/repair free; letters expected 17 August
+- 2026-08-10 | Forest River | NHTSA #26V477 (Forest River #51-2077) — MaxxAir N-Series Maxxfan rooftop vent fan PCB may fail and overheat; 69 units, 2026-2027 Pause travel trailers + OG Luxury Coach; fire risk; FOURTH builder on this same supplier defect after Tiffin #26V412, Grand Design #26V446, Winnebago #26V450 — running total ~1,076 units (our arithmetic, not published by NHTSA or MaxxAir); dealer PCB replacement free; letters expected July
 
 ## Background Deep-Dives — Already Done
 
@@ -146,6 +162,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-06-22 | market_analysis | Does bifacial solar actually pay off on a van roof? Bifaciality factor (Renogy 80%) describes cell potential, not yield; real rear-side gain governed by albedo, air gap, rear shading; flush RV-roof mount ≈ 0–3% (feature defeated), tilted/raised ground array over gravel/concrete/sand 5–15%, over snow more; the genuine mobile upgrade in N-Type TOPCon is front-side (efficiency/ft², temp coefficient, slower degradation), not the rear bonus; buy for the cells, earn the bifacial gain with mounting
 - 2026-07-20 | standards_explainer | Why the capacity test is the only test that tells the truth — LFP flat voltage curve masks capacity loss; internal resistance measures conduction path not lithium inventory; dead cells hidden in parallel groups; how to run a proper capacity test (full absorption charge, constant-current discharge to LVC, count Ah); warranty thresholds (70–80% retention) and capacity logs as claim evidence; keyed to Prowse Battle Born dataset (IR near-spec, capacity 27–60%)
 - 2026-06-29 | trend_piece | Smart alternators and the external-regulator market — how smart/ECU-managed alternators forced LiFePO4 builders to external regulators; Zeus Omega as distributed evolution (ADM at alternator vs field-wire run to central controller); DC-DC charger comparison ($889 Zeus vs ~$200 Orion XS for single alternator); distributed-architecture trend in DC systems (VE.Can, multi-MPPT, CANBus BMS)
+
+- 2026-08-10 | trend_piece | "Solid-state" as marine battery marketing — every solid-state pack currently buyable for a boat is semi-solid (5-20% liquid electrolyte); the four real promises (up to 60% energy density via lithium-metal anode not graphite, no flammable organic solvent, 15-min-to-80% in lab, longer cycle life from fewer parasitic reactions) don't arrive proportionally at 10% liquid; Renogy explicit at ~10% liquid, Safiery semi-solid on LFP, Solid State Marine chemistry unconfirmed and Stein reads it as NMC; LFP-vs-NMC matters more than solid-vs-semi-solid for a 12V house bank (high resting SoC, uncontrolled alternator regulation, hot locker); all-solid-state targeted back half of decade, EVs first; explicit parallel to the "drop-in" terminology problem (Panbo / Ben Stein, 7 Aug)
 
 ## Community Pulse — Threads & Discussions Already Featured
 
@@ -188,6 +206,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-27 | r/vandwellers | Well. I think after 7 builds, I did it. I maxed out my roof with 86% roof coverage and 1300 watts of solar. (21 July) — 7th-build indie roof-density solar build
 - 2026-07-27 | r/vandwellers | Solar panel not peak W charge (21 July) — 400W/2x200Ah lithium system, voltage spikes to 20.8V on reconnect then sags to 15V within 10 seconds; troubleshooting thread, unresolved at time of writing
 
+- 2026-08-10 | r/vandwellers | Roof Adapter Print File Creator (8 Aug) — builder released RoofFlangeForge, a browser tool generating STL roof flange/adapter files from user roof measurements; open-source community tool, relevant to cable glands / solar entry / vent penetrations
+- 2026-08-10 | r/vandwellers | Securing batterie and electric system (5 Aug) — battery + electrical retention in a Chrysler Town and Country with seats removed and stow-and-go wells open; battery restraint as the last-designed, highest-consequence part of a DIY DC install; no DIY-van equivalent of ABYC restraint requirements
+
 ## On the Bench — YouTube Videos Already Featured
 
 <!-- Each VIDEO_ID appears at most once. New videos from the same channel are fine. -->
@@ -201,3 +222,6 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-07-20 | NTsE10xyWcw | Off-Grid Garage — Gobel Power Project X: Get your own 35kWh Battery Shelf! But it needs some work...
 - 2026-07-20 | MO6pPlRaLBA | DIY Solar Power with Will Prowse — Caveman Crimping VS Electric Crimper! 300 amp Test Part 5
 (Note: Lead sources 5KCkl01uN5Q + wL1HEVfdNQU and News 9NtHyCpsOT8 / _HkP70xJzSw linked as story sources on 2026-07-20, not featured as On the Bench cards — do not re-feature)
+- 2026-08-10 | qZZPt6N1bCM | DIY Solar Power with Will Prowse — 18kW Battery Cycling Machine: No Battery is Safe!! This Changes Everything (FEATURED; video dated 22 July, used as tooling context for the 2026-08-10 lead)
+- 2026-08-10 | MWe_dMGuhhU | Off-Grid Garage — I roasted a Daly BMS and replaced it with a 300A JK. Repair of the Muller 12V/200Ah Batterie.
+(Note: DCGhw6x1Osg, obD17c96h00, X4p22w-UmtI, EwBNDURRNXg linked as story sources on 2026-08-10, NOT featured as On the Bench cards — do not re-feature)
