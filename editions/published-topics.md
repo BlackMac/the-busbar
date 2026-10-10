@@ -128,6 +128,13 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | Industry | Dragonfly Energy eighth term-loan amendment (signed 30 Sept, 8-K 2 Oct) — Sept minimum-liquidity covenant test waived; Series B cash dividend staged 2% by 1 Oct + 6% by 30 Oct; $450K fee PIK to principal. SEVENTH Dragonfly/Battle Born appearance since May
 - 2026-10-05 | Firmware | Victron Click & Design open to everyone (28 Sept) — no Professional login to open/edit shared links (account to save); FR/UK/NL added, DE/ES soon; installer logo; better loss simulation; priority/non-priority monthly loads; off-grid (with/without generator) "under development". Follows 2026-06-22 split-phase item
 
+- 2026-10-12 | Battery | **Off-Grid Garage mixed-capacity parallel bank (video `id69ftYOKbk`, 8 Oct)** — Lead. Shelf 3 packs 864Ah near chargers vs PowerWall side (MB56 + CL530 + ~314/306Ah packs, ~1,778Ah OUR sum, "double the capacity" per Andy) via 4×95mm² + breaker + 2nd SmartShunt; ~137kWh total. Bulk ~54V: ~50A each side, ~100mV shunt-to-shunt; 54.66V: 42A vs 100A; ~55.2V: 5A vs 140A; MB56 ~70A vs 314Ah 5–7A; absorption extended 1h→3h+; CL530 pack has 1 MB56 cell (transport damage); V19 JK showed 78% at 55.4V/1.2A; connectors ~32°C at 70A. Andy: repeated short absorptions = one long. Background explains physics
+- 2026-10-12 | Firmware | Victron Venus OS v3.81 (7 Oct) — Cerbo GX MK3 "no longer reboots while plenty of free memory remains", ~19MB more RAM; fixes v3.80 Classic UI missing VE.Bus AC/DC values + register 232 read-only; new Modbus regs 235 (MicroGrid AllowBlackStart), 129 (VE.Bus Weak AC Input); Pytes Shared Voltage Sense
+- 2026-10-12 | Marine | IBEX 2026 Innovation Awards (6 Oct, BWI + NMMA) — Electrical Systems: ARCO Zeus Omega (our 2026-06-29 Lead) + Egis Mobile Electric Modular PDM (sealed, ignition-protected, fuses/resettable breakers/Deutsch/NMEA 2000, no ratings published); honourable mention AquaAmp Smart DT Connector
+- 2026-10-12 | Monitoring | Battery Pack Card (Sven Hamers, MIT, HACS) — v1.6.0 1 Oct Stacked Pack Card, v1.7.0 3 Oct JK-style bank display (mean V, summed I/capacity, capacity-weighted SOC), v1.9.0 9 Oct JK RS485 add-on pack picker (credits "Andy"), v2.0.0-alpha.1 9 Oct alerts (cell Δ, cell V, temp, low SOC, BMS alarm, CHG/DCH off; critical breaks phone silent mode; writes only HA automations, never BMS); 12 GitHub stars
+- 2026-10-12 | Battery | Anker SOLIX S5000 (9 Oct) — 5,024Wh 314Ah LFP, 4,500W/8,000W 120/240V, 4×NEMA 5-20 + L14-30 + TT-30, solar 11–60V 1,000W + 16–165V 2,000W (17A each), idle 8.8W (120V)/13.7W (240V) = ~211Wh/day ~4% (our arithmetic), 5–30kWh, UL 9540/9540A, 6,000 cycles to 80%, 5-yr, 97lb; $2,499.99 launch 27 Oct / $3,599.99 MSRP
+- 2026-10-12 | Industry | Dragonfly Energy 1-for-8 reverse split effective 12 Oct (8-K filed 8 Oct, Certificate of Change 7 Oct) — Nasdaq 5550(a)(2) $1 bid; authorized 400M→50M; CUSIP 26145B 601; no deficiency notice mentioned. EIGHTH Dragonfly/Battle Born appearance since May
+
 ## Product Radar — Already Featured
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Product name -->
@@ -217,6 +224,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | Victron Energy | Cerbo GX MK3 — AM625 quad-core, 1GB DDR4, 25 VE.Direct; Victron price not published, US retail $393 list. Distinct from Nucleo GX (2026-07-06) (News 2 + Product Radar)
 - 2026-10-05 | Vatrer Power | 12V 300Ah Heated Lithium Battery with Cooling Fan — 3,840Wh, 300A BMS, 600A/3s, self-heating, cooling fan (trigger temp + IP rating NOT published), Bluetooth, 71.65lb, 5,000+ cycles @80%; $799.99–$839.99 promo (list $1,399.99); announced RV News 1 Oct (Product Radar only)
 
+- 2026-10-12 | Anker | SOLIX S5000 — 5,024Wh / 4.5kW / TT-30 / 8.8W idle / UL 9540; $2,499.99 launch 27 Oct (News 4 + Product Radar). Distinct from S2000 (2026-05-25), Solix XE, Solarbank 4
+- 2026-10-12 | Egis Mobile Electric | Modular Power Distribution Module — IBEX 2026 Electrical Systems co-winner; no ratings/price published (News 2 + Product Radar)
+- 2026-10-12 | REDARC | REDWorks Nomad50 (ICMS-016-002, $2,199, BCDC Alpha50 R + Smart Battery Monitor + fuse block, 465×308×79mm, 7.1kg) / Pioneer50 (ICMS-017-001, $2,899.01 as listed, + TVMS Rogue + RedVision Pro) — MERGED one entry; Scout25/QuickFit covered as story 2026-05-11 (Product Radar only)
+- 2026-10-12 | Sven Hamers (open source) | Battery Pack Card / Battery Stacked Pack Card — Home Assistant Lovelace cards, MIT, v1.9.0 + v2.0.0-alpha.1 9 Oct (News 3 + Product Radar)
+
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
@@ -256,6 +268,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | Grech Motors | NHTSA #26V628000 — MaxxAir N-Series Maxxfan PCB overheat; 134 units (2027 Strada/Terreno, 2026–2027 Turismo); dealer PCB replace free; letters 30 Oct; report 30 Sept. NINTH builder; running total ≈ 2,272 units (2,138 + 134, OUR arithmetic). Still no component-level recall on the fan
 - STILL NOT COVERED, catch-up candidate | Alliance RV | NHTSA #26V324 — lithium heating pad, 2,785 units. Passed over a SIXTH time (2026-10-05), on date
 
+- 2026-10-12 | (none) | Recalls & Safety SKIPPED — NHTSA API ≥ 28 Sept: 30 campaigns, none in scope (E-One #26V652000 fire-truck busbar overheat, 301 units — DC but outside audience; Forest River #26V647000 exterior outlet GFCI, 5 units — AC). No tenth MaxxAir Maxxfan builder; run stays 9 builders / ~2,272 units
+- STILL NOT COVERED, catch-up candidate | Alliance RV | NHTSA #26V324 — lithium heating pad, 2,785 units. Passed over a SEVENTH time (2026-10-12), on date
+
 ## Background Deep-Dives — Already Done
 
 <!-- Don't repeat the same angle on the same topic within ~6 months. Variation on the same subject is fine if the angle is genuinely different. -->
@@ -284,6 +299,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-09-28 | trend_piece | **"Your battery is rated for twelve years. Its app isn't rated at all"** — software lifecycle vs hardware lifecycle. Daly 2019 BMS app lockout (~7 yrs) vs 10–15-yr LFP life; if the app is the only interface you lose sight of cell voltages; flip side = updatable firmware (Goal Zero YETI 3000X app-remedy recall 2026-09-14, Winnebago Ekko OTA 2026-08-17, Orion XS reverse charge added to installed units); Signal K flaw = a GX/Node-RED/Signal K boat is a small Linux server on a shared marina network, so updates become maintenance; buyer levers: prefer local documented interfaces (pack display, CAN/RS485 with published protocol — JK Wi-Fi module reads existing RS485, 2026-09-14), ask vendors for app support duration, keep a vendor-independent way to read cell voltages; UL 1973 is a hardware snapshot (2026-08-17)
 
 - 2026-10-05 | trend_piece | "System voltage should be a setting. Some controllers treat it as a guess" — keyed to Grand Design #26V616000. Victron SmartSolar manual: detect ONCE at very first power-up, 10s wait + average, further detection disabled, defaults to 12V if no battery; Morningstar ProStar: auto-detect at EVERY start-up, >15.5V = 24V, Morningstar itself says use auto-detect "only in rare circumstances". Factory builders know system voltage; auto-detect hands a made decision to a power-up measurement; RVIA listing rule covers array side, UL 1741 tests the box not the integration. Trigger in the Reflection NOT asserted
+
+- 2026-10-12 | standards_explainer | "Parallel batteries share current by voltage, not by capacity" — each battery = resting voltage (OCV at SoC) behind internal + path resistance; capacity not in the equation; flat LFP mid-curve → resistance decides the split in bulk (illustrative OUR arithmetic: 100mV over 2mΩ = 50A, 4mΩ = 25A); above ~3.4V/cell steep knee → fuller battery self-throttles, emptier takes over (Andy's 42A→5A vs 140A); needs absorption time to converge. Practical: near/short-path batteries see highest C-rate in bulk (worst if nearest is smallest), same on heavy discharge; equal-length cables to common busbar + per-battery fuse equalise resistance not capacity/age; per-BMS SoC drifts, bank-level CAN aggregate better (ties 2026-09-21). Keyed to Off-Grid Garage Lead
 
 ## Community Pulse — Threads & Discussions Already Featured
 
@@ -358,6 +375,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | r/vandwellers | Rooftop A/C and solar - buildout/pricing in 2026 battery density (3 Oct) — 5th build, 2026 Transit HR 148, Dometic RTX2000, 628Ah from dual 314Ah minis vs older 600Ah/600W rule of thumb
 - METHOD NOTE (unchanged): RSS `summary` field only (OP text truncated, no replies). r/diysolar/r/solar/r/liveaboard empty FOURTH run running
 
+- 2026-10-12 | r/vandwellers | Over panelling MPPT (6 Oct) — 2×235W Victron panels parallel, 100/30 instead of calculator's 100/50, ~33A peak expected rare/clipped; tied to 2026-09-21 Manu over-panelled 75/15s
+- 2026-10-12 | r/vandwellers | Lithium battery folks: how do you check your BMS when you're off-grid? (6 Oct) — JK/JBD/Daly app complaints (accounts, internet, BT drops, switching packs), app SOC vs shunt; tied to 2026-09-28 Daly lockout background
+- 2026-10-12 | r/vandwellers | Airplus fan won't open or close (10 Oct) — Arctic Tern AirPlus installed May, 20–30 uses, lid motor squeals; tied to 2026-09-07 fan test
+- METHOD NOTE (unchanged): RSS `summary` field only (OP text truncated, no replies). r/diysolar/r/solar/r/liveaboard empty FIFTH run running
+
 ## On the Bench — YouTube Videos Already Featured
 
 <!-- Each VIDEO_ID appears at most once. New videos from the same channel are fine. -->
@@ -394,3 +416,7 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | `4OdG9GEFQpk` | **Cleversolarpower by Nick — Your Battery Fuse Will Not Blow At Its Rated Current** (21 Sept 2026) (FEATURED; maxresdefault; source for News 3). First Cleversolarpower card; channel not in sources.json
 - 2026-10-05 | `jOiGczodidI` | Off-Grid Garage — Huge RS485 Data Bus Installation, so all JKs can talk! (29 Sept 2026). RJ45 terminal blocks, JK RS485 on pins 1/2, T-568A vs B
 (VERIFICATION RECORD via channel/latest: Will Prowse newest still 31 Aug; Marine How To 18 Sept (used); Mortons 21 Aug; Trek April; HoboTech 22 Sept Renogy ShadowFlux (affiliate-style, rejected); Cleversolarpower also 24 Sept `CRL3X7y-bug` Victron Battery Balancer + 27 Sept `DTRYg5mV5LM` LiTime trolling teardown — unused, available; Off-Grid Garage 3 Oct `3p6qakh3buU` PowerWall first connect — unused, available; @PanboTV not found)
+- 2026-10-12 | `id69ftYOKbk` | **Off-Grid Garage — Battery Shelf and PowerWall in Action. Different Capacities and Cable Lengths. Will that even work?** (8 Oct 2026) (FEATURED; Lead + Background source; sddefault 640×480 — maxresdefault is a 120×90 placeholder)
+- 2026-10-12 | `3p6qakh3buU` | Off-Grid Garage — New PowerWall connects for the first time. Lots to check and test... (3 Oct 2026); also Lead secondary source
+- 2026-10-12 | `DTRYg5mV5LM` | Cleversolarpower by Nick — LiTime 12V 100Ah Trolling Motor Battery: Honest Review and Teardown (27 Sept 2026) — 101.4Ah, 160A trip ~10s / recover ~25s, Great Power cells, 39Ω balance resistors ≈88mA; affiliate links disclosed
+(VERIFICATION RECORD: TranscriptAPI channel/latest now returns `no_active_paid_plan` — NOT usable. YouTube channel RSS 404s. Working method: scrape `youtube.com/@handle/videos` ytInitialData + `python3 -m yt_dlp` (exact upload_date, auto-subs with `--sleep-subtitles 15`). Will Prowse newest still 31 Aug (use `/channel/UCoj6RxIAQq8kmJme-5dnN0Q/videos`); Marine How To newest 18 Sept; Mortons FOGATTI AC teardown ~early Sept `qyuHvEq3dkw` unused; Cleversolarpower 8 Oct `rCzlq1IkN38` Renogy DC-DC 40A review — unused, available; `CRL3X7y-bug` still unused)
