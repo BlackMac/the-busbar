@@ -135,6 +135,13 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-12 | Battery | Anker SOLIX S5000 (9 Oct) — 5,024Wh 314Ah LFP, 4,500W/8,000W 120/240V, 4×NEMA 5-20 + L14-30 + TT-30, solar 11–60V 1,000W + 16–165V 2,000W (17A each), idle 8.8W (120V)/13.7W (240V) = ~211Wh/day ~4% (our arithmetic), 5–30kWh, UL 9540/9540A, 6,000 cycles to 80%, 5-yr, 97lb; $2,499.99 launch 27 Oct / $3,599.99 MSRP
 - 2026-10-12 | Industry | Dragonfly Energy 1-for-8 reverse split effective 12 Oct (8-K filed 8 Oct, Certificate of Change 7 Oct) — Nasdaq 5550(a)(2) $1 bid; authorized 400M→50M; CUSIP 26145B 601; no deficiency notice mentioned. EIGHTH Dragonfly/Battle Born appearance since May
 
+- 2026-10-19 | Industry | Will Prowse launches Charged Reviews (chargedreviews.com, Charged Reviews LLC Wyoming; launch video `lhGXIGh5oTY` 13 Oct) — 484 batteries listed 18 Oct; verified review = receipt + serial-label photo, 19× weight; reviews permanent; certificate/datasheet/manual archive with change tracking; Evidence Score batteries = certificates 45 / warranty term 20 / lifetime-capacity 20 / warranty energy disclosure 10 / cell-model disclosure 5, scored vs category best, missing = 0 (measures documentation, not performance); top 5 on 18 Oct all residential wall/rack (EG4 WallMount 314Ah 78/100); affiliate-funded; built with AI with friend "Brandon"; Prowse = Dragonfly suit defendant, Battle Born a filter but none in default list; compared with OffGrid Benchmark (2026-05-04) (Lead)
+- 2026-10-19 | Industry | REDARC acquires Samlex America (15 Oct; REDARC page dated 16 Oct) — Burnaby BC, founded 1991 by Earl Berg, 90+ countries; PST/NTX inverters, EVO inverter/chargers, chargers, DC-DC, power supplies; terms undisclosed; Samlex brand + leadership retained; ties to RS3 (May) + Elkhart OEM hire (Aug)
+- 2026-10-19 | Battery | Cleversolarpower nine 12V 100Ah ranking on balancer current (13 Oct, `A1aHz6dbz7I`) — ≥50mA + works at rest; Eco-Worthy V1 35mA charge-only, 6.5Ah cell gap; Yeagulch/Dyness 22mA (Yeagulch 200A for 7 min on 100A BMS → 100°C cutoff); Dyness Trolling charge-only; Wattcycle Mini bloated/BMS heat at 100A; pass: Vatrer heated 200mA $330, LiTime Trolling 88mA $336, LiTime G24 Smart $311 (no cell V in app), Humsienk 46mA always-on 108Ah $192 budget
+- 2026-10-19 | Battery | Off-Grid Garage 100Ah Thor 5000 paralleled with CATL 530Ah (14 Oct, `h7qpx-m5Fb8`) — 88%/53.3V into ~54.9V bank, 50–60A inrush for seconds; JK PB limiter 10A after >100A for 3s; 21A load: MB56 10–11A / CATL 8.7A / Thor 1.7A; ~5.9kW: 13.3 / 16.8 / 4.8A; 280Ah packs nearer busbar out-delivered larger ones (path resistance, follow-up to 2026-10-12 Lead); Andy's rule ≤1–2V difference, own BMS+breaker+fuse per pack
+- 2026-10-19 | Safety | Digital Yacht SafeLi (15 Oct, Annapolis preview, METS launch 17–19 Nov) — hydrogen/VOC gas + temperature sensor for battery compartments; NMEA 2000 alarms, Wi-Fi app, internal sounder, N2K klaxon, Njord cloud push; thresholds, current draw, price unpublished
+- 2026-10-19 | Marine | TEMO OUTPOD North American launch (Annapolis 15–18 Oct; Panbo press release 15 Oct) — transom-mounted pod; OUTPOD·1000 1,300W/66lb/IP67 $2,600; OUTPOD·3000 3,100W/148lb/IP68 $5,400; 26lb motor; 48V, 2.3kWh auto-connect cassettes or existing 48V bank/solar/hydrogeneration; ~45 min full power per cassette on 3000 (our arithmetic); 3-yr warranty, Portland ME service
+
 ## Product Radar — Already Featured
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Product name -->
@@ -229,6 +236,11 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-12 | REDARC | REDWorks Nomad50 (ICMS-016-002, $2,199, BCDC Alpha50 R + Smart Battery Monitor + fuse block, 465×308×79mm, 7.1kg) / Pioneer50 (ICMS-017-001, $2,899.01 as listed, + TVMS Rogue + RedVision Pro) — MERGED one entry; Scout25/QuickFit covered as story 2026-05-11 (Product Radar only)
 - 2026-10-12 | Sven Hamers (open source) | Battery Pack Card / Battery Stacked Pack Card — Home Assistant Lovelace cards, MIT, v1.9.0 + v2.0.0-alpha.1 9 Oct (News 3 + Product Radar)
 
+- 2026-10-19 | Custom Marine Products | CMPower 450Ah Semi-Solid State LiFePO4 (CMP205450-BHR300) — 12.8V 5,760Wh 8D, 300A/600A 10s, heating, Bluetooth + NMEA 2000 + Victron, removable BMS, 16P/4S, 94.8lb, IEC 62619/UL 1973/UL 9540A/UN 38.3 listed; $2,189; "Solid State" in show listing/URL vs "Semi-Solid State" on page
+- 2026-10-19 | TEMO | OUTPOD·1000 / OUTPOD·3000 — $2,600 / $5,400 (News 5 + Radar)
+- 2026-10-19 | Digital Yacht | SafeLi battery-compartment gas/temperature monitor — no price (News 4 + Radar)
+- 2026-10-19 | Blue Sea Systems | MiniSwitch — terminal-mount enclosed battery disconnect, 150A continuous / 450A cranking; no price/part number/voltage rating (announced 13 Oct)
+
 ## Recalls — Already Covered
 
 <!-- Format: - YYYY-MM-DD | Manufacturer | Recall ID / short description -->
@@ -271,6 +283,9 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-12 | (none) | Recalls & Safety SKIPPED — NHTSA API ≥ 28 Sept: 30 campaigns, none in scope (E-One #26V652000 fire-truck busbar overheat, 301 units — DC but outside audience; Forest River #26V647000 exterior outlet GFCI, 5 units — AC). No tenth MaxxAir Maxxfan builder; run stays 9 builders / ~2,272 units
 - STILL NOT COVERED, catch-up candidate | Alliance RV | NHTSA #26V324 — lithium heating pad, 2,785 units. Passed over a SEVENTH time (2026-10-12), on date
 
+- 2026-10-19 | Lippert | NHTSA 26E070000 (report 9 Oct) — 4,435 power seating assemblies; power cord fuse may not provide adequate circuit protection → fire risk on short; dealers replace cord free; notification schedule TBD; 12V vs 120V side not stated
+- 2026-10-19 | (NHTSA check) | ≥5 Oct: 22 campaigns; no new MaxxAir Maxxfan builder (run stays 9 builders / ~2,272 units). Alliance RV #26V324 passed over an EIGHTH time
+
 ## Background Deep-Dives — Already Done
 
 <!-- Don't repeat the same angle on the same topic within ~6 months. Variation on the same subject is fine if the angle is genuinely different. -->
@@ -301,6 +316,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-05 | trend_piece | "System voltage should be a setting. Some controllers treat it as a guess" — keyed to Grand Design #26V616000. Victron SmartSolar manual: detect ONCE at very first power-up, 10s wait + average, further detection disabled, defaults to 12V if no battery; Morningstar ProStar: auto-detect at EVERY start-up, >15.5V = 24V, Morningstar itself says use auto-detect "only in rare circumstances". Factory builders know system voltage; auto-detect hands a made decision to a power-up measurement; RVIA listing rule covers array side, UL 1741 tests the box not the integration. Trigger in the Reflection NOT asserted
 
 - 2026-10-12 | standards_explainer | "Parallel batteries share current by voltage, not by capacity" — each battery = resting voltage (OCV at SoC) behind internal + path resistance; capacity not in the equation; flat LFP mid-curve → resistance decides the split in bulk (illustrative OUR arithmetic: 100mV over 2mΩ = 50A, 4mΩ = 25A); above ~3.4V/cell steep knee → fuller battery self-throttles, emptier takes over (Andy's 42A→5A vs 140A); needs absorption time to converge. Practical: near/short-path batteries see highest C-rate in bulk (worst if nearest is smallest), same on heavy discharge; equal-length cables to common busbar + per-battery fuse equalise resistance not capacity/age; per-BMS SoC drifts, bank-level CAN aggregate better (ties 2026-09-21). Keyed to Off-Grid Garage Lead
+
+- 2026-10-19 | standards_explainer | "A balancer's current rating tells you how many hours it needs" — keyed to Cleversolarpower News 2; drift in Ah vs balance current in mA; 6.5Ah gap = ~295h @22mA / ~186h @35mA / ~33h @200mA / ~11h @0.6A (our arithmetic); charge-only top balancers get ~1 balancing hour/day (Marine How To 3.40V/15mV/30–100mA) → ~half a year; balance current + activation + at-rest behaviour + cell drift rate all unpublished on drop-in datasheets; ties to JK V22 0.6A (2026-09-14)
 
 ## Community Pulse — Threads & Discussions Already Featured
 
@@ -380,6 +397,12 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-12 | r/vandwellers | Airplus fan won't open or close (10 Oct) — Arctic Tern AirPlus installed May, 20–30 uses, lid motor squeals; tied to 2026-09-07 fan test
 - METHOD NOTE (unchanged): RSS `summary` field only (OP text truncated, no replies). r/diysolar/r/solar/r/liveaboard empty FIFTH run running
 
+- 2026-10-19 | r/vandwellers | Open vevor diesel heater for cleaning with oven cleaner, without replacing parts (14 Oct) — ignition failure after 1.2 yrs, cleaned with oven cleaner, two $74 replacements on order
+- 2026-10-19 | r/vandwellers | Round 2: Fixing diesel heater with clogged atomizer screen, using new parts (17 Oct) — $17 Amazon kit, paper gasket, bent screen, carbon on old screen
+- 2026-10-19 | r/vandwellers | Webasto Heater Service in CO (13 Oct) — Evo 40, 2.5-yr-old van, ~600 run-hours, $1,600 quote ($600 parts / $1,000 labour), builder says not warranty
+- 2026-10-19 | r/vandwellers | Diesel Heater Priming (13 Oct) — LF-Bros ES5.0 5kW, T2 controller, no manual, air bubble in fuel line
+- 2026-10-19 | r/vandwellers | Want to upgrade my power setup. (17 Oct) — SUV, EcoFlow Delta 3 Plus + alternator charger, Portland winter, not driving enough
+
 ## On the Bench — YouTube Videos Already Featured
 
 <!-- Each VIDEO_ID appears at most once. New videos from the same channel are fine. -->
@@ -420,3 +443,8 @@ Before writing a new edition, the agent reads this file end-to-end and skips any
 - 2026-10-12 | `3p6qakh3buU` | Off-Grid Garage — New PowerWall connects for the first time. Lots to check and test... (3 Oct 2026); also Lead secondary source
 - 2026-10-12 | `DTRYg5mV5LM` | Cleversolarpower by Nick — LiTime 12V 100Ah Trolling Motor Battery: Honest Review and Teardown (27 Sept 2026) — 101.4Ah, 160A trip ~10s / recover ~25s, Great Power cells, 39Ω balance resistors ≈88mA; affiliate links disclosed
 (VERIFICATION RECORD: TranscriptAPI channel/latest now returns `no_active_paid_plan` — NOT usable. YouTube channel RSS 404s. Working method: scrape `youtube.com/@handle/videos` ytInitialData + `python3 -m yt_dlp` (exact upload_date, auto-subs with `--sleep-subtitles 15`). Will Prowse newest still 31 Aug (use `/channel/UCoj6RxIAQq8kmJme-5dnN0Q/videos`); Marine How To newest 18 Sept; Mortons FOGATTI AC teardown ~early Sept `qyuHvEq3dkw` unused; Cleversolarpower 8 Oct `rCzlq1IkN38` Renogy DC-DC 40A review — unused, available; `CRL3X7y-bug` still unused)
+- 2026-10-19 | `A1aHz6dbz7I` | **Cleversolarpower by Nick — I Tested 9 12V 100Ah Batteries. Only 4 Are Worth Buying** (13 Oct 2026) (FEATURED; maxresdefault; News 2 + Background source; affiliate links)
+- 2026-10-19 | `h7qpx-m5Fb8` | Off-Grid Garage — 100Ah Battery in parallel with 530Ah battery through Bulk, Absorption and Float. Should you? (14 Oct 2026) (News 3 source)
+- 2026-10-19 | `lhGXIGh5oTY` | DIY Solar Power with Will Prowse — I Built a Website to Expose Solar and Battery Scams (13 Oct 2026) (Lead source)
+- 2026-10-19 | `IoVWNUzcYMc` | Cleversolarpower by Nick — Cheap Breaker or PV Disconnect: Don't Buy the Wrong One (16 Oct 2026) — $27 DC breaker vs $38 PV disconnect
+(VERIFICATION RECORD 2026-10-19: youtube-transcript-api (pip --user) fetched transcripts without rate limiting; channel RSS by channel_id worked via subagent. Unused in window: Prowse `igbZJYw2Ujg` (16 Oct, Yixiang MB31 bad cell), HoboTech `n0q5nDiVbOg` (EcoFlow TITAN Plus, residential). Marine How To / Mortons / Trek nothing new.)
